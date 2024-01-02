@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct ForestFlowApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+                .modelContainer(for: [
+                    Forest.self,
+                    ForestOwner.self,
+                    Tree.self
+                ])
         }
     }
 }

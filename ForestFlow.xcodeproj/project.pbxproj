@@ -8,12 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		4FFE757C2B444B340098FF00 /* ForestFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE757B2B444B340098FF00 /* ForestFlowApp.swift */; };
-		4FFE757E2B444B340098FF00 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE757D2B444B340098FF00 /* ContentView.swift */; };
 		4FFE75802B444B350098FF00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FFE757F2B444B350098FF00 /* Assets.xcassets */; };
 		4FFE75842B444B350098FF00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FFE75832B444B350098FF00 /* Preview Assets.xcassets */; };
 		4FFE758E2B444B350098FF00 /* ForestFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE758D2B444B350098FF00 /* ForestFlowTests.swift */; };
 		4FFE75982B444B350098FF00 /* ForestFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75972B444B350098FF00 /* ForestFlowUITests.swift */; };
 		4FFE759A2B444B350098FF00 /* ForestFlowUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75992B444B350098FF00 /* ForestFlowUITestsLaunchTests.swift */; };
+		4FFE75AD2B444BD40098FF00 /* ForestListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75AC2B444BD40098FF00 /* ForestListView.swift */; };
+		4FFE75AF2B444C0C0098FF00 /* Forest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75AE2B444C0C0098FF00 /* Forest.swift */; };
+		4FFE75B12B444D810098FF00 /* ForestOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75B02B444D810098FF00 /* ForestOwner.swift */; };
+		4FFE75B32B444D970098FF00 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75B22B444D970098FF00 /* Tree.swift */; };
+		4FFE75B52B444E190098FF00 /* ForestAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75B42B444E190098FF00 /* ForestAddView.swift */; };
+		4FFE75B72B444E300098FF00 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75B62B444E300098FF00 /* MainView.swift */; };
+		4FFE75B92B4450C70098FF00 /* ForestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75B82B4450C70098FF00 /* ForestCell.swift */; };
+		4FFE75BC2B4451510098FF00 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75BB2B4451510098FF00 /* Font.swift */; };
+		4FFE75BE2B4452010098FF00 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75BD2B4452010098FF00 /* View.swift */; };
+		4FFE75C22B4452230098FF00 /* ButtonWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75C12B4452230098FF00 /* ButtonWrapper.swift */; };
+		4FFE75C42B4454FE0098FF00 /* ForestDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75C32B4454FE0098FF00 /* ForestDetailView.swift */; };
+		4FFE75C72B4456600098FF00 /* WoodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75C62B4456600098FF00 /* WoodType.swift */; };
+		4FFE75CB2B4459290098FF00 /* RateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75CA2B4459290098FF00 /* RateType.swift */; };
+		4FFE75CE2B445C720098FF00 /* TreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75CD2B445C720098FF00 /* TreeListView.swift */; };
+		4FFE75D02B445C880098FF00 /* TreeAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75CF2B445C880098FF00 /* TreeAddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +50,6 @@
 /* Begin PBXFileReference section */
 		4FFE75782B444B340098FF00 /* ForestFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForestFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FFE757B2B444B340098FF00 /* ForestFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestFlowApp.swift; sourceTree = "<group>"; };
-		4FFE757D2B444B340098FF00 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4FFE757F2B444B350098FF00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FFE75812B444B350098FF00 /* ForestFlow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForestFlow.entitlements; sourceTree = "<group>"; };
 		4FFE75832B444B350098FF00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -45,6 +58,21 @@
 		4FFE75932B444B350098FF00 /* ForestFlowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForestFlowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FFE75972B444B350098FF00 /* ForestFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestFlowUITests.swift; sourceTree = "<group>"; };
 		4FFE75992B444B350098FF00 /* ForestFlowUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestFlowUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4FFE75AC2B444BD40098FF00 /* ForestListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestListView.swift; sourceTree = "<group>"; };
+		4FFE75AE2B444C0C0098FF00 /* Forest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forest.swift; sourceTree = "<group>"; };
+		4FFE75B02B444D810098FF00 /* ForestOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestOwner.swift; sourceTree = "<group>"; };
+		4FFE75B22B444D970098FF00 /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		4FFE75B42B444E190098FF00 /* ForestAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestAddView.swift; sourceTree = "<group>"; };
+		4FFE75B62B444E300098FF00 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		4FFE75B82B4450C70098FF00 /* ForestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestCell.swift; sourceTree = "<group>"; };
+		4FFE75BB2B4451510098FF00 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		4FFE75BD2B4452010098FF00 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		4FFE75C12B4452230098FF00 /* ButtonWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWrapper.swift; sourceTree = "<group>"; };
+		4FFE75C32B4454FE0098FF00 /* ForestDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestDetailView.swift; sourceTree = "<group>"; };
+		4FFE75C62B4456600098FF00 /* WoodType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodType.swift; sourceTree = "<group>"; };
+		4FFE75CA2B4459290098FF00 /* RateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateType.swift; sourceTree = "<group>"; };
+		4FFE75CD2B445C720098FF00 /* TreeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeListView.swift; sourceTree = "<group>"; };
+		4FFE75CF2B445C880098FF00 /* TreeAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeAddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +123,9 @@
 		4FFE757A2B444B340098FF00 /* ForestFlow */ = {
 			isa = PBXGroup;
 			children = (
-				4FFE757B2B444B340098FF00 /* ForestFlowApp.swift */,
-				4FFE757D2B444B340098FF00 /* ContentView.swift */,
+				4FFE75A62B444B810098FF00 /* App */,
+				4FFE75A72B444B860098FF00 /* Common */,
+				4FFE75A82B444B8A0098FF00 /* Utils */,
 				4FFE757F2B444B350098FF00 /* Assets.xcassets */,
 				4FFE75812B444B350098FF00 /* ForestFlow.entitlements */,
 				4FFE75822B444B350098FF00 /* Preview Content */,
@@ -127,6 +156,107 @@
 				4FFE75992B444B350098FF00 /* ForestFlowUITestsLaunchTests.swift */,
 			);
 			path = ForestFlowUITests;
+			sourceTree = "<group>";
+		};
+		4FFE75A62B444B810098FF00 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4FFE75AA2B444BAE0098FF00 /* Main */,
+				4FFE75AB2B444BBE0098FF00 /* Forest */,
+				4FFE75CC2B445C600098FF00 /* Tree */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4FFE75A72B444B860098FF00 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4FFE75C52B4456550098FF00 /* Enumerations */,
+				4FFE75A92B444B970098FF00 /* DataModels */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4FFE75A82B444B8A0098FF00 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4FFE75C02B44521A0098FF00 /* Modifiers */,
+				4FFE75BF2B44520D0098FF00 /* UIComponents */,
+				4FFE75BA2B4451460098FF00 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4FFE75A92B444B970098FF00 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				4FFE75AE2B444C0C0098FF00 /* Forest.swift */,
+				4FFE75B02B444D810098FF00 /* ForestOwner.swift */,
+				4FFE75B22B444D970098FF00 /* Tree.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		4FFE75AA2B444BAE0098FF00 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4FFE757B2B444B340098FF00 /* ForestFlowApp.swift */,
+				4FFE75B62B444E300098FF00 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4FFE75AB2B444BBE0098FF00 /* Forest */ = {
+			isa = PBXGroup;
+			children = (
+				4FFE75AC2B444BD40098FF00 /* ForestListView.swift */,
+				4FFE75B42B444E190098FF00 /* ForestAddView.swift */,
+				4FFE75B82B4450C70098FF00 /* ForestCell.swift */,
+				4FFE75C32B4454FE0098FF00 /* ForestDetailView.swift */,
+			);
+			path = Forest;
+			sourceTree = "<group>";
+		};
+		4FFE75BA2B4451460098FF00 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4FFE75BB2B4451510098FF00 /* Font.swift */,
+				4FFE75BD2B4452010098FF00 /* View.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4FFE75BF2B44520D0098FF00 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		4FFE75C02B44521A0098FF00 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				4FFE75C12B4452230098FF00 /* ButtonWrapper.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		4FFE75C52B4456550098FF00 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				4FFE75C62B4456600098FF00 /* WoodType.swift */,
+				4FFE75CA2B4459290098FF00 /* RateType.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		4FFE75CC2B445C600098FF00 /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				4FFE75CD2B445C720098FF00 /* TreeListView.swift */,
+				4FFE75CF2B445C880098FF00 /* TreeAddView.swift */,
+			);
+			path = Tree;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +389,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FFE757E2B444B340098FF00 /* ContentView.swift in Sources */,
+				4FFE75D02B445C880098FF00 /* TreeAddView.swift in Sources */,
+				4FFE75B32B444D970098FF00 /* Tree.swift in Sources */,
+				4FFE75CE2B445C720098FF00 /* TreeListView.swift in Sources */,
+				4FFE75B72B444E300098FF00 /* MainView.swift in Sources */,
+				4FFE75C72B4456600098FF00 /* WoodType.swift in Sources */,
+				4FFE75BE2B4452010098FF00 /* View.swift in Sources */,
+				4FFE75AD2B444BD40098FF00 /* ForestListView.swift in Sources */,
 				4FFE757C2B444B340098FF00 /* ForestFlowApp.swift in Sources */,
+				4FFE75B52B444E190098FF00 /* ForestAddView.swift in Sources */,
+				4FFE75BC2B4451510098FF00 /* Font.swift in Sources */,
+				4FFE75B12B444D810098FF00 /* ForestOwner.swift in Sources */,
+				4FFE75B92B4450C70098FF00 /* ForestCell.swift in Sources */,
+				4FFE75C22B4452230098FF00 /* ButtonWrapper.swift in Sources */,
+				4FFE75CB2B4459290098FF00 /* RateType.swift in Sources */,
+				4FFE75C42B4454FE0098FF00 /* ForestDetailView.swift in Sources */,
+				4FFE75AF2B444C0C0098FF00 /* Forest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +568,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -432,8 +577,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -442,7 +586,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.zwicker.ForestFlow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -462,6 +607,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -470,8 +616,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -480,7 +625,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.zwicker.ForestFlow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
