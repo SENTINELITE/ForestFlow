@@ -13,7 +13,7 @@ struct ForestDetailView: View {
 
     var body: some View {
         VStack {
-            TreeListView()
+            TreeListView(forest: forest)
         }
         .navigationTitle(forest.name)
         .toolbar {

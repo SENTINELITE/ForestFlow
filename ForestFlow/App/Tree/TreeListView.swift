@@ -10,17 +10,13 @@ import SwiftData
 
 struct TreeListView: View {
 
-    @Query var trees: [Tree]
+    let forest: Forest
 
     var body: some View {
         List {
-            ForEach(trees, id: \.self) { tree in
+            ForEach(forest.trees, id: \.self) { tree in
                 Text("\(tree.stage) \(tree.woodType)")
             }
         }
     }
-}
-
-#Preview {
-    TreeListView()
 }

@@ -12,7 +12,7 @@ struct TreeAddView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.modelContext) var context
 
-    let forest: Forest
+    @Bindable var forest: Forest
 
     @State var woodType: WoodType = .div
     @State var stage: Int = 1
@@ -50,6 +50,7 @@ struct TreeAddView: View {
     func saveTree() {
         let tree = Tree(woodType: woodType.rawValue, stage: stage, forest: forest)
         context.insert(forest)
+        forest.trees.append(tree)
         dismiss()
     }
 }
