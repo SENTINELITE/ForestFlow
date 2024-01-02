@@ -7,90 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB097B752A43A2AF0068E977 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB097B742A43A2AF0068E977 /* MapView.swift */; };
-		CB097B772A43A2BB0068E977 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB097B762A43A2BB0068E977 /* ChartsView.swift */; };
-		CB25F3552A1934B800D40E6E /* ForestFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB25F3542A1934B800D40E6E /* ForestFlowApp.swift */; };
-		CB25F3592A1934B900D40E6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB25F3582A1934B900D40E6E /* Assets.xcassets */; };
-		CB25F35D2A1934B900D40E6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB25F35C2A1934B900D40E6E /* Preview Assets.xcassets */; };
-		CB25F3672A1934B900D40E6E /* ForestFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB25F3662A1934B900D40E6E /* ForestFlowTests.swift */; };
-		CB25F3712A1934B900D40E6E /* ForestFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB25F3702A1934B900D40E6E /* ForestFlowUITests.swift */; };
-		CB25F3732A1934B900D40E6E /* ForestFlowUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB25F3722A1934B900D40E6E /* ForestFlowUITestsLaunchTests.swift */; };
-		CB25F3852A19377700D40E6E /* TreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB25F3842A19377700D40E6E /* TreeListView.swift */; };
-		CB25F3872A19379000D40E6E /* AddTreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB25F3862A19379000D40E6E /* AddTreeView.swift */; };
-		CB25F3892A1937A300D40E6E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB25F3882A1937A300D40E6E /* HomeView.swift */; };
-		CB25F38B2A1937B600D40E6E /* AddListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB25F38A2A1937B600D40E6E /* AddListView.swift */; };
-		CB6F92BE2A6C26BD00888B4E /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F92BD2A6C26BD00888B4E /* ListModel.swift */; };
-		CB6F92C02A6C26C500888B4E /* TreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F92BF2A6C26C500888B4E /* TreeModel.swift */; };
-		CB7B1E1F2A746D95002BA7AA /* SettingsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7B1E1E2A746D95002BA7AA /* SettingsItemView.swift */; };
-		CB8546BD2A5743D90002BACB /* AddTreeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8546BC2A5743D90002BACB /* AddTreeViewModel.swift */; };
-		CBB5BF982A3F377B00385C5F /* TreeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB5BF972A3F377B00385C5F /* TreeDetailView.swift */; };
-		CBB5BF9E2A3F3CD400385C5F /* ListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB5BF9D2A3F3CD400385C5F /* ListDetailView.swift */; };
-		CBB5BFA42A3FA8FA00385C5F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB5BFA32A3FA8FA00385C5F /* SettingsView.swift */; };
-		CBBB8C7B2A5E901B00ADED23 /* ForestOwnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBB8C7A2A5E901B00ADED23 /* ForestOwnerView.swift */; };
-		CBF6992D2A536D9100EAE74C /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6992C2A536D9100EAE74C /* ItemView.swift */; };
+		4FFE757C2B444B340098FF00 /* ForestFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE757B2B444B340098FF00 /* ForestFlowApp.swift */; };
+		4FFE757E2B444B340098FF00 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE757D2B444B340098FF00 /* ContentView.swift */; };
+		4FFE75802B444B350098FF00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FFE757F2B444B350098FF00 /* Assets.xcassets */; };
+		4FFE75842B444B350098FF00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FFE75832B444B350098FF00 /* Preview Assets.xcassets */; };
+		4FFE758E2B444B350098FF00 /* ForestFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE758D2B444B350098FF00 /* ForestFlowTests.swift */; };
+		4FFE75982B444B350098FF00 /* ForestFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75972B444B350098FF00 /* ForestFlowUITests.swift */; };
+		4FFE759A2B444B350098FF00 /* ForestFlowUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75992B444B350098FF00 /* ForestFlowUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CB25F3632A1934B900D40E6E /* PBXContainerItemProxy */ = {
+		4FFE758A2B444B350098FF00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CB25F3492A1934B800D40E6E /* Project object */;
+			containerPortal = 4FFE75702B444B340098FF00 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CB25F3502A1934B800D40E6E;
+			remoteGlobalIDString = 4FFE75772B444B340098FF00;
 			remoteInfo = ForestFlow;
 		};
-		CB25F36D2A1934B900D40E6E /* PBXContainerItemProxy */ = {
+		4FFE75942B444B350098FF00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CB25F3492A1934B800D40E6E /* Project object */;
+			containerPortal = 4FFE75702B444B340098FF00 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CB25F3502A1934B800D40E6E;
+			remoteGlobalIDString = 4FFE75772B444B340098FF00;
 			remoteInfo = ForestFlow;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CB097B742A43A2AF0068E977 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		CB097B762A43A2BB0068E977 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
-		CB25F3512A1934B800D40E6E /* ForestFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForestFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB25F3542A1934B800D40E6E /* ForestFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestFlowApp.swift; sourceTree = "<group>"; };
-		CB25F3582A1934B900D40E6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CB25F35A2A1934B900D40E6E /* ForestFlow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForestFlow.entitlements; sourceTree = "<group>"; };
-		CB25F35C2A1934B900D40E6E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CB25F3622A1934B900D40E6E /* ForestFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForestFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB25F3662A1934B900D40E6E /* ForestFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestFlowTests.swift; sourceTree = "<group>"; };
-		CB25F36C2A1934B900D40E6E /* ForestFlowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForestFlowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB25F3702A1934B900D40E6E /* ForestFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestFlowUITests.swift; sourceTree = "<group>"; };
-		CB25F3722A1934B900D40E6E /* ForestFlowUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestFlowUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		CB25F3842A19377700D40E6E /* TreeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeListView.swift; sourceTree = "<group>"; };
-		CB25F3862A19379000D40E6E /* AddTreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTreeView.swift; sourceTree = "<group>"; };
-		CB25F3882A1937A300D40E6E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		CB25F38A2A1937B600D40E6E /* AddListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListView.swift; sourceTree = "<group>"; };
-		CB6F92BD2A6C26BD00888B4E /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
-		CB6F92BF2A6C26C500888B4E /* TreeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeModel.swift; sourceTree = "<group>"; };
-		CB7B1E1E2A746D95002BA7AA /* SettingsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemView.swift; sourceTree = "<group>"; };
-		CB8546BC2A5743D90002BACB /* AddTreeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTreeViewModel.swift; sourceTree = "<group>"; };
-		CBB5BF972A3F377B00385C5F /* TreeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeDetailView.swift; sourceTree = "<group>"; };
-		CBB5BF9D2A3F3CD400385C5F /* ListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailView.swift; sourceTree = "<group>"; };
-		CBB5BFA32A3FA8FA00385C5F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		CBBB8C7A2A5E901B00ADED23 /* ForestOwnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestOwnerView.swift; sourceTree = "<group>"; };
-		CBF6992C2A536D9100EAE74C /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		4FFE75782B444B340098FF00 /* ForestFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForestFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FFE757B2B444B340098FF00 /* ForestFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestFlowApp.swift; sourceTree = "<group>"; };
+		4FFE757D2B444B340098FF00 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4FFE757F2B444B350098FF00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4FFE75812B444B350098FF00 /* ForestFlow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForestFlow.entitlements; sourceTree = "<group>"; };
+		4FFE75832B444B350098FF00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4FFE75892B444B350098FF00 /* ForestFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForestFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FFE758D2B444B350098FF00 /* ForestFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestFlowTests.swift; sourceTree = "<group>"; };
+		4FFE75932B444B350098FF00 /* ForestFlowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForestFlowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FFE75972B444B350098FF00 /* ForestFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestFlowUITests.swift; sourceTree = "<group>"; };
+		4FFE75992B444B350098FF00 /* ForestFlowUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestFlowUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CB25F34E2A1934B800D40E6E /* Frameworks */ = {
+		4FFE75752B444B340098FF00 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB25F35F2A1934B900D40E6E /* Frameworks */ = {
+		4FFE75862B444B350098FF00 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB25F3692A1934B900D40E6E /* Frameworks */ = {
+		4FFE75902B444B350098FF00 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -100,175 +72,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CB25F3482A1934B800D40E6E = {
+		4FFE756F2B444B340098FF00 = {
 			isa = PBXGroup;
 			children = (
-				CB25F3532A1934B800D40E6E /* ForestFlow */,
-				CB25F3652A1934B900D40E6E /* ForestFlowTests */,
-				CB25F36F2A1934B900D40E6E /* ForestFlowUITests */,
-				CB25F3522A1934B800D40E6E /* Products */,
+				4FFE757A2B444B340098FF00 /* ForestFlow */,
+				4FFE758C2B444B350098FF00 /* ForestFlowTests */,
+				4FFE75962B444B350098FF00 /* ForestFlowUITests */,
+				4FFE75792B444B340098FF00 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CB25F3522A1934B800D40E6E /* Products */ = {
+		4FFE75792B444B340098FF00 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CB25F3512A1934B800D40E6E /* ForestFlow.app */,
-				CB25F3622A1934B900D40E6E /* ForestFlowTests.xctest */,
-				CB25F36C2A1934B900D40E6E /* ForestFlowUITests.xctest */,
+				4FFE75782B444B340098FF00 /* ForestFlow.app */,
+				4FFE75892B444B350098FF00 /* ForestFlowTests.xctest */,
+				4FFE75932B444B350098FF00 /* ForestFlowUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CB25F3532A1934B800D40E6E /* ForestFlow */ = {
+		4FFE757A2B444B340098FF00 /* ForestFlow */ = {
 			isa = PBXGroup;
 			children = (
-				CB25F3542A1934B800D40E6E /* ForestFlowApp.swift */,
-				CB25F3822A1935BC00D40E6E /* Home */,
-				CB25F3832A19360B00D40E6E /* Tree */,
-				CBFCAFF12B22745B003DCEBE /* Charts */,
-				CBFCAFF02B227454003DCEBE /* Map */,
-				CBFCAFEE2B22736A003DCEBE /* Settings */,
-				CBFCAFEB2B2272CE003DCEBE /* Common */,
-				CBFCAFEA2B2272B5003DCEBE /* Utils */,
-				CB25F35A2A1934B900D40E6E /* ForestFlow.entitlements */,
-				CB25F35B2A1934B900D40E6E /* Preview Content */,
+				4FFE757B2B444B340098FF00 /* ForestFlowApp.swift */,
+				4FFE757D2B444B340098FF00 /* ContentView.swift */,
+				4FFE757F2B444B350098FF00 /* Assets.xcassets */,
+				4FFE75812B444B350098FF00 /* ForestFlow.entitlements */,
+				4FFE75822B444B350098FF00 /* Preview Content */,
 			);
 			path = ForestFlow;
 			sourceTree = "<group>";
 		};
-		CB25F35B2A1934B900D40E6E /* Preview Content */ = {
+		4FFE75822B444B350098FF00 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				CB25F35C2A1934B900D40E6E /* Preview Assets.xcassets */,
+				4FFE75832B444B350098FF00 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		CB25F3652A1934B900D40E6E /* ForestFlowTests */ = {
+		4FFE758C2B444B350098FF00 /* ForestFlowTests */ = {
 			isa = PBXGroup;
 			children = (
-				CB25F3662A1934B900D40E6E /* ForestFlowTests.swift */,
+				4FFE758D2B444B350098FF00 /* ForestFlowTests.swift */,
 			);
 			path = ForestFlowTests;
 			sourceTree = "<group>";
 		};
-		CB25F36F2A1934B900D40E6E /* ForestFlowUITests */ = {
+		4FFE75962B444B350098FF00 /* ForestFlowUITests */ = {
 			isa = PBXGroup;
 			children = (
-				CB25F3702A1934B900D40E6E /* ForestFlowUITests.swift */,
-				CB25F3722A1934B900D40E6E /* ForestFlowUITestsLaunchTests.swift */,
+				4FFE75972B444B350098FF00 /* ForestFlowUITests.swift */,
+				4FFE75992B444B350098FF00 /* ForestFlowUITestsLaunchTests.swift */,
 			);
 			path = ForestFlowUITests;
-			sourceTree = "<group>";
-		};
-		CB25F3822A1935BC00D40E6E /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				CB25F3882A1937A300D40E6E /* HomeView.swift */,
-				CB25F38A2A1937B600D40E6E /* AddListView.swift */,
-				CBB5BF9D2A3F3CD400385C5F /* ListDetailView.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		CB25F3832A19360B00D40E6E /* Tree */ = {
-			isa = PBXGroup;
-			children = (
-				CB25F3842A19377700D40E6E /* TreeListView.swift */,
-				CBB5BF972A3F377B00385C5F /* TreeDetailView.swift */,
-				CB25F3862A19379000D40E6E /* AddTreeView.swift */,
-				CB8546BC2A5743D90002BACB /* AddTreeViewModel.swift */,
-			);
-			path = Tree;
-			sourceTree = "<group>";
-		};
-		CBBB8C7C2A5E912F00ADED23 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				CB6F92BD2A6C26BD00888B4E /* ListModel.swift */,
-				CB6F92BF2A6C26C500888B4E /* TreeModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		CBFCAFEA2B2272B5003DCEBE /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				CBFCAFEC2B2272D8003DCEBE /* UIComponents */,
-				CBFCAFED2B227326003DCEBE /* Resources */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		CBFCAFEB2B2272CE003DCEBE /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				CBFCAFEF2B22742D003DCEBE /* SwiftData */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		CBFCAFEC2B2272D8003DCEBE /* UIComponents */ = {
-			isa = PBXGroup;
-			children = (
-				CBBB8C7A2A5E901B00ADED23 /* ForestOwnerView.swift */,
-				CB7B1E1E2A746D95002BA7AA /* SettingsItemView.swift */,
-				CBF6992C2A536D9100EAE74C /* ItemView.swift */,
-			);
-			path = UIComponents;
-			sourceTree = "<group>";
-		};
-		CBFCAFED2B227326003DCEBE /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				CB25F3582A1934B900D40E6E /* Assets.xcassets */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		CBFCAFEE2B22736A003DCEBE /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				CBB5BFA32A3FA8FA00385C5F /* SettingsView.swift */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
-		CBFCAFEF2B22742D003DCEBE /* SwiftData */ = {
-			isa = PBXGroup;
-			children = (
-				CBBB8C7C2A5E912F00ADED23 /* Models */,
-			);
-			path = SwiftData;
-			sourceTree = "<group>";
-		};
-		CBFCAFF02B227454003DCEBE /* Map */ = {
-			isa = PBXGroup;
-			children = (
-				CB097B742A43A2AF0068E977 /* MapView.swift */,
-			);
-			path = Map;
-			sourceTree = "<group>";
-		};
-		CBFCAFF12B22745B003DCEBE /* Charts */ = {
-			isa = PBXGroup;
-			children = (
-				CB097B762A43A2BB0068E977 /* ChartsView.swift */,
-			);
-			path = Charts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CB25F3502A1934B800D40E6E /* ForestFlow */ = {
+		4FFE75772B444B340098FF00 /* ForestFlow */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CB25F3762A1934B900D40E6E /* Build configuration list for PBXNativeTarget "ForestFlow" */;
+			buildConfigurationList = 4FFE759D2B444B350098FF00 /* Build configuration list for PBXNativeTarget "ForestFlow" */;
 			buildPhases = (
-				CB25F34D2A1934B800D40E6E /* Sources */,
-				CB25F34E2A1934B800D40E6E /* Frameworks */,
-				CB25F34F2A1934B800D40E6E /* Resources */,
+				4FFE75742B444B340098FF00 /* Sources */,
+				4FFE75752B444B340098FF00 /* Frameworks */,
+				4FFE75762B444B340098FF00 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -276,69 +146,69 @@
 			);
 			name = ForestFlow;
 			productName = ForestFlow;
-			productReference = CB25F3512A1934B800D40E6E /* ForestFlow.app */;
+			productReference = 4FFE75782B444B340098FF00 /* ForestFlow.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CB25F3612A1934B900D40E6E /* ForestFlowTests */ = {
+		4FFE75882B444B350098FF00 /* ForestFlowTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CB25F3792A1934B900D40E6E /* Build configuration list for PBXNativeTarget "ForestFlowTests" */;
+			buildConfigurationList = 4FFE75A02B444B350098FF00 /* Build configuration list for PBXNativeTarget "ForestFlowTests" */;
 			buildPhases = (
-				CB25F35E2A1934B900D40E6E /* Sources */,
-				CB25F35F2A1934B900D40E6E /* Frameworks */,
-				CB25F3602A1934B900D40E6E /* Resources */,
+				4FFE75852B444B350098FF00 /* Sources */,
+				4FFE75862B444B350098FF00 /* Frameworks */,
+				4FFE75872B444B350098FF00 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CB25F3642A1934B900D40E6E /* PBXTargetDependency */,
+				4FFE758B2B444B350098FF00 /* PBXTargetDependency */,
 			);
 			name = ForestFlowTests;
 			productName = ForestFlowTests;
-			productReference = CB25F3622A1934B900D40E6E /* ForestFlowTests.xctest */;
+			productReference = 4FFE75892B444B350098FF00 /* ForestFlowTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CB25F36B2A1934B900D40E6E /* ForestFlowUITests */ = {
+		4FFE75922B444B350098FF00 /* ForestFlowUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CB25F37C2A1934B900D40E6E /* Build configuration list for PBXNativeTarget "ForestFlowUITests" */;
+			buildConfigurationList = 4FFE75A32B444B350098FF00 /* Build configuration list for PBXNativeTarget "ForestFlowUITests" */;
 			buildPhases = (
-				CB25F3682A1934B900D40E6E /* Sources */,
-				CB25F3692A1934B900D40E6E /* Frameworks */,
-				CB25F36A2A1934B900D40E6E /* Resources */,
+				4FFE758F2B444B350098FF00 /* Sources */,
+				4FFE75902B444B350098FF00 /* Frameworks */,
+				4FFE75912B444B350098FF00 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CB25F36E2A1934B900D40E6E /* PBXTargetDependency */,
+				4FFE75952B444B350098FF00 /* PBXTargetDependency */,
 			);
 			name = ForestFlowUITests;
 			productName = ForestFlowUITests;
-			productReference = CB25F36C2A1934B900D40E6E /* ForestFlowUITests.xctest */;
+			productReference = 4FFE75932B444B350098FF00 /* ForestFlowUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CB25F3492A1934B800D40E6E /* Project object */ = {
+		4FFE75702B444B340098FF00 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					CB25F3502A1934B800D40E6E = {
-						CreatedOnToolsVersion = 14.3;
+					4FFE75772B444B340098FF00 = {
+						CreatedOnToolsVersion = 15.0.1;
 					};
-					CB25F3612A1934B900D40E6E = {
-						CreatedOnToolsVersion = 14.3;
-						TestTargetID = CB25F3502A1934B800D40E6E;
+					4FFE75882B444B350098FF00 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 4FFE75772B444B340098FF00;
 					};
-					CB25F36B2A1934B900D40E6E = {
-						CreatedOnToolsVersion = 14.3;
-						TestTargetID = CB25F3502A1934B800D40E6E;
+					4FFE75922B444B350098FF00 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 4FFE75772B444B340098FF00;
 					};
 				};
 			};
-			buildConfigurationList = CB25F34C2A1934B800D40E6E /* Build configuration list for PBXProject "ForestFlow" */;
+			buildConfigurationList = 4FFE75732B444B340098FF00 /* Build configuration list for PBXProject "ForestFlow" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -346,36 +216,36 @@
 				en,
 				Base,
 			);
-			mainGroup = CB25F3482A1934B800D40E6E;
-			productRefGroup = CB25F3522A1934B800D40E6E /* Products */;
+			mainGroup = 4FFE756F2B444B340098FF00;
+			productRefGroup = 4FFE75792B444B340098FF00 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CB25F3502A1934B800D40E6E /* ForestFlow */,
-				CB25F3612A1934B900D40E6E /* ForestFlowTests */,
-				CB25F36B2A1934B900D40E6E /* ForestFlowUITests */,
+				4FFE75772B444B340098FF00 /* ForestFlow */,
+				4FFE75882B444B350098FF00 /* ForestFlowTests */,
+				4FFE75922B444B350098FF00 /* ForestFlowUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CB25F34F2A1934B800D40E6E /* Resources */ = {
+		4FFE75762B444B340098FF00 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB25F35D2A1934B900D40E6E /* Preview Assets.xcassets in Resources */,
-				CB25F3592A1934B900D40E6E /* Assets.xcassets in Resources */,
+				4FFE75842B444B350098FF00 /* Preview Assets.xcassets in Resources */,
+				4FFE75802B444B350098FF00 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB25F3602A1934B900D40E6E /* Resources */ = {
+		4FFE75872B444B350098FF00 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB25F36A2A1934B900D40E6E /* Resources */ = {
+		4FFE75912B444B350098FF00 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -385,66 +255,53 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CB25F34D2A1934B800D40E6E /* Sources */ = {
+		4FFE75742B444B340098FF00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB8546BD2A5743D90002BACB /* AddTreeViewModel.swift in Sources */,
-				CB6F92BE2A6C26BD00888B4E /* ListModel.swift in Sources */,
-				CBB5BF9E2A3F3CD400385C5F /* ListDetailView.swift in Sources */,
-				CB6F92C02A6C26C500888B4E /* TreeModel.swift in Sources */,
-				CB097B752A43A2AF0068E977 /* MapView.swift in Sources */,
-				CBF6992D2A536D9100EAE74C /* ItemView.swift in Sources */,
-				CB25F3872A19379000D40E6E /* AddTreeView.swift in Sources */,
-				CBBB8C7B2A5E901B00ADED23 /* ForestOwnerView.swift in Sources */,
-				CB25F38B2A1937B600D40E6E /* AddListView.swift in Sources */,
-				CBB5BF982A3F377B00385C5F /* TreeDetailView.swift in Sources */,
-				CB25F3892A1937A300D40E6E /* HomeView.swift in Sources */,
-				CB25F3852A19377700D40E6E /* TreeListView.swift in Sources */,
-				CB097B772A43A2BB0068E977 /* ChartsView.swift in Sources */,
-				CB7B1E1F2A746D95002BA7AA /* SettingsItemView.swift in Sources */,
-				CB25F3552A1934B800D40E6E /* ForestFlowApp.swift in Sources */,
-				CBB5BFA42A3FA8FA00385C5F /* SettingsView.swift in Sources */,
+				4FFE757E2B444B340098FF00 /* ContentView.swift in Sources */,
+				4FFE757C2B444B340098FF00 /* ForestFlowApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB25F35E2A1934B900D40E6E /* Sources */ = {
+		4FFE75852B444B350098FF00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB25F3672A1934B900D40E6E /* ForestFlowTests.swift in Sources */,
+				4FFE758E2B444B350098FF00 /* ForestFlowTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB25F3682A1934B900D40E6E /* Sources */ = {
+		4FFE758F2B444B350098FF00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB25F3712A1934B900D40E6E /* ForestFlowUITests.swift in Sources */,
-				CB25F3732A1934B900D40E6E /* ForestFlowUITestsLaunchTests.swift in Sources */,
+				4FFE75982B444B350098FF00 /* ForestFlowUITests.swift in Sources */,
+				4FFE759A2B444B350098FF00 /* ForestFlowUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CB25F3642A1934B900D40E6E /* PBXTargetDependency */ = {
+		4FFE758B2B444B350098FF00 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CB25F3502A1934B800D40E6E /* ForestFlow */;
-			targetProxy = CB25F3632A1934B900D40E6E /* PBXContainerItemProxy */;
+			target = 4FFE75772B444B340098FF00 /* ForestFlow */;
+			targetProxy = 4FFE758A2B444B350098FF00 /* PBXContainerItemProxy */;
 		};
-		CB25F36E2A1934B900D40E6E /* PBXTargetDependency */ = {
+		4FFE75952B444B350098FF00 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CB25F3502A1934B800D40E6E /* ForestFlow */;
-			targetProxy = CB25F36D2A1934B900D40E6E /* PBXContainerItemProxy */;
+			target = 4FFE75772B444B340098FF00 /* ForestFlow */;
+			targetProxy = 4FFE75942B444B350098FF00 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		CB25F3742A1934B900D40E6E /* Debug */ = {
+		4FFE759B2B444B350098FF00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -474,12 +331,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -493,18 +349,20 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		CB25F3752A1934B900D40E6E /* Release */ = {
+		4FFE759C2B444B350098FF00 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -534,12 +392,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -547,14 +404,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
-		CB25F3772A1934B900D40E6E /* Debug */ = {
+		4FFE759E2B444B350098FF00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -562,9 +419,8 @@
 				CODE_SIGN_ENTITLEMENTS = ForestFlow/ForestFlow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ForestFlow/Preview Content\"";
-				DEVELOPMENT_TEAM = 7SM6PL3XT8;
+				DEVELOPMENT_TEAM = PSU9VZHG7L;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -581,9 +437,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.romanindermuehle.ForestFlow;
+				PRODUCT_BUNDLE_IDENTIFIER = io.zwicker.ForestFlow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -593,7 +449,7 @@
 			};
 			name = Debug;
 		};
-		CB25F3782A1934B900D40E6E /* Release */ = {
+		4FFE759F2B444B350098FF00 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -601,9 +457,8 @@
 				CODE_SIGN_ENTITLEMENTS = ForestFlow/ForestFlow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ForestFlow/Preview Content\"";
-				DEVELOPMENT_TEAM = 7SM6PL3XT8;
+				DEVELOPMENT_TEAM = PSU9VZHG7L;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -620,9 +475,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.romanindermuehle.ForestFlow;
+				PRODUCT_BUNDLE_IDENTIFIER = io.zwicker.ForestFlow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -632,20 +487,19 @@
 			};
 			name = Release;
 		};
-		CB25F37A2A1934B900D40E6E /* Debug */ = {
+		4FFE75A12B444B350098FF00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 7SM6PL3XT8;
+				DEVELOPMENT_TEAM = PSU9VZHG7L;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.romanindermuehle.ForestFlowTests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.zwicker.ForestFlowTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -656,20 +510,19 @@
 			};
 			name = Debug;
 		};
-		CB25F37B2A1934B900D40E6E /* Release */ = {
+		4FFE75A22B444B350098FF00 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 7SM6PL3XT8;
+				DEVELOPMENT_TEAM = PSU9VZHG7L;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.romanindermuehle.ForestFlowTests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.zwicker.ForestFlowTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -680,19 +533,18 @@
 			};
 			name = Release;
 		};
-		CB25F37D2A1934B900D40E6E /* Debug */ = {
+		4FFE75A42B444B350098FF00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 7SM6PL3XT8;
+				DEVELOPMENT_TEAM = PSU9VZHG7L;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.romanindermuehle.ForestFlowUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.zwicker.ForestFlowUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -703,19 +555,18 @@
 			};
 			name = Debug;
 		};
-		CB25F37E2A1934B900D40E6E /* Release */ = {
+		4FFE75A52B444B350098FF00 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 7SM6PL3XT8;
+				DEVELOPMENT_TEAM = PSU9VZHG7L;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.romanindermuehle.ForestFlowUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.zwicker.ForestFlowUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -729,43 +580,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CB25F34C2A1934B800D40E6E /* Build configuration list for PBXProject "ForestFlow" */ = {
+		4FFE75732B444B340098FF00 /* Build configuration list for PBXProject "ForestFlow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CB25F3742A1934B900D40E6E /* Debug */,
-				CB25F3752A1934B900D40E6E /* Release */,
+				4FFE759B2B444B350098FF00 /* Debug */,
+				4FFE759C2B444B350098FF00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CB25F3762A1934B900D40E6E /* Build configuration list for PBXNativeTarget "ForestFlow" */ = {
+		4FFE759D2B444B350098FF00 /* Build configuration list for PBXNativeTarget "ForestFlow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CB25F3772A1934B900D40E6E /* Debug */,
-				CB25F3782A1934B900D40E6E /* Release */,
+				4FFE759E2B444B350098FF00 /* Debug */,
+				4FFE759F2B444B350098FF00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CB25F3792A1934B900D40E6E /* Build configuration list for PBXNativeTarget "ForestFlowTests" */ = {
+		4FFE75A02B444B350098FF00 /* Build configuration list for PBXNativeTarget "ForestFlowTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CB25F37A2A1934B900D40E6E /* Debug */,
-				CB25F37B2A1934B900D40E6E /* Release */,
+				4FFE75A12B444B350098FF00 /* Debug */,
+				4FFE75A22B444B350098FF00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CB25F37C2A1934B900D40E6E /* Build configuration list for PBXNativeTarget "ForestFlowUITests" */ = {
+		4FFE75A32B444B350098FF00 /* Build configuration list for PBXNativeTarget "ForestFlowUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CB25F37D2A1934B900D40E6E /* Debug */,
-				CB25F37E2A1934B900D40E6E /* Release */,
+				4FFE75A42B444B350098FF00 /* Debug */,
+				4FFE75A52B444B350098FF00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CB25F3492A1934B800D40E6E /* Project object */;
+	rootObject = 4FFE75702B444B340098FF00 /* Project object */;
 }
