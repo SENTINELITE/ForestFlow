@@ -16,6 +16,7 @@ struct TreeAddView: View {
 
     @State var woodType: WoodType = .div
     @State var stage: Int = 1
+    @State var locationManager: LocationManager = .init()
 
     var body: some View {
         VStack {
@@ -45,10 +46,14 @@ struct TreeAddView: View {
                     self.saveTree()
                 }
         }
+        .onAppear {
+            locationManager.request()
+        }
     }
 
     func saveTree() {
-        let tree = Tree(woodType: woodType.rawValue, stage: stage, forest: forest)
+        guard let location = locationManager.location else { return }
+        let tree = Tree(woodType: woodType.rawValue, stage: stage, lat: location.latitude, long: location.longitude, forest: forest)
         context.insert(forest)
         forest.trees.append(tree)
         dismiss()

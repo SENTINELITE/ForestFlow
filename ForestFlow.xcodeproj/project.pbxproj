@@ -28,6 +28,7 @@
 		4FFE75CB2B4459290098FF00 /* RateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75CA2B4459290098FF00 /* RateType.swift */; };
 		4FFE75CE2B445C720098FF00 /* TreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75CD2B445C720098FF00 /* TreeListView.swift */; };
 		4FFE75D02B445C880098FF00 /* TreeAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75CF2B445C880098FF00 /* TreeAddView.swift */; };
+		4FFE75D52B458ACC0098FF00 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75D42B458ACC0098FF00 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		4FFE75CA2B4459290098FF00 /* RateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateType.swift; sourceTree = "<group>"; };
 		4FFE75CD2B445C720098FF00 /* TreeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeListView.swift; sourceTree = "<group>"; };
 		4FFE75CF2B445C880098FF00 /* TreeAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeAddView.swift; sourceTree = "<group>"; };
+		4FFE75D42B458ACC0098FF00 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 		4FFE75A72B444B860098FF00 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4FFE75D32B458AC40098FF00 /* Location */,
 				4FFE75C52B4456550098FF00 /* Enumerations */,
 				4FFE75A92B444B970098FF00 /* DataModels */,
 			);
@@ -181,7 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				4FFE75C02B44521A0098FF00 /* Modifiers */,
-				4FFE75BF2B44520D0098FF00 /* UIComponents */,
 				4FFE75BA2B4451460098FF00 /* Extensions */,
 			);
 			path = Utils;
@@ -226,13 +228,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		4FFE75BF2B44520D0098FF00 /* UIComponents */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UIComponents;
-			sourceTree = "<group>";
-		};
 		4FFE75C02B44521A0098FF00 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +252,14 @@
 				4FFE75CF2B445C880098FF00 /* TreeAddView.swift */,
 			);
 			path = Tree;
+			sourceTree = "<group>";
+		};
+		4FFE75D32B458AC40098FF00 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				4FFE75D42B458ACC0098FF00 /* LocationManager.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FFE75D02B445C880098FF00 /* TreeAddView.swift in Sources */,
+				4FFE75D52B458ACC0098FF00 /* LocationManager.swift in Sources */,
 				4FFE75B32B444D970098FF00 /* Tree.swift in Sources */,
 				4FFE75CE2B445C720098FF00 /* TreeListView.swift in Sources */,
 				4FFE75B72B444E300098FF00 /* MainView.swift in Sources */,
@@ -569,6 +573,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Need Permission to set Tree to correct Location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need Permission to set Tree to correct Location";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -608,6 +614,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Need Permission to set Tree to correct Location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need Permission to set Tree to correct Location";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
