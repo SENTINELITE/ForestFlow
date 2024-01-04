@@ -44,7 +44,7 @@ struct ForestAddView: View {
 
             Text("Anlegen")
                 .font(.Bold.title2)
-                .foregroundStyle(.green)
+                .foregroundStyle(Color.accentColor)
                 .padding()
                 .button {
                     self.saveForest()

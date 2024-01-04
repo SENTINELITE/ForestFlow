@@ -40,7 +40,7 @@ struct TreeAddView: View {
 
             Text("Hinzufügen")
                 .font(.Bold.title2)
-                .foregroundStyle(.green)
+                .foregroundStyle(Color.accentColor)
                 .padding()
                 .button {
                     self.saveTree()
