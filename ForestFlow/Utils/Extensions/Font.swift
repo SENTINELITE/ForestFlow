@@ -44,5 +44,7 @@ extension SwiftUI.Font {
         static let title4 = Font.system(size: 24, weight: .bold)
         /// Size 32
         static let heading1 = Font.system(size: 32, weight: .bold)
+        /// Size 58
+        static let extraLarge = Font.system(size: 58, weight: .bold)
     }
 }
