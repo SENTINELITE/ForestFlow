@@ -16,13 +16,9 @@ struct ForestDetailView: View {
             TreeListView(forest: forest)
         }
         .navigationTitle(forest.name)
-        .toolbar {
-            ToolbarItemGroup(placement: .topBarTrailing) {
-                NavigationLink(destination: TreeAddView(forest: forest)) {
-                    Image(systemName: "plus")
-                        .font(.Bold.title3)
-                        .foregroundStyle(.green)
-                }
+        .overlay(alignment: .bottomTrailing) {
+            NavigationLink(destination: TreeAddView(forest: forest)) {
+                PlusButton()
             }
         }
     }

@@ -20,13 +20,9 @@ struct ForestListView: View {
             }
         }
         .navigationTitle("Waldlisten")
-        .toolbar {
-            ToolbarItemGroup(placement: .topBarTrailing) {
-                NavigationLink(destination: ForestAddView()) {
-                    Image(systemName: "plus")
-                        .font(.Bold.title3)
-                        .foregroundStyle(.green)
-                }
+        .overlay(alignment: .bottomTrailing) {
+            NavigationLink(destination: ForestAddView()) {
+                PlusButton()
             }
         }
         .navigationDestination(for: Forest.self) { forest in
