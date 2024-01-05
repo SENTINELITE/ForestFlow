@@ -18,7 +18,9 @@ struct ForestOwnerAddView: View {
     
     var body: some View {
         List {
-            
+            ForEach(forestOwners, id: \.self) { forestOwner in
+                Text(forestOwner.name)
+            }
         }
         .overlay(alignment: .bottomTrailing) {
             PlusButton()
