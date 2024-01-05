@@ -8,21 +8,14 @@
 import SwiftUI
 
 struct AppTabView: View {
-    @Binding var selection: AppScreen?
-    
+    @State var selection: AppScreen = .forest
+
     var body: some View {
         TabView(selection: $selection) {
             ForEach(AppScreen.allCases, id: \.self) { screen in
-                NavigationStack {
-                    screen.destination
-                        .tag(screen as AppScreen?)
-                        .tabItem { screen.label }
-                }
+                screen.destination
+                    .tabItem { screen.label }
             }
         }
     }
-}
-
-#Preview {
-    AppTabView(selection: .constant(.forest))
 }

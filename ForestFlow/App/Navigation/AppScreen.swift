@@ -14,6 +14,13 @@ enum AppScreen: CaseIterable {
 }
 
 extension AppScreen {
+    var navigationTitle: String {
+        switch self {
+        case .forest: "Waldliste"
+        case .settings: "Einstellungen"
+        }
+    }
+
     @ViewBuilder
     var label: some View {
         switch self {

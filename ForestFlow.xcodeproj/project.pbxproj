@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F5F9B302B481E6E0037CB5C /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5F9B2E2B481E6E0037CB5C /* AppScreen.swift */; };
+		4F5F9B312B481E6E0037CB5C /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5F9B2F2B481E6E0037CB5C /* AppTabView.swift */; };
+		4F5F9B372B48229E0037CB5C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5F9B362B48229E0037CB5C /* SettingsView.swift */; };
 		4FFE757C2B444B340098FF00 /* ForestFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE757B2B444B340098FF00 /* ForestFlowApp.swift */; };
 		4FFE75802B444B350098FF00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FFE757F2B444B350098FF00 /* Assets.xcassets */; };
 		4FFE75842B444B350098FF00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FFE75832B444B350098FF00 /* Preview Assets.xcassets */; };
@@ -50,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F5F9B2E2B481E6E0037CB5C /* AppScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppScreen.swift; sourceTree = "<group>"; };
+		4F5F9B2F2B481E6E0037CB5C /* AppTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		4F5F9B362B48229E0037CB5C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4FFE75782B444B340098FF00 /* ForestFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForestFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FFE757B2B444B340098FF00 /* ForestFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestFlowApp.swift; sourceTree = "<group>"; };
 		4FFE757F2B444B350098FF00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +110,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F5F9B2D2B481E6E0037CB5C /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				4F5F9B2E2B481E6E0037CB5C /* AppScreen.swift */,
+				4F5F9B2F2B481E6E0037CB5C /* AppTabView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		4F5F9B352B4822940037CB5C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4F5F9B362B48229E0037CB5C /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		4FFE756F2B444B340098FF00 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +188,8 @@
 		4FFE75A62B444B810098FF00 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				4F5F9B352B4822940037CB5C /* Settings */,
+				4F5F9B2D2B481E6E0037CB5C /* Navigation */,
 				4FFE75AA2B444BAE0098FF00 /* Main */,
 				4FFE75AB2B444BBE0098FF00 /* Forest */,
 				4FFE75CC2B445C600098FF00 /* Tree */,
@@ -403,8 +428,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F5F9B372B48229E0037CB5C /* SettingsView.swift in Sources */,
 				4FFE75D02B445C880098FF00 /* TreeAddView.swift in Sources */,
 				4FFE75D52B458ACC0098FF00 /* LocationManager.swift in Sources */,
+				4F5F9B302B481E6E0037CB5C /* AppScreen.swift in Sources */,
 				4FFE75B32B444D970098FF00 /* Tree.swift in Sources */,
 				4FFE75CE2B445C720098FF00 /* TreeListView.swift in Sources */,
 				4FFE75B72B444E300098FF00 /* MainView.swift in Sources */,
@@ -416,6 +443,7 @@
 				4FFE75BC2B4451510098FF00 /* Font.swift in Sources */,
 				4FFE75B12B444D810098FF00 /* ForestOwner.swift in Sources */,
 				4FFE75B92B4450C70098FF00 /* ForestCell.swift in Sources */,
+				4F5F9B312B481E6E0037CB5C /* AppTabView.swift in Sources */,
 				4FFE75C22B4452230098FF00 /* ButtonWrapper.swift in Sources */,
 				4FFE75CB2B4459290098FF00 /* RateType.swift in Sources */,
 				4FFE75C42B4454FE0098FF00 /* ForestDetailView.swift in Sources */,

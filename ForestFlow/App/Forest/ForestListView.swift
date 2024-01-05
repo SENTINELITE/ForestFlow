@@ -12,21 +12,23 @@ struct ForestListView: View {
     @Query private var forests: [Forest]
 
     var body: some View {
-        List {
-            ForEach(forests, id: \.self) { forest in
-                NavigationLink(value: forest) {
-                    ForestCell(forest: forest)
+        NavigationStack {
+            List {
+                ForEach(forests, id: \.self) { forest in
+                    NavigationLink(value: forest) {
+                        ForestCell(forest: forest)
+                    }
                 }
             }
-        }
-        .navigationTitle("Waldlisten")
-        .overlay(alignment: .bottomTrailing) {
-            NavigationLink(destination: ForestAddView()) {
-                PlusButton()
+            .navigationTitle("Waldliste")
+            .overlay(alignment: .bottomTrailing) {
+                NavigationLink(destination: ForestAddView()) {
+                    PlusButton()
+                }
             }
-        }
-        .navigationDestination(for: Forest.self) { forest in
-            ForestDetailView(forest: forest)
+            .navigationDestination(for: Forest.self) { forest in
+                ForestDetailView(forest: forest)
+            }
         }
     }
 }
