@@ -37,7 +37,7 @@ extension AppScreen {
         case .forest:
             ForestListView()
         case .settings:
-            EmptyView()
+            SettingsView()
         }
     }
 }
