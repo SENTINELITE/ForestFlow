@@ -28,19 +28,19 @@ struct WoodTypeAddView: View {
                 .button {
                     showAlert.toggle()
                 }
-                .alert("Hinzufügen", isPresented: $showAlert, actions: {
-                    TextField("Name", text: $name)
-                    
-                   Button("Speichern", action: {
-                       saveWoodType()
-                       name = ""
-                   })
-                    Button("Abbrechen", role: .cancel, action: {})
-                }, message: {
-                    Text("Bitte gib den Namen der Baumart ein.")
-                })
         }
-
+        .alert("Hinzufügen", isPresented: $showAlert, actions: {
+            TextField("Name", text: $name)
+            
+            Button("Speichern", action: {
+                saveWoodType()
+                name = ""
+            })
+            Button("Abbrechen", role: .cancel, action: {})
+        }, message: {
+            Text("Bitte gib den Namen der Baumart ein.")
+        })
+        
     }
     
     func saveWoodType() {
