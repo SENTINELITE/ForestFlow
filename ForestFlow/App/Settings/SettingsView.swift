@@ -19,7 +19,7 @@ struct SettingsView: View {
                         Card(name: "Waldbesitzer", systemImage: "person.text.rectangle.fill")
                     }
                 }
-                HStack {
+                HStack(spacing: 20.0) {
                     NavigationLink(destination: WoodTypeAddView()) {
                         Card(name: "Baumart", systemImage: "tree.circle.fill")
                     }
