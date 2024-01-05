@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct TreeAddView: View {
+    @Query private var remarks: [Remark]
     @Query private var woodTypes: [WoodType]
     @Query private var forestOwners: [ForestOwner]
 
@@ -20,6 +21,7 @@ struct TreeAddView: View {
     @State var woodType: WoodType?
     @State var stage: Int = 1
     @State var forestOwner: ForestOwner?
+    @State var remark: Remark?
     @State var locationManager: LocationManager = .init()
 
     var body: some View {
@@ -31,6 +33,12 @@ struct TreeAddView: View {
                     Picker("Waldbesitzer", selection: $forestOwner) {
                         ForEach(forestOwners, id: \.id) { forestOwner in
                             Text(forestOwner.name)
+                        }
+                    }
+                    
+                    Picker("Bemerkung", selection: $remark) {
+                        ForEach(remarks, id: \.id) { remark in
+                            Text(remark.name)
                         }
                     }
 
