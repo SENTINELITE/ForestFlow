@@ -12,9 +12,11 @@ import SwiftData
 class RateType {
     let name: String
     var forests: [Forest]
+    var rateValues: [RateValue]
 
-    init(name: String, forests: [Forest] = []) {
+    init(name: String, forests: [Forest] = [], rateValues: [RateValue] = []) {
         self.name = name
         self.forests = forests
+        self.rateValues = rateValues
     }
 }

@@ -6,3 +6,18 @@
 //
 
 import Foundation
+import SwiftData
+
+@Model
+class RateValue {
+    var number: Int
+    var volume: Float
+    @Relationship() var rateTypes: [RateType]
+    
+    init(number: Int, volume: Float, rateTypes: [RateType] = []) {
+        self.number = number
+        self.volume = volume
+        self.rateTypes = rateTypes
+    }
+    
+}
