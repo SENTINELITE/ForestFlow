@@ -50,6 +50,7 @@ struct ForestAddView: View {
                     self.saveForest()
                 }
         }
+        .toolbar(.hidden, for: .tabBar)
     }
 
     func saveForest() {

@@ -24,5 +24,6 @@ struct TreeListView: View {
                 }
             }
         }
+        .toolbar(.hidden, for: .tabBar)
     }
 }
