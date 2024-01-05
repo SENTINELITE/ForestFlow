@@ -33,6 +33,7 @@ struct ForestOwnerAddView: View {
                     
                    Button("Speichern", action: {
                        saveForestOwner()
+                       name = ""
                    })
                     Button("Abbrechen", role: .cancel, action: {})
                 }, message: {
