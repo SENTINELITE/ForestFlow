@@ -18,6 +18,7 @@ struct TreeAddView: View {
 
     @State var woodType = ""
     @State var stage: Int = 1
+    @State var forestOwner: Int = 1
     @State var locationManager: LocationManager = .init()
 
     var body: some View {
@@ -45,6 +46,13 @@ struct TreeAddView: View {
                                     woodType = type.name
                                     print(woodType)
                                 }
+                        }
+                    }
+                    
+                    Picker("Waldbesitzer", selection: $forestOwner) {
+                        ForEach(forest.forestOwner, id: \.self) { forestOwner in
+                            Text(forestOwner)
+                                .tag(forestOwner as String?)
                         }
                     }
 
