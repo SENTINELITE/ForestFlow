@@ -34,6 +34,7 @@
 		4FFE75D52B458ACC0098FF00 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75D42B458ACC0098FF00 /* LocationManager.swift */; };
 		CB059A382B4719300093E374 /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB059A372B4719300093E374 /* PlusButton.swift */; };
 		CBE1CF3A2B4826970076B445 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF392B4826970076B445 /* Card.swift */; };
+		CBE1CF3D2B48470B0076B445 /* ForestOwnerAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF3C2B48470B0076B445 /* ForestOwnerAddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		4FFE75D42B458ACC0098FF00 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CB059A372B4719300093E374 /* PlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
 		CBE1CF392B4826970076B445 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		CBE1CF3C2B48470B0076B445 /* ForestOwnerAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestOwnerAddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 		4FFE75A62B444B810098FF00 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				CBE1CF3B2B4846490076B445 /* ForestOwner */,
 				4F5F9B352B4822940037CB5C /* Settings */,
 				4F5F9B2D2B481E6E0037CB5C /* Navigation */,
 				4FFE75AA2B444BAE0098FF00 /* Main */,
@@ -299,6 +302,14 @@
 				CB059A372B4719300093E374 /* PlusButton.swift */,
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		CBE1CF3B2B4846490076B445 /* ForestOwner */ = {
+			isa = PBXGroup;
+			children = (
+				CBE1CF3C2B48470B0076B445 /* ForestOwnerAddView.swift */,
+			);
+			path = ForestOwner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F5F9B372B48229E0037CB5C /* SettingsView.swift in Sources */,
+				CBE1CF3D2B48470B0076B445 /* ForestOwnerAddView.swift in Sources */,
 				4FFE75D02B445C880098FF00 /* TreeAddView.swift in Sources */,
 				4FFE75D52B458ACC0098FF00 /* LocationManager.swift in Sources */,
 				4F5F9B302B481E6E0037CB5C /* AppScreen.swift in Sources */,
