@@ -11,8 +11,10 @@ import SwiftData
 @Model
 class ForestOwner {
     var name: String
+    var forests: [Forest]?
 
-    init(name: String) {
+    init(name: String, forests: [Forest]? = nil) {
         self.name = name
+        self.forests = forests
     }
 }
