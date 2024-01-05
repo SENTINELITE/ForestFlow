@@ -19,8 +19,13 @@ struct SettingsView: View {
                         Card(name: "Waldbesitzer", systemImage: "person.text.rectangle.fill")
                     }
                 }
-                NavigationLink(destination: WoodTypeAddView()) {
-                    Card(name: "Baumart", systemImage: "tree.circle.fill")
+                HStack {
+                    NavigationLink(destination: WoodTypeAddView()) {
+                        Card(name: "Baumart", systemImage: "tree.circle.fill")
+                    }
+                    NavigationLink(destination: RemarkAddView()) {
+                        Card(name: "Bemerkungen", systemImage: "pencil.and.list.clipboard")
+                    }
                 }
                 Spacer()
             }
