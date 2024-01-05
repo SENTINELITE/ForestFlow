@@ -38,6 +38,8 @@
 		CBE1CF422B4856DE0076B445 /* WoodTypeAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF412B4856DE0076B445 /* WoodTypeAddView.swift */; };
 		CBE1CF492B4870270076B445 /* Remark.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF482B4870270076B445 /* Remark.swift */; };
 		CBE1CF4B2B48705A0076B445 /* RemarkAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF4A2B48705A0076B445 /* RemarkAddView.swift */; };
+		CBE1CF4D2B4873350076B445 /* RateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF4C2B4873350076B445 /* RateType.swift */; };
+		CBE1CF4F2B4873780076B445 /* RateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF4E2B4873780076B445 /* RateValue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		CBE1CF412B4856DE0076B445 /* WoodTypeAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodTypeAddView.swift; sourceTree = "<group>"; };
 		CBE1CF482B4870270076B445 /* Remark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remark.swift; sourceTree = "<group>"; };
 		CBE1CF4A2B48705A0076B445 /* RemarkAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemarkAddView.swift; sourceTree = "<group>"; };
+		CBE1CF4C2B4873350076B445 /* RateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateType.swift; sourceTree = "<group>"; };
+		CBE1CF4E2B4873780076B445 /* RateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +242,8 @@
 				4FFE75B22B444D970098FF00 /* Tree.swift */,
 				CBE1CF3F2B4856500076B445 /* WoodType.swift */,
 				CBE1CF482B4870270076B445 /* Remark.swift */,
+				CBE1CF4C2B4873350076B445 /* RateType.swift */,
+				CBE1CF4E2B4873780076B445 /* RateValue.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -474,6 +480,7 @@
 				CBE1CF4B2B48705A0076B445 /* RemarkAddView.swift in Sources */,
 				4F5F9B302B481E6E0037CB5C /* AppScreen.swift in Sources */,
 				4FFE75B32B444D970098FF00 /* Tree.swift in Sources */,
+				CBE1CF4F2B4873780076B445 /* RateValue.swift in Sources */,
 				4FFE75CE2B445C720098FF00 /* TreeListView.swift in Sources */,
 				4FFE75B72B444E300098FF00 /* MainView.swift in Sources */,
 				4FFE75BE2B4452010098FF00 /* View.swift in Sources */,
@@ -485,6 +492,7 @@
 				4FFE75B92B4450C70098FF00 /* ForestCell.swift in Sources */,
 				CBE1CF492B4870270076B445 /* Remark.swift in Sources */,
 				4F5F9B312B481E6E0037CB5C /* AppTabView.swift in Sources */,
+				CBE1CF4D2B4873350076B445 /* RateType.swift in Sources */,
 				4FFE75C22B4452230098FF00 /* ButtonWrapper.swift in Sources */,
 				4FFE75CB2B4459290098FF00 /* RateType.swift in Sources */,
 				4FFE75C42B4454FE0098FF00 /* ForestDetailView.swift in Sources */,
