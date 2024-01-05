@@ -22,6 +22,7 @@ struct ForestOwnerAddView: View {
                 Text(forestOwner.name)
             }
         }
+        .navigationTitle("Waldbesitzer")
         .overlay(alignment: .bottomTrailing) {
             PlusButton()
                 .button {
