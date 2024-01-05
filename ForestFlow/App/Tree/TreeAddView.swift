@@ -22,6 +22,29 @@ struct TreeAddView: View {
         VStack {
             Form {
                 Section("Bauminformationen") {
+                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 60))], spacing: 15) {
+                        ForEach(WoodType.allCases, id: \.self) { type in
+                            Circle()
+                                .foregroundColor(.accentColor)
+                                .opacity(0.7)
+                                .frame(width: 55, height: 55)
+                                .overlay(
+                                    Text(type.rawValue)
+                                        .font(.headline)
+                                        .fontWeight(.semibold)
+                                )
+                                .overlay(
+                                    Circle()
+                                        .stroke(woodType == type ? Color.brown : Color.clear, lineWidth: 3)
+                                        .padding(-5)
+                                    
+                                )
+                                .onTapGesture {
+                                    woodType = type
+                                    print(woodType)
+                                }
+                        }
+                    }
                     Picker("Baumart", selection: $woodType) {
                         ForEach(WoodType.allCases, id: \.self) { type in
                             Text(type.rawValue)
