@@ -16,7 +16,8 @@ struct ForestFlowApp: App {
                 .modelContainer(for: [
                     Forest.self,
                     ForestOwner.self,
-                    Tree.self
+                    Tree.self,
+                    WoodType.self
                 ])
         }
     }
