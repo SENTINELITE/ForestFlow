@@ -15,7 +15,7 @@ struct SettingsView: View {
                     NavigationLink(destination: Text("Tarif")) {
                         Card(name: "Tarif", systemImage: "dollarsign.circle.fill")
                     }
-                    NavigationLink(destination: Text("Waldbesitzer")) {
+                    NavigationLink(destination: ForestOwnerAddView()) {
                         Card(name: "Waldbesitzer", systemImage: "person.text.rectangle.fill")
                     }
                 }
