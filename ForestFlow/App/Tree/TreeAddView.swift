@@ -6,15 +6,17 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct TreeAddView: View {
-
+    @Query private var woodTypes: [WoodType]
+    
     @Environment(\.dismiss) var dismiss
     @Environment(\.modelContext) var context
 
     @Bindable var forest: Forest
 
-    @State var woodType: WoodType = .div
+    @State var woodType = ""
     @State var stage: Int = 1
     @State var locationManager: LocationManager = .init()
 
@@ -23,31 +25,26 @@ struct TreeAddView: View {
             Form {
                 Section("Bauminformationen") {
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 60))], spacing: 15) {
-                        ForEach(WoodType.allCases, id: \.self) { type in
+                        ForEach(woodTypes, id: \.self) { type in
                             Circle()
                                 .foregroundColor(.accentColor)
                                 .opacity(0.7)
                                 .frame(width: 55, height: 55)
                                 .overlay(
-                                    Text(type.rawValue)
+                                    Text(type.name)
                                         .font(.headline)
                                         .fontWeight(.semibold)
                                 )
                                 .overlay(
                                     Circle()
-                                        .stroke(woodType == type ? Color.brown : Color.clear, lineWidth: 3)
+                                        .stroke(woodType == type.name ? Color.brown : Color.clear, lineWidth: 3)
                                         .padding(-5)
                                     
                                 )
                                 .onTapGesture {
-                                    woodType = type
+                                    woodType = type.name
                                     print(woodType)
                                 }
-                        }
-                    }
-                    Picker("Baumart", selection: $woodType) {
-                        ForEach(WoodType.allCases, id: \.self) { type in
-                            Text(type.rawValue)
                         }
                     }
 
@@ -76,7 +73,7 @@ struct TreeAddView: View {
 
     func saveTree() {
         guard let location = locationManager.location else { return }
-        let tree = Tree(woodType: woodType.rawValue, stage: stage, lat: location.latitude, long: location.longitude, forest: forest)
+        let tree = Tree(woodType: woodType, stage: stage, lat: location.latitude, long: location.longitude, forest: forest)
         context.insert(forest)
         forest.trees.append(tree)
         dismiss()
