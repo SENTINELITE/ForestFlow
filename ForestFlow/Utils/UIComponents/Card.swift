@@ -17,7 +17,7 @@ struct Card: View {
             RoundedRectangle(cornerRadius: 25, style: .continuous)
                 .frame(width: cardSize, height: 150)
                 .foregroundStyle(.white)
-                .shadow(radius: 10)
+                .shadow(radius: 8)
                 
             
             VStack {
@@ -30,6 +30,7 @@ struct Card: View {
                 
                 Text(name)
                     .font(.Bold.title4)
+                    .frame(width: cardSize, alignment: .center)
             }
            
         }
