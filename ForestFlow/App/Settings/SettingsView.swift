@@ -24,7 +24,7 @@ struct SettingsView: View {
                 }
                 Spacer()
             }
-            .padding(.top, 15)
+            .padding()
             .navigationTitle("Einstellungen")
         }
     }

@@ -13,7 +13,6 @@ struct ForestOwnerAddView: View {
     @Environment(\.modelContext) var context
     
     @State private var showAlert = false
-    
     @State private var name: String = ""
     
     var body: some View {
@@ -28,18 +27,17 @@ struct ForestOwnerAddView: View {
                 .button {
                     showAlert.toggle()
                 }
-                .alert("Hinzufügen", isPresented: $showAlert, actions: {
-                    TextField("Name", text: $name)
-                    
-                   Button("Speichern", action: {
-                       saveForestOwner()
-                       name = ""
-                   })
-                    Button("Abbrechen", role: .cancel, action: {})
-                }, message: {
-                    Text("Bitte gib den Namen des Waldbesitzers ein.")
-                })
         }
+        .alert("Hinzufügen", isPresented: $showAlert, actions: {
+            TextField("Name", text: $name)
+            Button("Speichern", action: {
+                saveForestOwner()
+                name = ""
+            })
+            Button("Abbrechen", role: .cancel, action: {})
+        }, message: {
+            Text("Bitte gib den Namen des Waldbesitzers ein.")
+        })
     }
     
     func saveForestOwner() {
