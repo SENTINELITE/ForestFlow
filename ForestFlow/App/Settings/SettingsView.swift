@@ -10,8 +10,8 @@ import SwiftUI
 struct SettingsView: View {
     var body: some View {
         NavigationStack {
-            VStack(alignment: .leading) {
-                HStack {
+            VStack(alignment: .leading, spacing: 20.0) {
+                HStack(spacing: 20.0) {
                     NavigationLink(destination: Text("Tarif")) {
                         Card(name: "Tarif", systemImage: "dollarsign.circle.fill")
                     }

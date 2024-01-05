@@ -13,10 +13,20 @@ struct ForestListView: View {
 
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(forests, id: \.self) { forest in
-                    NavigationLink(value: forest) {
-                        ForestCell(forest: forest)
+            ZStack {
+                if forests.isEmpty {
+                    ContentUnavailableView(
+                        "Noch kein Wald angelegt",
+                        systemImage: "tree.circle.fill",
+                        description: Text("Erstelle einen neuen Wald indem du auf das + drückst.")
+                    )
+                } else {
+                    List {
+                        ForEach(forests, id: \.self) { forest in
+                            NavigationLink(value: forest) {
+                                ForestCell(forest: forest)
+                            }
+                        }
                     }
                 }
             }
