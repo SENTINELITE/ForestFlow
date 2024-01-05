@@ -9,10 +9,12 @@ import Foundation
 import SwiftData
 
 @Model
-class WoodType {
+class WoodType: Selectable {
     var name: String
-    
-    init(name: String) {
+    var trees: [Tree]
+
+    init(name: String, trees: [Tree] = []) {
         self.name = name
+        self.trees = trees
     }
 }

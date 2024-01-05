@@ -10,13 +10,13 @@ import SwiftData
 
 @Model
 class Tree {
-    var woodType: String //WoodType Enum
+    var woodType: WoodType //WoodType Enum
     var stage: Int
     var latitude: CGFloat
     var longitude: CGFloat
     var forest: Forest?
 
-    init(woodType: String, stage: Int, lat: CGFloat, long: CGFloat, forest: Forest? = nil) {
+    init(woodType: WoodType, stage: Int, lat: CGFloat, long: CGFloat, forest: Forest? = nil) {
         self.woodType = woodType
         self.stage = stage
         self.latitude = lat

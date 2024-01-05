@@ -13,7 +13,7 @@ class Forest {
     var name: String
     var location: String
     var forestOwner: ForestOwner?
-    var rate: String // TarifEnum
+    var rateType: RateType? // TarifEnum
     var cropLoss: Int
     @Relationship(deleteRule: .cascade, inverse: \Tree.forest) var trees: [Tree]
 
@@ -21,14 +21,14 @@ class Forest {
         name: String,
         location: String,
         forestOwner: ForestOwner? = nil,
-        rate: String,
+        rateType: RateType? = nil,
         cropLoss: Int,
         trees: [Tree] = []
     ) {
         self.name = name
         self.location = location
         self.forestOwner = forestOwner
-        self.rate = rate
+        self.rateType = rateType
         self.cropLoss = cropLoss
         self.trees = trees
     }

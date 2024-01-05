@@ -16,7 +16,7 @@ struct TreeListView: View {
         List {
             ForEach(forest.trees, id: \.self) { tree in
                 VStack(alignment: .leading, spacing: 5.0) {
-                    Text("\(tree.stage) \(tree.woodType)")
+                    Text("\(tree.stage) \(tree.woodType.name)")
                         .font(.Bold.regular)
 
                     Text("Lat: \(tree.latitude) - Long: \(tree.longitude)")

@@ -12,9 +12,11 @@ struct ForestAddView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.modelContext) var context
 
+    @Query var rateTypes: [RateType]
+
     @State var name: String = ""
     @State var location: String = ""
-    @State var rateType: RateType = .short
+    @State var rateType: RateType?
     @State var cropLoss: Int = 12
 
     var body: some View {
@@ -27,8 +29,8 @@ struct ForestAddView: View {
 
                 Section("Tarifeinstellung") {
                     Picker("Tarif", selection: $rateType) {
-                        ForEach(RateType.allCases, id: \.self) { rate in
-                            Text(rate.rawValue)
+                        ForEach(rateTypes, id: \.id) { rate in
+                            Text(rate.name)
                         }
                     }
 
@@ -54,7 +56,7 @@ struct ForestAddView: View {
     }
 
     func saveForest() {
-        let forest = Forest(name: name, location: location, rate: rateType.rawValue, cropLoss: cropLoss)
+        let forest = Forest(name: name, location: location, rateType: rateType, cropLoss: cropLoss)
         context.insert(forest)
         dismiss()
     }

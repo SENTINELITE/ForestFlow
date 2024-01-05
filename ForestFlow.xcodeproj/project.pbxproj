@@ -10,6 +10,8 @@
 		4F5F9B302B481E6E0037CB5C /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5F9B2E2B481E6E0037CB5C /* AppScreen.swift */; };
 		4F5F9B312B481E6E0037CB5C /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5F9B2F2B481E6E0037CB5C /* AppTabView.swift */; };
 		4F5F9B372B48229E0037CB5C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5F9B362B48229E0037CB5C /* SettingsView.swift */; };
+		4FA615B52B489AAA0002C7E2 /* CircleSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA615B42B489AAA0002C7E2 /* CircleSelection.swift */; };
+		4FA615B82B489CBE0002C7E2 /* Selectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA615B72B489CBE0002C7E2 /* Selectable.swift */; };
 		4FFE757C2B444B340098FF00 /* ForestFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE757B2B444B340098FF00 /* ForestFlowApp.swift */; };
 		4FFE75802B444B350098FF00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FFE757F2B444B350098FF00 /* Assets.xcassets */; };
 		4FFE75842B444B350098FF00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FFE75832B444B350098FF00 /* Preview Assets.xcassets */; };
@@ -27,7 +29,6 @@
 		4FFE75BE2B4452010098FF00 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75BD2B4452010098FF00 /* View.swift */; };
 		4FFE75C22B4452230098FF00 /* ButtonWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75C12B4452230098FF00 /* ButtonWrapper.swift */; };
 		4FFE75C42B4454FE0098FF00 /* ForestDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75C32B4454FE0098FF00 /* ForestDetailView.swift */; };
-		4FFE75CB2B4459290098FF00 /* RateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75CA2B4459290098FF00 /* RateType.swift */; };
 		4FFE75CE2B445C720098FF00 /* TreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75CD2B445C720098FF00 /* TreeListView.swift */; };
 		4FFE75D02B445C880098FF00 /* TreeAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75CF2B445C880098FF00 /* TreeAddView.swift */; };
 		4FFE75D52B458ACC0098FF00 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75D42B458ACC0098FF00 /* LocationManager.swift */; };
@@ -63,6 +64,8 @@
 		4F5F9B2E2B481E6E0037CB5C /* AppScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppScreen.swift; sourceTree = "<group>"; };
 		4F5F9B2F2B481E6E0037CB5C /* AppTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
 		4F5F9B362B48229E0037CB5C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4FA615B42B489AAA0002C7E2 /* CircleSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSelection.swift; sourceTree = "<group>"; };
+		4FA615B72B489CBE0002C7E2 /* Selectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selectable.swift; sourceTree = "<group>"; };
 		4FFE75782B444B340098FF00 /* ForestFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForestFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FFE757B2B444B340098FF00 /* ForestFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestFlowApp.swift; sourceTree = "<group>"; };
 		4FFE757F2B444B350098FF00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,7 +87,6 @@
 		4FFE75BD2B4452010098FF00 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		4FFE75C12B4452230098FF00 /* ButtonWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWrapper.swift; sourceTree = "<group>"; };
 		4FFE75C32B4454FE0098FF00 /* ForestDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestDetailView.swift; sourceTree = "<group>"; };
-		4FFE75CA2B4459290098FF00 /* RateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateType.swift; sourceTree = "<group>"; };
 		4FFE75CD2B445C720098FF00 /* TreeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeListView.swift; sourceTree = "<group>"; };
 		4FFE75CF2B445C880098FF00 /* TreeAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeAddView.swift; sourceTree = "<group>"; };
 		4FFE75D42B458ACC0098FF00 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -139,6 +141,14 @@
 				4F5F9B362B48229E0037CB5C /* SettingsView.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		4FA615B62B489CB40002C7E2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4FA615B72B489CBE0002C7E2 /* Selectable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		4FFE756F2B444B340098FF00 = {
@@ -218,7 +228,6 @@
 			isa = PBXGroup;
 			children = (
 				4FFE75D32B458AC40098FF00 /* Location */,
-				4FFE75C52B4456550098FF00 /* Enumerations */,
 				4FFE75A92B444B970098FF00 /* DataModels */,
 			);
 			path = Common;
@@ -227,6 +236,7 @@
 		4FFE75A82B444B8A0098FF00 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4FA615B62B489CB40002C7E2 /* Protocols */,
 				CB059A362B4719190093E374 /* UIComponents */,
 				4FFE75C02B44521A0098FF00 /* Modifiers */,
 				4FFE75BA2B4451460098FF00 /* Extensions */,
@@ -285,14 +295,6 @@
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
-		4FFE75C52B4456550098FF00 /* Enumerations */ = {
-			isa = PBXGroup;
-			children = (
-				4FFE75CA2B4459290098FF00 /* RateType.swift */,
-			);
-			path = Enumerations;
-			sourceTree = "<group>";
-		};
 		4FFE75CC2B445C600098FF00 /* Tree */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,6 +317,7 @@
 			children = (
 				CBE1CF392B4826970076B445 /* Card.swift */,
 				CB059A372B4719300093E374 /* PlusButton.swift */,
+				4FA615B42B489AAA0002C7E2 /* CircleSelection.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				CBE1CF4B2B48705A0076B445 /* RemarkAddView.swift in Sources */,
 				4F5F9B302B481E6E0037CB5C /* AppScreen.swift in Sources */,
 				4FFE75B32B444D970098FF00 /* Tree.swift in Sources */,
+				4FA615B82B489CBE0002C7E2 /* Selectable.swift in Sources */,
 				CBE1CF4F2B4873780076B445 /* RateValue.swift in Sources */,
 				4FFE75CE2B445C720098FF00 /* TreeListView.swift in Sources */,
 				4FFE75B72B444E300098FF00 /* MainView.swift in Sources */,
@@ -489,12 +493,12 @@
 				4FFE75B52B444E190098FF00 /* ForestAddView.swift in Sources */,
 				4FFE75BC2B4451510098FF00 /* Font.swift in Sources */,
 				4FFE75B12B444D810098FF00 /* ForestOwner.swift in Sources */,
+				4FA615B52B489AAA0002C7E2 /* CircleSelection.swift in Sources */,
 				4FFE75B92B4450C70098FF00 /* ForestCell.swift in Sources */,
 				CBE1CF492B4870270076B445 /* Remark.swift in Sources */,
 				4F5F9B312B481E6E0037CB5C /* AppTabView.swift in Sources */,
 				CBE1CF4D2B4873350076B445 /* RateType.swift in Sources */,
 				4FFE75C22B4452230098FF00 /* ButtonWrapper.swift in Sources */,
-				4FFE75CB2B4459290098FF00 /* RateType.swift in Sources */,
 				4FFE75C42B4454FE0098FF00 /* ForestDetailView.swift in Sources */,
 				CBE1CF402B4856500076B445 /* WoodType.swift in Sources */,
 				4FFE75AF2B444C0C0098FF00 /* Forest.swift in Sources */,
