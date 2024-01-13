@@ -10,12 +10,12 @@ import SwiftData
 
 @Model
 class RateValue {
-    var number: Int
+    var stage: Int
     var volume: Float
     @Relationship() var rateTypes: [RateType]
     
-    init(number: Int, volume: Float, rateTypes: [RateType] = []) {
-        self.number = number
+    init(stage: Int, volume: Float, rateTypes: [RateType] = []) {
+        self.stage = stage
         self.volume = volume
         self.rateTypes = rateTypes
     }
