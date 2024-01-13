@@ -25,14 +25,10 @@ struct RateValueAddView: View {
                 }
                 
                 Section("Stufen") {
-                    ForEach(rateValues, id: \.self) { rateValue in
-                        HStack {
-                            Text("\(rateValue.stage)")
-                            Stepper("Volume: \(rateValue.volume)", onIncrement: {
-                                volume += 0.1
-                            }, onDecrement: {
-                                volume -= 0.1
-                            })
+                    ForEach($rateValues, id: \.self) { $rateValue in
+                        VStack(alignment: .leading) {
+                            Text("Stufe: \(rateValue.stage)")
+                            Stepper("Volumen: \(rateValue.volume)", value: $rateValue.volume, step: 0.1)
                         }
                     }
                     AddButton()
@@ -57,7 +53,7 @@ struct RateValueAddView: View {
     }
     
     func saveRateType() {
-        let rateType = RateType(name: name)
+        let rateType = RateType(name: name, rateValues: rateValues)
         context.insert(rateType)
         print(rateType.rateValues)
         dismiss()
