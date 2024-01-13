@@ -18,6 +18,7 @@ struct TreeAddView: View {
 
     @Bindable var forest: Forest
 
+    @State var rateType: RateType?
     @State var woodType: WoodType?
     @State var stage: Int = 1
     @State var forestOwner: ForestOwner?
@@ -39,12 +40,6 @@ struct TreeAddView: View {
                     Picker("Bemerkung", selection: $remark) {
                         ForEach(remarks, id: \.id) { remark in
                             Text(remark.name)
-                        }
-                    }
-
-                    Picker("Baumstufe", selection: $stage) {
-                        ForEach(0...17, id: \.self) {
-                            Text("\($0)")
                         }
                     }
                 }
