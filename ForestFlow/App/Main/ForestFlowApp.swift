@@ -18,7 +18,9 @@ struct ForestFlowApp: App {
                     ForestOwner.self,
                     Tree.self,
                     WoodType.self,
-                    Remark.self
+                    Remark.self,
+                    RateType.self,
+                    RateValue.self
                 ])
         }
     }
