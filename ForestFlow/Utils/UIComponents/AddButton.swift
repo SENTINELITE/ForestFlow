@@ -12,8 +12,10 @@ struct AddButton: View {
         HStack {
             Image(systemName: "plus.circle.fill")
                 .foregroundStyle(.green)
-                .font(.Regular.title)
+                .font(.Regular.title2)
             Text("Stufe hinzufügen")
+                .font(.Regular.regular)
+                .foregroundStyle(.black)
         }
     }
 }
