@@ -23,6 +23,7 @@ struct WoodTypeAddView: View {
             }
         }
         .navigationTitle("Baumart")
+        .toolbar(.hidden, for: .tabBar)
         .overlay(alignment: .bottomTrailing) {
             PlusButton()
                 .button {

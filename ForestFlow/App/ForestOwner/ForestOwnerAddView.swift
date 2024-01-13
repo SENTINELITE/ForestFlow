@@ -22,6 +22,7 @@ struct ForestOwnerAddView: View {
             }
         }
         .navigationTitle("Waldbesitzer")
+        .toolbar(.hidden, for: .tabBar)
         .overlay(alignment: .bottomTrailing) {
             PlusButton()
                 .button {

@@ -23,6 +23,7 @@ struct RemarkAddView: View {
             }
         }
         .navigationTitle("Bemerkungen")
+        .toolbar(.hidden, for: .tabBar)
         .overlay(alignment: .bottomTrailing) {
             PlusButton()
                 .button {
