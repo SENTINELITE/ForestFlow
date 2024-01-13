@@ -12,7 +12,7 @@ struct SettingsView: View {
         NavigationStack {
             VStack(alignment: .leading, spacing: 20.0) {
                 HStack(spacing: 20.0) {
-                    NavigationLink(destination: Text("Tarif")) {
+                    NavigationLink(destination: RateTypeAddView()) {
                         Card(name: "Tarif", systemImage: "dollarsign.circle.fill")
                     }
                     NavigationLink(destination: ForestOwnerAddView()) {
