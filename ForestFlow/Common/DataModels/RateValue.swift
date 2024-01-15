@@ -9,15 +9,14 @@ import Foundation
 import SwiftData
 
 @Model
-class RateValue {
+class RateValue: Selectable {
     var stage: Int
     var volume: Float
-    @Relationship() var rateTypes: [RateType]
-    
-    init(stage: Int, volume: Float, rateTypes: [RateType] = []) {
+    var name: String
+
+    init(stage: Int, volume: Float) {
         self.stage = stage
         self.volume = volume
-        self.rateTypes = rateTypes
+        self.name = stage.description
     }
-    
 }

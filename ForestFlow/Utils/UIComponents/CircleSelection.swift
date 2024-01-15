@@ -13,21 +13,18 @@ struct CircleSelection<S: Selectable>: View {
     @Binding var selected: S?
 
     var body: some View {
-        LazyVGrid(columns: [GridItem(.adaptive(minimum: 60))], spacing: 15) {
+        LazyVGrid(columns: [GridItem(.adaptive(minimum: 75))], alignment: .leading, spacing: 15) {
             ForEach(items, id: \.self) { item in
-                Circle()
-                    .foregroundColor(.accentColor)
-                    .opacity(0.7)
-                    .frame(width: 55, height: 55)
-                    .overlay(
-                        Text(item.name)
-                            .font(.headline)
-                            .fontWeight(.semibold)
-                    )
-                    .overlay(
-                        Circle()
-                            .stroke(selected?.name == item.name ? Color.brown : Color.clear, lineWidth: 3)
-                            .padding(-5)
+                Text(item.name)
+                    .font(.headline)
+                    .fontWeight(.semibold)
+                    .padding(.horizontal, 10.0)
+                    .frame(height: 55)
+                    .frame(minWidth: 55, maxWidth: 75)
+                    .background(
+                        RoundedRectangle(cornerRadius: 25.0)
+                            .foregroundColor(selected?.name == item.name ? .accentColor: .accentColor.opacity(0.2))
+                            .opacity(0.7)
                     )
                     .onTapGesture {
                         selected = item

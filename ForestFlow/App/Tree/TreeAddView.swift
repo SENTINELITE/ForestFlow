@@ -18,7 +18,7 @@ struct TreeAddView: View {
 
     @Bindable var forest: Forest
 
-    @State var rateType: RateType?
+    @State var rateValue: RateValue?
     @State var woodType: WoodType?
     @State var stage: Int = 1
     @State var forestOwner: ForestOwner?
@@ -30,7 +30,10 @@ struct TreeAddView: View {
             Form {
                 Section("Bauminformationen") {
                     CircleSelection(items: woodTypes, selected: $woodType)
-                    
+                    if let rateValues = forest.rateType?.rateValues.sorted(by: { $0.stage < $1.stage }) {
+                        CircleSelection(items: rateValues, selected: $rateValue)
+                    }
+
                     Picker("Waldbesitzer", selection: $forestOwner) {
                         ForEach(forestOwners, id: \.id) { forestOwner in
                             Text(forestOwner.name)

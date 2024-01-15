@@ -9,14 +9,12 @@ import Foundation
 import SwiftData
 
 @Model
-class RateType {
-    let name: String
-    var forests: [Forest]
+class RateType: Selectable {
+    var name: String
     var rateValues: [RateValue]
 
-    init(name: String, forests: [Forest] = [], rateValues: [RateValue] = []) {
+    init(name: String, rateValues: [RateValue] = []) {
         self.name = name
-        self.forests = forests
         self.rateValues = rateValues
     }
 }

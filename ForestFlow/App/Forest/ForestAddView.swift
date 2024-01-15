@@ -19,6 +19,10 @@ struct ForestAddView: View {
     @State var rateType: RateType?
     @State var cropLoss: Int = 12
 
+    init() {
+        rateType = rateTypes.first
+    }
+
     var body: some View {
         VStack {
             Form {
@@ -28,11 +32,7 @@ struct ForestAddView: View {
                 }
 
                 Section("Tarifeinstellung") {
-                    Picker("Tarif", selection: $rateType) {
-                        ForEach(rateTypes, id: \.id) { rate in
-                            Text(rate.name)
-                        }
-                    }
+                    CircleSelection(items: rateTypes, selected: $rateType)
 
                     Picker("Ernteverlust", selection: $cropLoss) {
                         ForEach(5...20, id: \.self) { percent in
