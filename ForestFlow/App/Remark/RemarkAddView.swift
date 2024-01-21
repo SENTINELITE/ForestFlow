@@ -19,7 +19,18 @@ struct RemarkAddView: View {
     var body: some View {
         List {
             ForEach(remarks, id: \.self) { remark in
-                Text(remark.name)
+                NavigationLink {
+                    RemarkEditView(remark: remark)
+                } label: {
+                    Text(remark.name)
+                }
+                .swipeActions {
+                    Button(role: .destructive) {
+                        context.delete(remark)
+                    } label: {
+                        Image(systemName: "trash")
+                    }
+                }
             }
         }
         .navigationTitle("Bemerkungen")

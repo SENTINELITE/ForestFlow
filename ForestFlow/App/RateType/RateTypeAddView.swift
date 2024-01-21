@@ -10,12 +10,25 @@ import SwiftData
 
 struct RateTypeAddView: View {
     @Query var rateTypes: [RateType]
+    @Environment(\.modelContext) var context
+    
     
     var body: some View {
         NavigationStack {
             List {
                 ForEach(rateTypes, id: \.self) { rateType in
-                    Text(rateType.name)
+                    NavigationLink {
+                        RateValueEditView(rateType: rateType)
+                    } label: {
+                        Text(rateType.name)
+                    }
+                    .swipeActions {
+                        Button(role: .destructive) {
+                            context.delete(rateType)
+                        } label: {
+                            Image(systemName: "trash")
+                        }
+                    }
                 }
             }
             .navigationTitle("Tarife")

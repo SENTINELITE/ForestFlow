@@ -18,7 +18,18 @@ struct ForestOwnerAddView: View {
     var body: some View {
         List {
             ForEach(forestOwners, id: \.self) { forestOwner in
-                Text(forestOwner.name)
+                NavigationLink {
+                    ForestOwnerEditView(forestOwner: forestOwner)
+                } label: {
+                    Text(forestOwner.name)
+                }
+                .swipeActions {
+                    Button(role: .destructive) {
+                        context.delete(forestOwner)
+                    } label: {
+                        Image(systemName: "trash")
+                    }
+                }
             }
         }
         .navigationTitle("Waldbesitzer")

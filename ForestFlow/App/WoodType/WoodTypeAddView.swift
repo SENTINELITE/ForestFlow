@@ -19,7 +19,18 @@ struct WoodTypeAddView: View {
     var body: some View {
         List {
             ForEach(woodTypes, id: \.self) { woodType in
-                Text(woodType.name)
+                NavigationLink {
+                    WoodTypeEditView(woodType: woodType)
+                } label: {
+                    Text(woodType.name)
+                }
+                .swipeActions {
+                    Button(role: .destructive) {
+                        context.delete(woodType)
+                    } label: {
+                        Image(systemName: "trash")
+                    }
+                }
             }
         }
         .navigationTitle("Baumart")
