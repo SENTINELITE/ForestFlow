@@ -33,6 +33,10 @@ struct TreeAddView: View {
                     if let rateValues = forest.rateType?.rateValues.sorted(by: { $0.stage < $1.stage }) {
                         CircleSelection(items: rateValues, selected: $rateValue)
                     }
+                    if let volume = rateValue?.volume {
+                        Text("Volumen: \(volume)")
+                    }
+                    
 
                     Picker("Waldbesitzer", selection: $forestOwner) {
                         ForEach(forestOwners, id: \.id) { forestOwner in
@@ -64,8 +68,8 @@ struct TreeAddView: View {
     }
 
     func saveTree() {
-        guard let location = locationManager.location, let woodType else { return }
-        let tree = Tree(woodType: woodType, stage: stage, lat: location.latitude, long: location.longitude, forest: forest)
+        guard let location = locationManager.location, let woodType, let remark else { return }
+        let tree = Tree(woodType: woodType, stage: stage, lat: location.latitude, long: location.longitude, forest: forest, remark: remark)
         context.insert(forest)
         forest.trees.append(tree)
         dismiss()
