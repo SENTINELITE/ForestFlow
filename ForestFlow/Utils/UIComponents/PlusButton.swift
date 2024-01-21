@@ -12,7 +12,7 @@ struct PlusButton: View {
         Image(systemName: "plus.circle.fill")
             .font(.Regular.extraLarge)
             .symbolRenderingMode(.palette)
-            .foregroundStyle(Color.accentColor, .white)
+            .foregroundStyle(.componentColorForeground, .componentColorBackground)
             .shadow(radius: 10)
             .offset(CGSize(width: -10.0, height: -35.0))
           

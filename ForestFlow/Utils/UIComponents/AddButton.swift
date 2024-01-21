@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct AddButton: View {
+    
     var body: some View {
         HStack {
             Image(systemName: "plus.circle.fill")
-                .foregroundStyle(.green)
+                .foregroundStyle(.accent)
                 .font(.Regular.title2)
             Text("Stufe hinzufügen")
                 .font(.Regular.regular)
-                .foregroundStyle(.black)
         }
     }
 }

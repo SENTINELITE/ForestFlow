@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Card: View {
+    @Environment(\.colorScheme) var colorScheme
     private let cardSize: CGFloat = (UIScreen.main.bounds.width - 60.0) / 2.0
     var name: String
     var systemImage: String
@@ -16,15 +17,16 @@ struct Card: View {
         ZStack {
             Image(systemName: systemImage)
                 .symbolRenderingMode(.hierarchical)
-                .foregroundStyle(Color.accentColor)
+                .foregroundStyle(.componentColorForeground)
                 .font(.Bold.large)
                 .position(x: 35, y: 30)
 
             Text(name)
                 .font(.Bold.title4)
+                .foregroundStyle(colorScheme == .dark ? .white : .accentColor)
         }
         .frame(width: cardSize, height: cardSize)
-        .background(.white)
+        .background(.componentColorBackground)
         .clipShape(.rect(cornerRadius: 25.0))
         .shadow(radius: 5)
     }
