@@ -33,9 +33,14 @@
 		4FFE75D02B445C880098FF00 /* TreeAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75CF2B445C880098FF00 /* TreeAddView.swift */; };
 		4FFE75D52B458ACC0098FF00 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75D42B458ACC0098FF00 /* LocationManager.swift */; };
 		CB059A382B4719300093E374 /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB059A372B4719300093E374 /* PlusButton.swift */; };
+		CB1CEE6B2B57207C00589FA4 /* RemarkEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1CEE6A2B57207B00589FA4 /* RemarkEditView.swift */; };
 		CB756BF02B52CEFC00228989 /* RateValueAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB756BEF2B52CEFC00228989 /* RateValueAddView.swift */; };
 		CB756BF22B52D17F00228989 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB756BF12B52D17F00228989 /* AddButton.swift */; };
 		CB756BF52B531AAF00228989 /* RateTypeAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB756BF42B531AAF00228989 /* RateTypeAddView.swift */; };
+		CB7A9B112B5D705F00170600 /* WoodTypeEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7A9B102B5D705F00170600 /* WoodTypeEditView.swift */; };
+		CB7A9B132B5D718B00170600 /* ForestOwnerEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7A9B122B5D718B00170600 /* ForestOwnerEditView.swift */; };
+		CB7A9B152B5D72FB00170600 /* RateValueEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7A9B142B5D72FB00170600 /* RateValueEditView.swift */; };
+		CB7A9B172B5D81C100170600 /* TreeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7A9B162B5D81C100170600 /* TreeDetailView.swift */; };
 		CBE1CF3A2B4826970076B445 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF392B4826970076B445 /* Card.swift */; };
 		CBE1CF3D2B48470B0076B445 /* ForestOwnerAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF3C2B48470B0076B445 /* ForestOwnerAddView.swift */; };
 		CBE1CF402B4856500076B445 /* WoodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF3F2B4856500076B445 /* WoodType.swift */; };
@@ -94,9 +99,14 @@
 		4FFE75CF2B445C880098FF00 /* TreeAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeAddView.swift; sourceTree = "<group>"; };
 		4FFE75D42B458ACC0098FF00 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CB059A372B4719300093E374 /* PlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
+		CB1CEE6A2B57207B00589FA4 /* RemarkEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemarkEditView.swift; sourceTree = "<group>"; };
 		CB756BEF2B52CEFC00228989 /* RateValueAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateValueAddView.swift; sourceTree = "<group>"; };
 		CB756BF12B52D17F00228989 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		CB756BF42B531AAF00228989 /* RateTypeAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateTypeAddView.swift; sourceTree = "<group>"; };
+		CB7A9B102B5D705F00170600 /* WoodTypeEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodTypeEditView.swift; sourceTree = "<group>"; };
+		CB7A9B122B5D718B00170600 /* ForestOwnerEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestOwnerEditView.swift; sourceTree = "<group>"; };
+		CB7A9B142B5D72FB00170600 /* RateValueEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateValueEditView.swift; sourceTree = "<group>"; };
+		CB7A9B162B5D81C100170600 /* TreeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeDetailView.swift; sourceTree = "<group>"; };
 		CBE1CF392B4826970076B445 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		CBE1CF3C2B48470B0076B445 /* ForestOwnerAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestOwnerAddView.swift; sourceTree = "<group>"; };
 		CBE1CF3F2B4856500076B445 /* WoodType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodType.swift; sourceTree = "<group>"; };
@@ -308,6 +318,7 @@
 			children = (
 				4FFE75CD2B445C720098FF00 /* TreeListView.swift */,
 				4FFE75CF2B445C880098FF00 /* TreeAddView.swift */,
+				CB7A9B162B5D81C100170600 /* TreeDetailView.swift */,
 			);
 			path = Tree;
 			sourceTree = "<group>";
@@ -335,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				CB756BEF2B52CEFC00228989 /* RateValueAddView.swift */,
+				CB7A9B142B5D72FB00170600 /* RateValueEditView.swift */,
 			);
 			path = RateValue;
 			sourceTree = "<group>";
@@ -351,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				CBE1CF3C2B48470B0076B445 /* ForestOwnerAddView.swift */,
+				CB7A9B122B5D718B00170600 /* ForestOwnerEditView.swift */,
 			);
 			path = ForestOwner;
 			sourceTree = "<group>";
@@ -359,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				CBE1CF412B4856DE0076B445 /* WoodTypeAddView.swift */,
+				CB7A9B102B5D705F00170600 /* WoodTypeEditView.swift */,
 			);
 			path = WoodType;
 			sourceTree = "<group>";
@@ -367,6 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				CBE1CF4A2B48705A0076B445 /* RemarkAddView.swift */,
+				CB1CEE6A2B57207B00589FA4 /* RemarkEditView.swift */,
 			);
 			path = Remark;
 			sourceTree = "<group>";
@@ -502,6 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F5F9B372B48229E0037CB5C /* SettingsView.swift in Sources */,
+				CB7A9B112B5D705F00170600 /* WoodTypeEditView.swift in Sources */,
 				CBE1CF3D2B48470B0076B445 /* ForestOwnerAddView.swift in Sources */,
 				CB756BF52B531AAF00228989 /* RateTypeAddView.swift in Sources */,
 				4FFE75D02B445C880098FF00 /* TreeAddView.swift in Sources */,
@@ -511,6 +527,8 @@
 				4FFE75B32B444D970098FF00 /* Tree.swift in Sources */,
 				4FA615B82B489CBE0002C7E2 /* Selectable.swift in Sources */,
 				CBE1CF4F2B4873780076B445 /* RateValue.swift in Sources */,
+				CB7A9B172B5D81C100170600 /* TreeDetailView.swift in Sources */,
+				CB7A9B132B5D718B00170600 /* ForestOwnerEditView.swift in Sources */,
 				4FFE75CE2B445C720098FF00 /* TreeListView.swift in Sources */,
 				4FFE75B72B444E300098FF00 /* MainView.swift in Sources */,
 				4FFE75BE2B4452010098FF00 /* View.swift in Sources */,
@@ -520,8 +538,10 @@
 				4FFE75BC2B4451510098FF00 /* Font.swift in Sources */,
 				4FFE75B12B444D810098FF00 /* ForestOwner.swift in Sources */,
 				4FA615B52B489AAA0002C7E2 /* CircleSelection.swift in Sources */,
+				CB1CEE6B2B57207C00589FA4 /* RemarkEditView.swift in Sources */,
 				4FFE75B92B4450C70098FF00 /* ForestCell.swift in Sources */,
 				CB756BF22B52D17F00228989 /* AddButton.swift in Sources */,
+				CB7A9B152B5D72FB00170600 /* RateValueEditView.swift in Sources */,
 				CBE1CF492B4870270076B445 /* Remark.swift in Sources */,
 				4F5F9B312B481E6E0037CB5C /* AppTabView.swift in Sources */,
 				CBE1CF4D2B4873350076B445 /* RateType.swift in Sources */,
