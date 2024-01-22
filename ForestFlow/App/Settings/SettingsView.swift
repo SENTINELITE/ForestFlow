@@ -23,7 +23,7 @@ struct SettingsView: View {
                     NavigationLink(destination: WoodTypeAddView()) {
                         Card(name: "Baumart", systemImage: "tree.circle.fill")
                     }
-                    NavigationLink(destination: RemarkAddView()) {
+                    NavigationLink(destination: RemarkView()) {
                         Card(name: "Bemerkungen", systemImage: "pencil.and.list.clipboard")
                     }
                 }
@@ -31,6 +31,12 @@ struct SettingsView: View {
             }
             .padding()
             .navigationTitle("Einstellungen")
+            .navigationDestination(for: Remark.self) { remark in
+                RemarkModifyView(remark)
+            }
+            .navigationDestination(for: String.self) { _ in
+                RemarkModifyView(nil)
+            }
         }
     }
 }
