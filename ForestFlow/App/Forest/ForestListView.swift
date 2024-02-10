@@ -31,9 +31,11 @@ struct ForestListView: View {
                 }
             }
             .navigationTitle("Waldliste")
-            .overlay(alignment: .bottomTrailing) {
-                NavigationLink(destination: ForestAddView()) {
-                    PlusButton()
+            .toolbar {
+                ToolbarItem(placement: .bottomBar) {
+                    NavigationLink(destination: ForestAddView()) {
+                        PlusButton()
+                    }
                 }
             }
             .navigationDestination(for: Forest.self) { forest in

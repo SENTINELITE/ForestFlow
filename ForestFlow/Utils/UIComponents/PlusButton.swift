@@ -14,7 +14,6 @@ struct PlusButton: View {
             .symbolRenderingMode(.palette)
             .foregroundStyle(.componentColorForeground, .componentColorBackground)
             .shadow(radius: 10)
-            .offset(CGSize(width: -10.0, height: -35.0))
           
     }
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RateValueEditView: View {
+struct RateTypeModifyView: View {
     @Bindable var rateType: RateType
     @Environment(\.modelContext) var context
     @State var volume: Float = 0.0

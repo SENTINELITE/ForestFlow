@@ -15,34 +15,37 @@ struct RemarkModifyView: View {
     @State var name: String
     let isEditing: Bool
     
-    
-    init(_ remark: Remark?) {
-        self._remark = .constant(remark)
-        self._name = .init(initialValue: remark?.name ?? "")
-        self.isEditing = remark != nil ? true: false
-    }
-    
     var body: some View {
         VStack {
-            Form {
-                TextField("Name", text: $name)
-            }
+            TextField("Name", text: $name)
+                .textFieldStyle(.roundedBorder)
             
-            Spacer()
             
             Button {
                 saveRemark()
             } label: {
                 Text("Anlegen")
+                    .frame(width: 250, height: 50)
+                    .foregroundStyle(.white)
+                    .background(Color.accentColor)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
                     .padding()
             }
-
+            
         }
+        .padding()
     }
     
     func saveRemark() {
-        let remark = Remark(name: name)
-        context.insert(remark)
+        if isEditing {
+            remark?.name = name
+        } else {
+            let remark = Remark(name: name)
+            context.insert(remark)
+        }
+        
+        dismiss()
+        
     }
     
 }

@@ -36,17 +36,18 @@
 		CB1CEE6B2B57207C00589FA4 /* RemarkModifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1CEE6A2B57207B00589FA4 /* RemarkModifyView.swift */; };
 		CB756BF02B52CEFC00228989 /* RateValueAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB756BEF2B52CEFC00228989 /* RateValueAddView.swift */; };
 		CB756BF22B52D17F00228989 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB756BF12B52D17F00228989 /* AddButton.swift */; };
-		CB756BF52B531AAF00228989 /* RateTypeAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB756BF42B531AAF00228989 /* RateTypeAddView.swift */; };
-		CB7A9B112B5D705F00170600 /* WoodTypeEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7A9B102B5D705F00170600 /* WoodTypeEditView.swift */; };
-		CB7A9B132B5D718B00170600 /* ForestOwnerEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7A9B122B5D718B00170600 /* ForestOwnerEditView.swift */; };
-		CB7A9B152B5D72FB00170600 /* RateValueEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7A9B142B5D72FB00170600 /* RateValueEditView.swift */; };
+		CB756BF52B531AAF00228989 /* RateTypesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB756BF42B531AAF00228989 /* RateTypesView.swift */; };
+		CB7A9B112B5D705F00170600 /* WoodTypeModifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7A9B102B5D705F00170600 /* WoodTypeModifyView.swift */; };
+		CB7A9B132B5D718B00170600 /* ForestOwnerModifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7A9B122B5D718B00170600 /* ForestOwnerModifyView.swift */; };
+		CB7A9B152B5D72FB00170600 /* RateTypeModifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7A9B142B5D72FB00170600 /* RateTypeModifyView.swift */; };
 		CB7A9B172B5D81C100170600 /* TreeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7A9B162B5D81C100170600 /* TreeDetailView.swift */; };
+		CB8C77502B77F4CE00F97A1A /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C774F2B77F4CE00F97A1A /* Setting.swift */; };
 		CBE1CF3A2B4826970076B445 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF392B4826970076B445 /* Card.swift */; };
-		CBE1CF3D2B48470B0076B445 /* ForestOwnerAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF3C2B48470B0076B445 /* ForestOwnerAddView.swift */; };
+		CBE1CF3D2B48470B0076B445 /* ForestOwnersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF3C2B48470B0076B445 /* ForestOwnersView.swift */; };
 		CBE1CF402B4856500076B445 /* WoodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF3F2B4856500076B445 /* WoodType.swift */; };
-		CBE1CF422B4856DE0076B445 /* WoodTypeAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF412B4856DE0076B445 /* WoodTypeAddView.swift */; };
+		CBE1CF422B4856DE0076B445 /* WoodTypesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF412B4856DE0076B445 /* WoodTypesView.swift */; };
 		CBE1CF492B4870270076B445 /* Remark.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF482B4870270076B445 /* Remark.swift */; };
-		CBE1CF4B2B48705A0076B445 /* RemarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF4A2B48705A0076B445 /* RemarkView.swift */; };
+		CBE1CF4B2B48705A0076B445 /* RemarksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF4A2B48705A0076B445 /* RemarksView.swift */; };
 		CBE1CF4D2B4873350076B445 /* RateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF4C2B4873350076B445 /* RateType.swift */; };
 		CBE1CF4F2B4873780076B445 /* RateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF4E2B4873780076B445 /* RateValue.swift */; };
 /* End PBXBuildFile section */
@@ -102,17 +103,18 @@
 		CB1CEE6A2B57207B00589FA4 /* RemarkModifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemarkModifyView.swift; sourceTree = "<group>"; };
 		CB756BEF2B52CEFC00228989 /* RateValueAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateValueAddView.swift; sourceTree = "<group>"; };
 		CB756BF12B52D17F00228989 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
-		CB756BF42B531AAF00228989 /* RateTypeAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateTypeAddView.swift; sourceTree = "<group>"; };
-		CB7A9B102B5D705F00170600 /* WoodTypeEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodTypeEditView.swift; sourceTree = "<group>"; };
-		CB7A9B122B5D718B00170600 /* ForestOwnerEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestOwnerEditView.swift; sourceTree = "<group>"; };
-		CB7A9B142B5D72FB00170600 /* RateValueEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateValueEditView.swift; sourceTree = "<group>"; };
+		CB756BF42B531AAF00228989 /* RateTypesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateTypesView.swift; sourceTree = "<group>"; };
+		CB7A9B102B5D705F00170600 /* WoodTypeModifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodTypeModifyView.swift; sourceTree = "<group>"; };
+		CB7A9B122B5D718B00170600 /* ForestOwnerModifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestOwnerModifyView.swift; sourceTree = "<group>"; };
+		CB7A9B142B5D72FB00170600 /* RateTypeModifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateTypeModifyView.swift; sourceTree = "<group>"; };
 		CB7A9B162B5D81C100170600 /* TreeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeDetailView.swift; sourceTree = "<group>"; };
+		CB8C774F2B77F4CE00F97A1A /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		CBE1CF392B4826970076B445 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		CBE1CF3C2B48470B0076B445 /* ForestOwnerAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestOwnerAddView.swift; sourceTree = "<group>"; };
+		CBE1CF3C2B48470B0076B445 /* ForestOwnersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestOwnersView.swift; sourceTree = "<group>"; };
 		CBE1CF3F2B4856500076B445 /* WoodType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodType.swift; sourceTree = "<group>"; };
-		CBE1CF412B4856DE0076B445 /* WoodTypeAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodTypeAddView.swift; sourceTree = "<group>"; };
+		CBE1CF412B4856DE0076B445 /* WoodTypesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodTypesView.swift; sourceTree = "<group>"; };
 		CBE1CF482B4870270076B445 /* Remark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remark.swift; sourceTree = "<group>"; };
-		CBE1CF4A2B48705A0076B445 /* RemarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemarkView.swift; sourceTree = "<group>"; };
+		CBE1CF4A2B48705A0076B445 /* RemarksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemarksView.swift; sourceTree = "<group>"; };
 		CBE1CF4C2B4873350076B445 /* RateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateType.swift; sourceTree = "<group>"; };
 		CBE1CF4E2B4873780076B445 /* RateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,7 +156,12 @@
 		4F5F9B352B4822940037CB5C /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				CB756BF32B531A9900228989 /* RateType */,
+				CBE1CF452B486F230076B445 /* Remark */,
+				CBE1CF3E2B48562E0076B445 /* WoodType */,
+				CBE1CF3B2B4846490076B445 /* ForestOwner */,
 				4F5F9B362B48229E0037CB5C /* SettingsView.swift */,
+				CB8C774F2B77F4CE00F97A1A /* Setting.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -228,11 +235,6 @@
 		4FFE75A62B444B810098FF00 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				CB756BF32B531A9900228989 /* RateType */,
-				CB756BEE2B52CECC00228989 /* RateValue */,
-				CBE1CF452B486F230076B445 /* Remark */,
-				CBE1CF3E2B48562E0076B445 /* WoodType */,
-				CBE1CF3B2B4846490076B445 /* ForestOwner */,
 				4F5F9B352B4822940037CB5C /* Settings */,
 				4F5F9B2D2B481E6E0037CB5C /* Navigation */,
 				4FFE75AA2B444BAE0098FF00 /* Main */,
@@ -342,19 +344,12 @@
 			path = UIComponents;
 			sourceTree = "<group>";
 		};
-		CB756BEE2B52CECC00228989 /* RateValue */ = {
-			isa = PBXGroup;
-			children = (
-				CB756BEF2B52CEFC00228989 /* RateValueAddView.swift */,
-				CB7A9B142B5D72FB00170600 /* RateValueEditView.swift */,
-			);
-			path = RateValue;
-			sourceTree = "<group>";
-		};
 		CB756BF32B531A9900228989 /* RateType */ = {
 			isa = PBXGroup;
 			children = (
-				CB756BF42B531AAF00228989 /* RateTypeAddView.swift */,
+				CB756BF42B531AAF00228989 /* RateTypesView.swift */,
+				CB7A9B142B5D72FB00170600 /* RateTypeModifyView.swift */,
+				CB756BEF2B52CEFC00228989 /* RateValueAddView.swift */,
 			);
 			path = RateType;
 			sourceTree = "<group>";
@@ -362,8 +357,8 @@
 		CBE1CF3B2B4846490076B445 /* ForestOwner */ = {
 			isa = PBXGroup;
 			children = (
-				CBE1CF3C2B48470B0076B445 /* ForestOwnerAddView.swift */,
-				CB7A9B122B5D718B00170600 /* ForestOwnerEditView.swift */,
+				CBE1CF3C2B48470B0076B445 /* ForestOwnersView.swift */,
+				CB7A9B122B5D718B00170600 /* ForestOwnerModifyView.swift */,
 			);
 			path = ForestOwner;
 			sourceTree = "<group>";
@@ -371,8 +366,8 @@
 		CBE1CF3E2B48562E0076B445 /* WoodType */ = {
 			isa = PBXGroup;
 			children = (
-				CBE1CF412B4856DE0076B445 /* WoodTypeAddView.swift */,
-				CB7A9B102B5D705F00170600 /* WoodTypeEditView.swift */,
+				CBE1CF412B4856DE0076B445 /* WoodTypesView.swift */,
+				CB7A9B102B5D705F00170600 /* WoodTypeModifyView.swift */,
 			);
 			path = WoodType;
 			sourceTree = "<group>";
@@ -380,7 +375,7 @@
 		CBE1CF452B486F230076B445 /* Remark */ = {
 			isa = PBXGroup;
 			children = (
-				CBE1CF4A2B48705A0076B445 /* RemarkView.swift */,
+				CBE1CF4A2B48705A0076B445 /* RemarksView.swift */,
 				CB1CEE6A2B57207B00589FA4 /* RemarkModifyView.swift */,
 			);
 			path = Remark;
@@ -517,21 +512,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F5F9B372B48229E0037CB5C /* SettingsView.swift in Sources */,
-				CB7A9B112B5D705F00170600 /* WoodTypeEditView.swift in Sources */,
-				CBE1CF3D2B48470B0076B445 /* ForestOwnerAddView.swift in Sources */,
-				CB756BF52B531AAF00228989 /* RateTypeAddView.swift in Sources */,
+				CB7A9B112B5D705F00170600 /* WoodTypeModifyView.swift in Sources */,
+				CBE1CF3D2B48470B0076B445 /* ForestOwnersView.swift in Sources */,
+				CB756BF52B531AAF00228989 /* RateTypesView.swift in Sources */,
 				4FFE75D02B445C880098FF00 /* TreeAddView.swift in Sources */,
 				4FFE75D52B458ACC0098FF00 /* LocationManager.swift in Sources */,
-				CBE1CF4B2B48705A0076B445 /* RemarkView.swift in Sources */,
+				CBE1CF4B2B48705A0076B445 /* RemarksView.swift in Sources */,
 				4F5F9B302B481E6E0037CB5C /* AppScreen.swift in Sources */,
 				4FFE75B32B444D970098FF00 /* Tree.swift in Sources */,
 				4FA615B82B489CBE0002C7E2 /* Selectable.swift in Sources */,
 				CBE1CF4F2B4873780076B445 /* RateValue.swift in Sources */,
 				CB7A9B172B5D81C100170600 /* TreeDetailView.swift in Sources */,
-				CB7A9B132B5D718B00170600 /* ForestOwnerEditView.swift in Sources */,
+				CB7A9B132B5D718B00170600 /* ForestOwnerModifyView.swift in Sources */,
 				4FFE75CE2B445C720098FF00 /* TreeListView.swift in Sources */,
 				4FFE75B72B444E300098FF00 /* MainView.swift in Sources */,
 				4FFE75BE2B4452010098FF00 /* View.swift in Sources */,
+				CB8C77502B77F4CE00F97A1A /* Setting.swift in Sources */,
 				4FFE75AD2B444BD40098FF00 /* ForestListView.swift in Sources */,
 				4FFE757C2B444B340098FF00 /* ForestFlowApp.swift in Sources */,
 				4FFE75B52B444E190098FF00 /* ForestAddView.swift in Sources */,
@@ -541,7 +537,7 @@
 				CB1CEE6B2B57207C00589FA4 /* RemarkModifyView.swift in Sources */,
 				4FFE75B92B4450C70098FF00 /* ForestCell.swift in Sources */,
 				CB756BF22B52D17F00228989 /* AddButton.swift in Sources */,
-				CB7A9B152B5D72FB00170600 /* RateValueEditView.swift in Sources */,
+				CB7A9B152B5D72FB00170600 /* RateTypeModifyView.swift in Sources */,
 				CBE1CF492B4870270076B445 /* Remark.swift in Sources */,
 				4F5F9B312B481E6E0037CB5C /* AppTabView.swift in Sources */,
 				CBE1CF4D2B4873350076B445 /* RateType.swift in Sources */,
@@ -552,7 +548,7 @@
 				4FFE75AF2B444C0C0098FF00 /* Forest.swift in Sources */,
 				CB059A382B4719300093E374 /* PlusButton.swift in Sources */,
 				CBE1CF3A2B4826970076B445 /* Card.swift in Sources */,
-				CBE1CF422B4856DE0076B445 /* WoodTypeAddView.swift in Sources */,
+				CBE1CF422B4856DE0076B445 /* WoodTypesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,6 +721,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -766,6 +763,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

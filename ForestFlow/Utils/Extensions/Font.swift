@@ -27,8 +27,8 @@ extension SwiftUI.Font {
         static let heading1 = Font.system(size: 32)
         /// Size 40
         static let large = Font.system(size: 40)
-        /// Size 58
-        static let extraLarge = Font.system(size: 58)
+        /// Size 54
+        static let extraLarge = Font.system(size: 54)
     }
 
     enum Bold {
@@ -50,7 +50,7 @@ extension SwiftUI.Font {
         static let heading1 = Font.system(size: 32, weight: .bold)
         /// Size 40
         static let large = Font.system(size: 40, weight: .bold)
-        /// Size 58
-        static let extraLarge = Font.system(size: 58, weight: .bold)
+        /// Size 54
+        static let extraLarge = Font.system(size: 54, weight: .bold)
     }
 }
