@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct ForestOwnersView: View {
-    @Query private var forestOwners: [ForestOwner]
+    @Query var forestOwners: [ForestOwner]
     @Environment(\.modelContext) var context
     
     @State private var showModifyView = false
@@ -20,20 +20,12 @@ struct ForestOwnersView: View {
             ForEach(forestOwners, id: \.self) { forestOwner in
                 Button {
                     self.forestOwner = forestOwner
-                    dump(self.forestOwner)
-                    print(self.forestOwner)
                 } label: {
                     Text(forestOwner.name)
                         .font(.Bold.title)
                 }
-                .swipeActions {
-                    Button(role: .destructive) {
-                        context.delete(forestOwner)
-                    } label: {
-                        Image(systemName: "trash")
-                    }
-                }
             }
+            .onDelete(perform: deleteModel)
         }
         .navigationTitle("Waldbesitzer")
         .toolbar(.hidden, for: .tabBar)
@@ -45,13 +37,20 @@ struct ForestOwnersView: View {
                     }
             }
         }
-        .sheet(item: $forestOwner, onDismiss: { self.forestOwner = nil }) { _ in
-            ForestOwnerModifyView(forestOwner: $forestOwner, name: forestOwner?.name ?? "", isEditing: true)
+        .sheet(item: $forestOwner, onDismiss: { self.forestOwner = nil }) { forestOwner in
+            ForestOwnerModifyView(forestOwner: $forestOwner, name: forestOwner.name, isEditing: true)
                 .presentationDetents([.height(250.0)])
         }
         .sheet(isPresented: $showModifyView) {
             ForestOwnerModifyView(forestOwner: .constant(nil), name: "", isEditing: false)
                 .presentationDetents([.height(250.0)])
+        }
+    }
+
+    func deleteModel(_ indexSet: IndexSet) {
+        for index in indexSet {
+            let model = forestOwners[index]
+            context.delete(model)
         }
     }
 }

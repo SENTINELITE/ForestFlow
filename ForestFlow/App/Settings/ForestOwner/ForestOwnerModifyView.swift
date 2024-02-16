@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ForestOwnerModifyView: View {
     @Environment(\.dismiss) var dismiss
@@ -19,8 +20,7 @@ struct ForestOwnerModifyView: View {
         VStack {
             TextField("Name", text: $name)
                 .textFieldStyle(.roundedBorder)
-            
-            
+
             Button {
                 saveForestOwner()
             } label: {
@@ -34,13 +34,6 @@ struct ForestOwnerModifyView: View {
             
         }
         .padding()
-//        .onAppear {
-//            dump(forestOwner)
-//            if isEditing {
-//                name = forestOwner?.name ?? ""
-//            }
-//            
-//        }
     }
     
     
