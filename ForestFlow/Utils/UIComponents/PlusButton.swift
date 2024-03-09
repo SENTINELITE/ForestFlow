@@ -10,7 +10,7 @@ import SwiftUI
 struct PlusButton: View {
     var body: some View {
         Image(systemName: "plus.circle.fill")
-            .font(.Regular.extraLarge)
+            .font(.Regular.large)
             .symbolRenderingMode(.palette)
             .foregroundStyle(.componentColorForeground, .componentColorBackground)
             .shadow(radius: 10)
