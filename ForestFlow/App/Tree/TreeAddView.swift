@@ -34,7 +34,7 @@ struct TreeAddView: View {
                         CircleSelection(items: rateValues, selected: $rateValue)
                     }
                     if let volume = rateValue?.volume {
-                        Text("Volumen: \(volume)")
+                        Text("Volumen: \(volume.string(decimalPlaces: 2))")
                     }
                     
 
