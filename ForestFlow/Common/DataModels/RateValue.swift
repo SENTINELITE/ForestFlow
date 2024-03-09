@@ -11,10 +11,10 @@ import SwiftData
 @Model
 class RateValue: Selectable {
     var stage: Int
-    var volume: Float
+    var volume: Double
     var name: String
 
-    init(stage: Int, volume: Float) {
+    init(stage: Int, volume: Double) {
         self.stage = stage
         self.volume = volume
         self.name = stage.description
