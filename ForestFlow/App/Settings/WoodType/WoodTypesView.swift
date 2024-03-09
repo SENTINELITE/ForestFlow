@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct WoodTypesView: View {
-    @Query private var woodTypes: [WoodType]
+    @Query var woodTypes: [WoodType]
     @Environment(\.modelContext) var context
     
     @State private var showModifyView = false
@@ -43,8 +43,8 @@ struct WoodTypesView: View {
                     }
             }
         }
-        .sheet(item: $woodType, onDismiss: { self.woodType = nil }) { _ in
-            WoodTypeModifyView(woodType: $woodType, name: woodType?.name ?? "", isEditing: true)
+        .sheet(item: $woodType, onDismiss: { self.woodType = nil }) { woodType in
+            WoodTypeModifyView(woodType: $woodType, name: woodType.name, isEditing: true)
                 .presentationDetents([.height(250.0)])
         }
         .sheet(isPresented: $showModifyView) {
