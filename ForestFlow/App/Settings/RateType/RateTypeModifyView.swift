@@ -6,44 +6,76 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct RateTypeModifyView: View {
-    @Bindable var rateType: RateType
     @Environment(\.modelContext) var context
-    @State var volume: Float = 0.0
-    @State var stage: Int = 0
+    @Environment(\.dismiss) var dismiss
+    
+    @Binding var rateType: RateType?
+    
+    @State var rateValues: [RateValue]
+    
+    @State var name: String
+    let isEditing: Bool
     
     var body: some View {
         Form {
             Section("Tarif") {
-                TextField("Tarif", text: $rateType.name)
+                TextField("Tarif", text: $name)
             }
             
             Section("Stufen") {
-                ForEach($rateType.rateValues, id: \.self) { $rateValue in
-                    VStack(alignment: .leading) {
-                        Text("Stufe: \(rateValue.stage)")
-                        Stepper("Volumen: \(rateValue.volume)", value: $rateValue.volume, step: 0.1)
-                    }
-                    .swipeActions {
-                        Button(role: .destructive) {
-                            context.delete(rateValue)
-                        } label: {
-                            Image(systemName: "trash")
+                ForEach(rateValues.reversed(), id: \.self) { rateValue in
+                    RateValueStepper(rateValue: .constant(rateValue))
+                        .swipeActions {
+                            Button(role: .destructive) {
+                                context.delete(rateValue)
+                            } label: {
+                                Image(systemName: "trash")
+                            }
+                            
                         }
-
-                    }
                 }
+                
                 AddButton()
                     .button {
-                        if let rateValue = rateType.rateValues.last?.stage {
-                            stage = rateValue + 1
-                        }
-                
-                        rateType.rateValues.append(RateValue(stage: stage, volume: volume))
+                        createRateValue()
                     }
             }
         }
+        Spacer()
+        
+        Button {
+            save()
+        } label: {
+            Text("Anlegen")
+                .frame(width: 250, height: 50)
+                .foregroundStyle(.white)
+                .background(Color.accentColor)
+                .clipShape(RoundedRectangle(cornerRadius: 15))
+                .padding()
+        }
+    }
+    
+    private func save() {
+        if isEditing {
+            rateType?.name = name
+            rateType?.rateValues = rateValues 
+        } else {
+            let rateType = RateType(name: name, rateValues: rateValues)
+            context.insert(rateType)
+        }
+        
+        dismiss()
+        
+    }
+    
+    private func createRateValue() {
+        let nextStage = (rateValues.last?.stage ?? 0) + 1
+        let rateValue = RateValue(stage: nextStage, volume: 0.0)
+        rateValues.append(rateValue)
+        
     }
 }
 
