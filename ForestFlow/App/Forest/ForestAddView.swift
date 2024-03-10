@@ -13,15 +13,15 @@ struct ForestAddView: View {
     @Environment(\.modelContext) var context
 
     @Query var rateTypes: [RateType]
+    
+    @Binding var forest: Forest?
 
-    @State var name: String = ""
-    @State var location: String = ""
+    @State var name: String
+    @State var location: String
     @State var rateType: RateType?
-    @State var cropLoss: Int = 12
-
-    init() {
-        rateType = rateTypes.first
-    }
+    @State var cropLoss: Int
+    
+    let isEditing: Bool
 
     var body: some View {
         VStack {
@@ -52,12 +52,26 @@ struct ForestAddView: View {
                     self.saveForest()
                 }
         }
+        .onAppear {
+            if isEditing {
+                rateType = forest?.rateType
+            } else {
+                rateType = rateTypes.first
+            }
+        }
         .toolbar(.hidden, for: .tabBar)
     }
 
     func saveForest() {
-        let forest = Forest(name: name, location: location, rateType: rateType, cropLoss: cropLoss)
-        context.insert(forest)
+        if isEditing {
+            forest?.name = name
+            forest?.location = location
+            forest?.rateType = rateType
+            forest?.cropLoss = cropLoss
+        } else {
+            let forest = Forest(name: name, location: location, rateType: rateType, cropLoss: cropLoss)
+            context.insert(forest)
+        }
         dismiss()
     }
 }

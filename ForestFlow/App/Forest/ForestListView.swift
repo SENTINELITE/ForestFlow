@@ -10,6 +10,8 @@ import SwiftData
 
 struct ForestListView: View {
     @Query private var forests: [Forest]
+    
+    @State var forest: Forest?
 
     var body: some View {
         NavigationStack {
@@ -26,6 +28,13 @@ struct ForestListView: View {
                             NavigationLink(value: forest) {
                                 ForestCell(forest: forest)
                             }
+                            .contextMenu {
+                                Button {
+                                    self.forest = forest
+                                } label: {
+                                    Label("Bearbeiten", systemImage: "pencil")
+                                }
+                            }
                         }
                     }
                 }
@@ -33,13 +42,19 @@ struct ForestListView: View {
             .navigationTitle("Waldliste")
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
-                    NavigationLink(destination: ForestAddView()) {
+                    NavigationLink(value: true) {
                         PlusButton()
                     }
                 }
             }
             .navigationDestination(for: Forest.self) { forest in
                 ForestDetailView(forest: forest)
+            }
+            .navigationDestination(for: Bool.self) { _ in
+                ForestAddView(forest: .constant(nil), name: "", location: "", cropLoss: 12, isEditing: false)
+            }
+            .navigationDestination(item: $forest) { forest in
+                ForestAddView(forest: .constant(forest), name: forest.name, location: forest.location, rateType: forest.rateType, cropLoss: forest.cropLoss, isEditing: true)
             }
         }
     }
