@@ -13,7 +13,7 @@ class Forest {
     var name: String
     var location: String
     var forestOwner: ForestOwner?
-    var rateType: RateType? // TarifEnum
+    var rateType: RateType?
     var cropLoss: Int
     @Relationship(deleteRule: .cascade, inverse: \Tree.forest) var trees: [Tree]
 
