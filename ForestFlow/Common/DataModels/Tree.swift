@@ -11,15 +11,15 @@ import SwiftData
 @Model
 class Tree {
     var woodType: WoodType 
-    var stage: Int
+    var rateValue: RateValue?
     var latitude: CGFloat
     var longitude: CGFloat
     var forest: Forest?
     var remark: Remark
 
-    init(woodType: WoodType, stage: Int, lat: CGFloat, long: CGFloat, forest: Forest? = nil, remark: Remark) {
+    init(woodType: WoodType, rateValue: RateValue?, lat: CGFloat, long: CGFloat, forest: Forest? = nil, remark: Remark) {
         self.woodType = woodType
-        self.stage = stage
+        self.rateValue = rateValue
         self.latitude = lat
         self.longitude = long
         self.forest = forest
