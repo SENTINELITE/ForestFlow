@@ -26,9 +26,19 @@ struct TreeListView: View {
                 }
             }
         }
-        .navigationDestination(for: Tree.self, destination: { tree in
-            TreeDetailView(tree: tree)
-        })
         .toolbar(.hidden, for: .tabBar)
+        .toolbar {
+            ToolbarItem(placement: .bottomBar) {
+                NavigationLink(value: "true") {
+                    PlusButton()
+                }
+            }
+        }
+        .navigationDestination(for: Tree.self) { tree in
+            TreeDetailView(tree: tree)
+        }
+        .navigationDestination(for: String.self) { _ in
+            TreeAddView(forest: forest)
+        }
     }
 }
