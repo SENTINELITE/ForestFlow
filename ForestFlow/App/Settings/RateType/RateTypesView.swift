@@ -13,8 +13,6 @@ struct RateTypesView: View {
     @Environment(\.modelContext) var context
     
     @State private var showModifyView = false
-    @State private var rateType: RateType?
-    
     
     var body: some View {
         List {
