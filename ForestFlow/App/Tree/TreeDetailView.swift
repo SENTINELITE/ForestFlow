@@ -14,7 +14,7 @@ struct TreeDetailView: View {
         Form {
             Section("Bauminformationen") {
                 Text(tree.woodType.name)
-                Text("\(tree.stage)")
+                Text("\(String(describing: tree.rateValue))")
             }
             Section {
                 Text(tree.remark.name)
