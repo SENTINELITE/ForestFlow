@@ -26,7 +26,7 @@ struct RateTypeModifyView: View {
             }
             
             Section("Stufen") {
-                ForEach(rateValues.reversed(), id: \.self) { rateValue in
+                ForEach(rateValues.sorted(by: { $0.stage > $1.stage }), id: \.self) { rateValue in
                     RateValueStepper(rateValue: .constant(rateValue))
                         .swipeActions {
                             Button(role: .destructive) {
