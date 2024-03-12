@@ -34,7 +34,6 @@ struct WoodTypesView: View {
             }
         }
         .navigationTitle("Baumart")
-        .toolbar(.hidden, for: .tabBar)
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
                 PlusButton()

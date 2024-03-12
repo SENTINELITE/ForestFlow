@@ -35,7 +35,6 @@ struct RemarksView: View {
             }
         }
         .navigationTitle("Bemerkungen")
-        .toolbar(.hidden, for: .tabBar)
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
                 PlusButton()

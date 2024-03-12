@@ -28,7 +28,6 @@ struct ForestOwnersView: View {
             .onDelete(perform: deleteModel)
         }
         .navigationTitle("Waldbesitzer")
-        .toolbar(.hidden, for: .tabBar)
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
                 PlusButton()
