@@ -17,16 +17,22 @@ struct TreeListView: View {
             ForEach(forest.trees, id: \.self) { tree in
                 VStack(alignment: .leading, spacing: 5.0) {
                     NavigationLink(value: tree) {
-                        Text("\(tree.stage) \(tree.woodType.name)")
-                            .font(.Bold.regular)
-
-                        Text("Lat: \(tree.latitude) - Long: \(tree.longitude)")
-                            .font(.Regular.small)
+                        VStack(alignment: .leading) {
+                            Text("\(tree.woodType.name)")
+                                .font(.Bold.regular)
+                            
+                            HStack {
+                                Text("Stufe: \(tree.rateValue?.stage ?? 0)")
+                                    .font(.Bold.small)
+                                
+                                Text("Volumen: \(tree.rateValue?.volume.string(decimalPlaces: 2) ?? "0.0" )")
+                                    .font(.Bold.small)
+                            }
+                        }
                     }
                 }
             }
         }
-        .toolbar(.hidden, for: .tabBar)
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
                 NavigationLink(value: "true") {
