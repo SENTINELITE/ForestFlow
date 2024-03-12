@@ -20,43 +20,46 @@ struct RateTypeModifyView: View {
     let isEditing: Bool
     
     var body: some View {
-        Form {
-            Section("Tarif") {
-                TextField("Tarif", text: $name)
-            }
-            
-            Section("Stufen") {
-                ForEach(rateValues.sorted(by: { $0.stage > $1.stage }), id: \.self) { rateValue in
-                    RateValueStepper(rateValue: .constant(rateValue))
-                        .swipeActions {
-                            Button(role: .destructive) {
-                                context.delete(rateValue)
-                            } label: {
-                                Image(systemName: "trash")
-                            }
-                            
-                        }
+        VStack {
+            Form {
+                Section("Tarif") {
+                    TextField("Tarif", text: $name)
                 }
                 
-                AddButton()
-                    .button {
-                        createRateValue()
+                Section("Stufen") {
+                    ForEach(rateValues.sorted(by: { $0.stage > $1.stage }), id: \.self) { rateValue in
+                        RateValueStepper(rateValue: .constant(rateValue))
+                            .swipeActions {
+                                Button(role: .destructive) {
+                                    context.delete(rateValue)
+                                } label: {
+                                    Image(systemName: "trash")
+                                }
+                                
+                            }
                     }
+                    
+                    AddButton()
+                        .button {
+                            createRateValue()
+                        }
+                }
+            }
+           
+            Spacer()
+            
+            Button {
+                save()
+            } label: {
+                Text("Anlegen")
+                    .frame(width: 250, height: 50)
+                    .foregroundStyle(.white)
+                    .background(Color.accentColor)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .padding()
             }
         }
         .toolbar(.hidden, for: .tabBar)
-        Spacer()
-        
-        Button {
-            save()
-        } label: {
-            Text("Anlegen")
-                .frame(width: 250, height: 50)
-                .foregroundStyle(.white)
-                .background(Color.accentColor)
-                .clipShape(RoundedRectangle(cornerRadius: 15))
-                .padding()
-        }
     }
     
     private func save() {
