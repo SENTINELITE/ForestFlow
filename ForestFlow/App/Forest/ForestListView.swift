@@ -51,10 +51,10 @@ struct ForestListView: View {
                 ForestDetailView(forest: forest)
             }
             .navigationDestination(for: Bool.self) { _ in
-                ForestAddView(forest: .constant(nil), name: "", location: "", cropLoss: 12, isEditing: false)
+                ForestModifyView(forest: .constant(nil), name: "", location: "", cropLoss: 12, isEditing: false)
             }
             .navigationDestination(item: $forest) { forest in
-                ForestAddView(forest: .constant(forest), name: forest.name, location: forest.location, rateType: forest.rateType, cropLoss: forest.cropLoss, isEditing: true)
+                ForestModifyView(forest: .constant(forest), name: forest.name, location: forest.location, rateType: forest.rateType, cropLoss: forest.cropLoss, isEditing: true)
             }
         }
     }

@@ -22,7 +22,7 @@
 		4FFE75AF2B444C0C0098FF00 /* Forest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75AE2B444C0C0098FF00 /* Forest.swift */; };
 		4FFE75B12B444D810098FF00 /* ForestOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75B02B444D810098FF00 /* ForestOwner.swift */; };
 		4FFE75B32B444D970098FF00 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75B22B444D970098FF00 /* Tree.swift */; };
-		4FFE75B52B444E190098FF00 /* ForestAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75B42B444E190098FF00 /* ForestAddView.swift */; };
+		4FFE75B52B444E190098FF00 /* ForestModifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75B42B444E190098FF00 /* ForestModifyView.swift */; };
 		4FFE75B72B444E300098FF00 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75B62B444E300098FF00 /* MainView.swift */; };
 		4FFE75B92B4450C70098FF00 /* ForestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75B82B4450C70098FF00 /* ForestCell.swift */; };
 		4FFE75BC2B4451510098FF00 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75BB2B4451510098FF00 /* Font.swift */; };
@@ -90,7 +90,7 @@
 		4FFE75AE2B444C0C0098FF00 /* Forest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forest.swift; sourceTree = "<group>"; };
 		4FFE75B02B444D810098FF00 /* ForestOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestOwner.swift; sourceTree = "<group>"; };
 		4FFE75B22B444D970098FF00 /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
-		4FFE75B42B444E190098FF00 /* ForestAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestAddView.swift; sourceTree = "<group>"; };
+		4FFE75B42B444E190098FF00 /* ForestModifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestModifyView.swift; sourceTree = "<group>"; };
 		4FFE75B62B444E300098FF00 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4FFE75B82B4450C70098FF00 /* ForestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestCell.swift; sourceTree = "<group>"; };
 		4FFE75BB2B4451510098FF00 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
@@ -293,7 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				4FFE75AC2B444BD40098FF00 /* ForestListView.swift */,
-				4FFE75B42B444E190098FF00 /* ForestAddView.swift */,
+				4FFE75B42B444E190098FF00 /* ForestModifyView.swift */,
 				4FFE75B82B4450C70098FF00 /* ForestCell.swift */,
 				4FFE75C32B4454FE0098FF00 /* ForestDetailView.swift */,
 			);
@@ -534,7 +534,7 @@
 				CB8C77502B77F4CE00F97A1A /* Setting.swift in Sources */,
 				4FFE75AD2B444BD40098FF00 /* ForestListView.swift in Sources */,
 				4FFE757C2B444B340098FF00 /* ForestFlowApp.swift in Sources */,
-				4FFE75B52B444E190098FF00 /* ForestAddView.swift in Sources */,
+				4FFE75B52B444E190098FF00 /* ForestModifyView.swift in Sources */,
 				4FFE75BC2B4451510098FF00 /* Font.swift in Sources */,
 				4FFE75B12B444D810098FF00 /* ForestOwner.swift in Sources */,
 				4FA615B52B489AAA0002C7E2 /* CircleSelection.swift in Sources */,

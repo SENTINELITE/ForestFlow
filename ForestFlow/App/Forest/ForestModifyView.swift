@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct ForestAddView: View {
+struct ForestModifyView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.modelContext) var context
 
