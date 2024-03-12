@@ -43,8 +43,8 @@ struct RemarksView: View {
                     }
             }
         }
-        .sheet(item: $remark, onDismiss: { self.remark = nil }) { _ in
-            RemarkModifyView(remark: $remark, name: remark?.name ?? "", isEditing: true)
+        .sheet(item: $remark, onDismiss: { self.remark = nil }) { remark in
+            RemarkModifyView(remark: $remark, name: remark.name, isEditing: true)
                 .presentationDetents([.height(250.0)])
         }
         .sheet(isPresented: $showModifyView) {
