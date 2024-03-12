@@ -79,8 +79,8 @@ struct TreeAddView: View {
     }
     
     func saveTree() {
-        guard let location = locationManager.location, let woodType, let remark else { return }
-        let tree = Tree(woodType: woodType, rateValue: rateValue, lat: location.latitude, long: location.longitude, forest: forest, remark: remark)
+        guard let location = locationManager.location, let woodType, let remark, let forestOwner else { return }
+        let tree = Tree(woodType: woodType, rateValue: rateValue, lat: location.latitude, long: location.longitude, forest: forest, remark: remark, forestOwner: forestOwner)
         context.insert(forest)
         forest.trees.append(tree)
         dismiss()
