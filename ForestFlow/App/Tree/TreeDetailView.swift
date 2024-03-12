@@ -20,6 +20,7 @@ struct TreeDetailView: View {
                 Text(tree.remark.name)
             }
         }
+        .toolbar(.hidden, for: .tabBar)
     }
 }
 

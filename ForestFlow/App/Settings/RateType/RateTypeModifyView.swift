@@ -44,6 +44,7 @@ struct RateTypeModifyView: View {
                     }
             }
         }
+        .toolbar(.hidden, for: .tabBar)
         Spacer()
         
         Button {
