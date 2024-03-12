@@ -18,7 +18,7 @@ struct ForestCell: View {
             Spacer()
 
             VStack(spacing: 10.0) {
-                Text("123 Bäume")
+                Text("\(forest.trees.count) \(forest.trees.count > 1 ? "Bäume" : "Baum")")
                     .font(.Regular.small)
                     .foregroundStyle(.gray)
 
