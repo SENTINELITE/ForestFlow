@@ -12,6 +12,8 @@
 		4F5F9B372B48229E0037CB5C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5F9B362B48229E0037CB5C /* SettingsView.swift */; };
 		4FA615B52B489AAA0002C7E2 /* CircleSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA615B42B489AAA0002C7E2 /* CircleSelection.swift */; };
 		4FA615B82B489CBE0002C7E2 /* Selectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA615B72B489CBE0002C7E2 /* Selectable.swift */; };
+		4FCB75AF2BA1AABE007EC941 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB75AE2BA1AABE007EC941 /* Array.swift */; };
+		4FCB75B12BA1AECD007EC941 /* ForestShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB75B02BA1AECD007EC941 /* ForestShow.swift */; };
 		4FFE757C2B444B340098FF00 /* ForestFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE757B2B444B340098FF00 /* ForestFlowApp.swift */; };
 		4FFE75802B444B350098FF00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FFE757F2B444B350098FF00 /* Assets.xcassets */; };
 		4FFE75842B444B350098FF00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FFE75832B444B350098FF00 /* Preview Assets.xcassets */; };
@@ -76,6 +78,8 @@
 		4F5F9B362B48229E0037CB5C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4FA615B42B489AAA0002C7E2 /* CircleSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSelection.swift; sourceTree = "<group>"; };
 		4FA615B72B489CBE0002C7E2 /* Selectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selectable.swift; sourceTree = "<group>"; };
+		4FCB75AE2BA1AABE007EC941 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		4FCB75B02BA1AECD007EC941 /* ForestShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestShow.swift; sourceTree = "<group>"; };
 		4FFE75782B444B340098FF00 /* ForestFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForestFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FFE757B2B444B340098FF00 /* ForestFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestFlowApp.swift; sourceTree = "<group>"; };
 		4FFE757F2B444B350098FF00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -296,6 +300,7 @@
 				4FFE75B42B444E190098FF00 /* ForestModifyView.swift */,
 				4FFE75B82B4450C70098FF00 /* ForestCell.swift */,
 				4FFE75C32B4454FE0098FF00 /* ForestDetailView.swift */,
+				4FCB75B02BA1AECD007EC941 /* ForestShow.swift */,
 			);
 			path = Forest;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 				4FFE75BB2B4451510098FF00 /* Font.swift */,
 				4FFE75BD2B4452010098FF00 /* View.swift */,
 				CB5B258D2B9CB5A70023F582 /* Double.swift */,
+				4FCB75AE2BA1AABE007EC941 /* Array.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -523,6 +529,7 @@
 				4FFE75D52B458ACC0098FF00 /* LocationManager.swift in Sources */,
 				CBE1CF4B2B48705A0076B445 /* RemarksView.swift in Sources */,
 				4F5F9B302B481E6E0037CB5C /* AppScreen.swift in Sources */,
+				4FCB75B12BA1AECD007EC941 /* ForestShow.swift in Sources */,
 				4FFE75B32B444D970098FF00 /* Tree.swift in Sources */,
 				4FA615B82B489CBE0002C7E2 /* Selectable.swift in Sources */,
 				CBE1CF4F2B4873780076B445 /* RateValue.swift in Sources */,
@@ -535,6 +542,7 @@
 				4FFE75AD2B444BD40098FF00 /* ForestListView.swift in Sources */,
 				4FFE757C2B444B340098FF00 /* ForestFlowApp.swift in Sources */,
 				4FFE75B52B444E190098FF00 /* ForestModifyView.swift in Sources */,
+				4FCB75AF2BA1AABE007EC941 /* Array.swift in Sources */,
 				4FFE75BC2B4451510098FF00 /* Font.swift in Sources */,
 				4FFE75B12B444D810098FF00 /* ForestOwner.swift in Sources */,
 				4FA615B52B489AAA0002C7E2 /* CircleSelection.swift in Sources */,
