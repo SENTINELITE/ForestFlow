@@ -9,42 +9,71 @@ import SwiftUI
 import SwiftData
 
 struct TreeListView: View {
-
+    @Environment(\.modelContext) var context
     let forest: Forest
-
+    
     var body: some View {
         List {
             ForEach(forest.trees, id: \.self) { tree in
-                VStack(alignment: .leading, spacing: 5.0) {
-                    NavigationLink(value: tree) {
-                        VStack(alignment: .leading) {
-                            Text("\(tree.woodType.name)")
-                                .font(.Bold.regular)
+                NavigationLink(value: TreeShow(forest: nil, tree: tree, editing: false)) {
+                    HStack {
+                        Text("\(tree.woodType.name)")
+                            .font(.Bold.title3)
+                        
+                        Spacer()
+                        
+                        VStack(alignment: .leading, spacing: 10.0) {
+                            Text("Stufe: \(tree.rateValue?.stage ?? 0)")
+                                .font(.Regular.small)
+                                .foregroundStyle(.gray)
                             
-                            HStack {
-                                Text("Stufe: \(tree.rateValue?.stage ?? 0)")
-                                    .font(.Bold.small)
-                                
-                                Text("Volumen: \(tree.rateValue?.volume.string(decimalPlaces: 2) ?? "0.0" )")
-                                    .font(.Bold.small)
-                            }
+                            Text("Volumen: \(tree.rateValue?.volume.string(decimalPlaces: 2) ?? "0.0" )")
+                                .font(.Regular.small)
+                                .foregroundStyle(.gray)
                         }
+                        .padding(.horizontal, 10.0)
+                    }
+                    .padding(10.0)
+                }
+                .contextMenu {
+                    Button(role: .destructive) {
+                        context.delete(tree)
+                    } label: {
+                        Label("Löschen", systemImage: "trash")
+                            .tint(.red)
+                    }
+                    NavigationLink(value: TreeShow(forest: nil, tree: tree, editing: true)) {
+                        Label("Bearbeiten", systemImage: "pencil")
                     }
                 }
             }
+            .onDelete(perform: deleteModel)
         }
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
-                NavigationLink(value: "true") {
+                NavigationLink(value: TreeShow(forest: forest, tree: nil, editing: false)) {
                     PlusButton()
                 }
             }
         }
-        .navigationDestination(for: Tree.self) { tree in
-            TreeDetailView(tree: tree)
+        .navigationDestination(for: TreeShow.self) { show in
+            if let forest = show.forest {
+                TreeModifyView(forest: .constant(forest), tree: .constant(nil), isEditing: false)
+            }
+            
+            if let tree = show.tree {
+                if show.editing {
+                    TreeModifyView(forest: .constant(nil), tree: .constant(tree), isEditing: true)
+                } else {
+                    TreeDetailView(tree: tree)
+                }
+            }
         }
-        .navigationDestination(for: String.self) { _ in
-            TreeAddView(forest: forest)
+    }
+    func deleteModel(_ indexSet: IndexSet) {
+        for index in indexSet {
+            let model = forest.trees[index]
+            context.delete(model)
         }
     }
 }
