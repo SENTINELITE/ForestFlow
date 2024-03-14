@@ -8,18 +8,36 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @State var path = NavigationPath()
+    
     var body: some View {
-        NavigationStack {
+        
+        NavigationStack(path: $path) {
             List {
-                ForEach(Setting.allCases, id: \.self) { setting in
-                    NavigationLink(value: setting) {
-                        setting.label
-                    }
+                NavigationLink(value: "RateType") {
+                    Label("Tarife", systemImage: "eurosign.arrow.circlepath")
+                }
+                NavigationLink(value: "Remark") {
+                    Label("Bemerkungen", systemImage: "text.bubble.fill")
+                }
+                NavigationLink(value: "WoodType") {
+                    Label("Baumart", systemImage: "tree.fill")
+                }
+                NavigationLink(value: "ForestOwner") {
+                    Label("Waldbesitzer", systemImage: "person.fill")
                 }
             }
             .navigationTitle("Einstellungen")
-            .navigationDestination(for: Setting.self) { setting in
-                setting.destination
+            .navigationDestination(for: String.self) { setting in
+                if setting == "RateType" {
+                    RateTypesView(path: $path)
+                } else if setting == "Remark" {
+                    RemarksView()
+                } else if setting == "WoodType" {
+                    WoodTypesView()
+                } else if setting == "ForestOwner" {
+                    ForestOwnersView()
+                }
             }
         }
     }
