@@ -14,6 +14,8 @@ struct RateTypesView: View {
     
     @State private var showModifyView = false
     
+    @Binding var path: NavigationPath
+    
     var body: some View {
         List {
             ForEach(rateTypes, id: \.self) { rateType in
@@ -33,14 +35,14 @@ struct RateTypesView: View {
         .navigationDestination(for: RateType.self) { rateType in
             RateTypeModifyView(rateType: .constant(rateType), rateValues: rateType.rateValues, name: rateType.name, isEditing: true)
         }
-        .navigationDestination(for: Bool.self) { _ in
-            RateTypeModifyView(rateType: .constant(nil), rateValues: [], name: "", isEditing: false)
-        }
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
-                NavigationLink(value: true) {
-                    PlusButton()
-                }
+                PlusButton()
+                    .button {
+                        let rateType = RateType(name: "", rateValues: [])
+                        context.insert(rateType)
+                        path.append(rateType)
+                    }
             }
         }
     }
