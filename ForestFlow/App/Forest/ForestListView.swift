@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct ForestListView: View {
-
+    @Environment(\.modelContext) var context
     @Query private var forests: [Forest]
 
     var body: some View {
@@ -22,11 +22,18 @@ struct ForestListView: View {
                                 ForestCell(forest: forest)
                             }
                             .contextMenu {
+                                Button(role: .destructive) {
+                                    context.delete(forest)
+                                } label: {
+                                    Label("Löschen", systemImage: "trash")
+                                        .tint(.red)
+                                }
                                 NavigationLink(value: ForestShow(forest: forest, editing: true)) {
                                     Label("Bearbeiten", systemImage: "pencil")
                                 }
                             }
                         }
+                        .onDelete(perform: deleteModel)
                     }
                 } else {
                     ContentUnavailableView(
@@ -62,6 +69,13 @@ struct ForestListView: View {
                     ForestModifyView(forest: .constant(nil), name: "", location: "", cropLoss: 12, isEditing: show.editing)
                 }
             }
+        }
+    }
+    
+    func deleteModel(_ indexSet: IndexSet) {
+        for index in indexSet {
+            let model = forests[index]
+            context.delete(model)
         }
     }
 }

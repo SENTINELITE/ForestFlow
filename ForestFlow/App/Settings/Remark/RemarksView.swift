@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct RemarksView: View {
-
+    
     @Environment(\.modelContext) var context
     
     @State var showModifyView: Bool = false
@@ -19,20 +19,16 @@ struct RemarksView: View {
     @Query var remarks: [Remark]
 
     var body: some View {
-        List(remarks, id: \.self) { remark in
-            Button {
-                self.remark = remark
-            } label: {
-                Text(remark.name)
-                    .font(.Bold.title)
-            }
-            .swipeActions {
-                Button(role: .destructive) {
-                    context.delete(remark)
+        List {
+            ForEach(remarks, id: \.self) { remark in
+                Button {
+                    self.remark = remark
                 } label: {
-                    Image(systemName: "trash")
+                    Text(remark.name)
+                        .font(.Bold.title)
                 }
             }
+            .onDelete(perform: deleteModel)
         }
         .navigationTitle("Bemerkungen")
         .toolbar {
@@ -50,6 +46,13 @@ struct RemarksView: View {
         .sheet(isPresented: $showModifyView) {
             RemarkModifyView(remark: .constant(nil), name: "", isEditing: false)
                 .presentationDetents([.height(250.0)])
+        }
+    }
+    
+    func deleteModel(_ indexSet: IndexSet) {
+        for index in indexSet {
+            let model = remarks[index]
+            context.delete(model)
         }
     }
 }

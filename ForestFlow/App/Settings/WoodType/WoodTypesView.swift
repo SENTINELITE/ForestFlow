@@ -24,14 +24,8 @@ struct WoodTypesView: View {
                     Text(woodType.name)
                         .font(.Bold.title)
                 }
-                .swipeActions {
-                    Button(role: .destructive) {
-                        context.delete(woodType)
-                    } label: {
-                        Image(systemName: "trash")
-                    }
-                }
             }
+            .onDelete(perform: deleteModel)
         }
         .navigationTitle("Baumart")
         .toolbar {
@@ -49,6 +43,13 @@ struct WoodTypesView: View {
         .sheet(isPresented: $showModifyView) {
             WoodTypeModifyView(woodType: .constant(nil), name: "", isEditing: false)
                 .presentationDetents([.height(250.0)])
+        }
+    }
+    
+    func deleteModel(_ indexSet: IndexSet) {
+        for index in indexSet {
+            let model = woodTypes[index]
+            context.delete(model)
         }
     }
 }

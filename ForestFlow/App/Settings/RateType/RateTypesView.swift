@@ -22,14 +22,8 @@ struct RateTypesView: View {
                 NavigationLink(value: rateType) {
                     Text(rateType.name)
                 }
-                .swipeActions {
-                    Button(role: .destructive) {
-                        context.delete(rateType)
-                    } label: {
-                        Image(systemName: "trash")
-                    }
-                }
             }
+            .onDelete(perform: deleteModel)
         }
         .navigationTitle("Tarife")
         .navigationDestination(for: RateType.self) { rateType in
@@ -44,6 +38,13 @@ struct RateTypesView: View {
                         path.append(rateType)
                     }
             }
+        }
+    }
+    
+    func deleteModel(_ indexSet: IndexSet) {
+        for index in indexSet {
+            let model = rateTypes[index]
+            context.delete(model)
         }
     }
 }
