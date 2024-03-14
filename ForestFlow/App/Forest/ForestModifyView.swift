@@ -11,47 +11,49 @@ import SwiftData
 struct ForestModifyView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.modelContext) var context
-
+    
     @Query var rateTypes: [RateType]
     
     @Binding var forest: Forest?
-
+    
     @State var name: String
     @State var location: String
     @State var rateType: RateType?
     @State var cropLoss: Int
     
     let isEditing: Bool
-
+    
     var body: some View {
-        VStack {
-            Form {
-                Section("Informationen") {
-                    TextField("Name", text: $name)
-                    TextField("Ort", text: $location)
-                }
-
-                Section("Tarifeinstellung") {
-                    CircleSelection(items: rateTypes, selected: $rateType)
-
-                    Picker("Ernteverlust", selection: $cropLoss) {
-                        ForEach(5...20, id: \.self) { percent in
-                            Text("\(percent) %")
-                        }
+        Form {
+            Section("Informationen") {
+                TextField("Name", text: $name)
+                TextField("Ort", text: $location)
+            }
+            
+            Section("Tarifeinstellung") {
+                CircleSelection(items: rateTypes, selected: $rateType)
+                
+                Picker("Ernteverlust", selection: $cropLoss) {
+                    ForEach(5...20, id: \.self) { percent in
+                        Text("\(percent) %")
                     }
                 }
             }
-
-            Spacer()
-
-            Text("Anlegen")
-                .font(.Bold.title2)
-                .foregroundStyle(Color.accentColor)
-                .padding()
-                .button {
-                    self.saveForest()
-                }
         }
+        .toolbar {
+            ToolbarItem(placement: .bottomBar) {
+                Text("Speichern")
+                    .font(.Bold.title2)
+                    .frame(width: 250, height: 50)
+                    .foregroundStyle(.white)
+                    .background(Color.accentColor)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .button {
+                        self.saveForest()
+                    }
+            }
+        }
+        .toolbar(.hidden, for: .tabBar)
         .onAppear {
             if isEditing {
                 rateType = forest?.rateType
@@ -59,9 +61,8 @@ struct ForestModifyView: View {
                 rateType = rateTypes.first
             }
         }
-        .toolbar(.hidden, for: .tabBar)
     }
-
+    
     func saveForest() {
         if isEditing {
             forest?.name = name
