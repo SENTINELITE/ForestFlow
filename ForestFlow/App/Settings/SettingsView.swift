@@ -29,13 +29,16 @@ struct SettingsView: View {
             }
             .navigationTitle("Einstellungen")
             .navigationDestination(for: String.self) { setting in
-                if setting == "RateType" {
+                
+                switch setting {
+                case "RateType":
                     RateTypesView(path: $path)
-                } else if setting == "Remark" {
+                case "Remark":
                     RemarksView()
-                } else if setting == "WoodType" {
+                case "WoodType":
                     WoodTypesView()
-                } else if setting == "ForestOwner" {
+                    
+                default:
                     ForestOwnersView()
                 }
             }
