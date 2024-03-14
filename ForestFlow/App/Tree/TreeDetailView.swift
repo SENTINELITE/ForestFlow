@@ -17,8 +17,11 @@ struct TreeDetailView: View {
                 Map(position: .constant(MapCameraPosition.region(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: tree.latitude, longitude: tree.longitude), latitudinalMeters: 500, longitudinalMeters: 500)))) {
                     Marker("Baum Standort", coordinate: CLLocationCoordinate2D(latitude: tree.latitude, longitude: tree.longitude))
                 }
-                .frame(width: 300, height: 300)
+                .frame(width: 330, height: 330)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
             }
+            .listRowSeparator(.hidden)
+            .listRowBackground(Color.clear)
             
             Section("Bauminformationen") {
                 Text(tree.woodType.name)
