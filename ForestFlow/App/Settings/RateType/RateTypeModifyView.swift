@@ -66,11 +66,7 @@ struct RateTypeModifyView: View {
         if isEditing {
             rateType?.name = name
             rateType?.rateValues = rateValues 
-        } else {
-            let rateType = RateType(name: name, rateValues: rateValues)
-            context.insert(rateType)
         }
-        
         dismiss()
         
     }
