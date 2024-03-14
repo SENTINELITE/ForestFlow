@@ -20,16 +20,17 @@ struct RemarkModifyView: View {
             TextField("Name", text: $name)
                 .textFieldStyle(.roundedBorder)
             
+            Spacer()
             
             Button {
                 saveRemark()
             } label: {
-                Text("Anlegen")
+                Text("Speichern")
+                    .font(.Bold.title2)
                     .frame(width: 250, height: 50)
                     .foregroundStyle(.white)
                     .background(Color.accentColor)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
-                    .padding()
             }
             
         }
