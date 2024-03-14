@@ -32,7 +32,7 @@
 		4FFE75C22B4452230098FF00 /* ButtonWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75C12B4452230098FF00 /* ButtonWrapper.swift */; };
 		4FFE75C42B4454FE0098FF00 /* ForestDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75C32B4454FE0098FF00 /* ForestDetailView.swift */; };
 		4FFE75CE2B445C720098FF00 /* TreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75CD2B445C720098FF00 /* TreeListView.swift */; };
-		4FFE75D02B445C880098FF00 /* TreeAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75CF2B445C880098FF00 /* TreeAddView.swift */; };
+		4FFE75D02B445C880098FF00 /* TreeModifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75CF2B445C880098FF00 /* TreeModifyView.swift */; };
 		4FFE75D52B458ACC0098FF00 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75D42B458ACC0098FF00 /* LocationManager.swift */; };
 		CB059A382B4719300093E374 /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB059A372B4719300093E374 /* PlusButton.swift */; };
 		CB1CEE6B2B57207C00589FA4 /* RemarkModifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1CEE6A2B57207B00589FA4 /* RemarkModifyView.swift */; };
@@ -101,7 +101,7 @@
 		4FFE75C12B4452230098FF00 /* ButtonWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWrapper.swift; sourceTree = "<group>"; };
 		4FFE75C32B4454FE0098FF00 /* ForestDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestDetailView.swift; sourceTree = "<group>"; };
 		4FFE75CD2B445C720098FF00 /* TreeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeListView.swift; sourceTree = "<group>"; };
-		4FFE75CF2B445C880098FF00 /* TreeAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeAddView.swift; sourceTree = "<group>"; };
+		4FFE75CF2B445C880098FF00 /* TreeModifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeModifyView.swift; sourceTree = "<group>"; };
 		4FFE75D42B458ACC0098FF00 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CB059A372B4719300093E374 /* PlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
 		CB1CEE6A2B57207B00589FA4 /* RemarkModifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemarkModifyView.swift; sourceTree = "<group>"; };
@@ -325,7 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				4FFE75CD2B445C720098FF00 /* TreeListView.swift */,
-				4FFE75CF2B445C880098FF00 /* TreeAddView.swift */,
+				4FFE75CF2B445C880098FF00 /* TreeModifyView.swift */,
 				CB7A9B162B5D81C100170600 /* TreeDetailView.swift */,
 			);
 			path = Tree;
@@ -522,7 +522,7 @@
 				CBE1CF3D2B48470B0076B445 /* ForestOwnersView.swift in Sources */,
 				CB756BF52B531AAF00228989 /* RateTypesView.swift in Sources */,
 				CB5B258E2B9CB5A70023F582 /* Double.swift in Sources */,
-				4FFE75D02B445C880098FF00 /* TreeAddView.swift in Sources */,
+				4FFE75D02B445C880098FF00 /* TreeModifyView.swift in Sources */,
 				4FFE75D52B458ACC0098FF00 /* LocationManager.swift in Sources */,
 				CBE1CF4B2B48705A0076B445 /* RemarksView.swift in Sources */,
 				4F5F9B302B481E6E0037CB5C /* AppScreen.swift in Sources */,
