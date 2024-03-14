@@ -44,7 +44,6 @@
 		CB7A9B132B5D718B00170600 /* ForestOwnerModifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7A9B122B5D718B00170600 /* ForestOwnerModifyView.swift */; };
 		CB7A9B152B5D72FB00170600 /* RateTypeModifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7A9B142B5D72FB00170600 /* RateTypeModifyView.swift */; };
 		CB7A9B172B5D81C100170600 /* TreeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7A9B162B5D81C100170600 /* TreeDetailView.swift */; };
-		CB8C77502B77F4CE00F97A1A /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8C774F2B77F4CE00F97A1A /* Setting.swift */; };
 		CBE1CF3A2B4826970076B445 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF392B4826970076B445 /* Card.swift */; };
 		CBE1CF3D2B48470B0076B445 /* ForestOwnersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF3C2B48470B0076B445 /* ForestOwnersView.swift */; };
 		CBE1CF402B4856500076B445 /* WoodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF3F2B4856500076B445 /* WoodType.swift */; };
@@ -114,7 +113,6 @@
 		CB7A9B122B5D718B00170600 /* ForestOwnerModifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestOwnerModifyView.swift; sourceTree = "<group>"; };
 		CB7A9B142B5D72FB00170600 /* RateTypeModifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateTypeModifyView.swift; sourceTree = "<group>"; };
 		CB7A9B162B5D81C100170600 /* TreeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeDetailView.swift; sourceTree = "<group>"; };
-		CB8C774F2B77F4CE00F97A1A /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		CBE1CF392B4826970076B445 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		CBE1CF3C2B48470B0076B445 /* ForestOwnersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestOwnersView.swift; sourceTree = "<group>"; };
 		CBE1CF3F2B4856500076B445 /* WoodType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodType.swift; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 				CBE1CF3E2B48562E0076B445 /* WoodType */,
 				CBE1CF3B2B4846490076B445 /* ForestOwner */,
 				4F5F9B362B48229E0037CB5C /* SettingsView.swift */,
-				CB8C774F2B77F4CE00F97A1A /* Setting.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -538,7 +535,6 @@
 				4FFE75CE2B445C720098FF00 /* TreeListView.swift in Sources */,
 				4FFE75B72B444E300098FF00 /* MainView.swift in Sources */,
 				4FFE75BE2B4452010098FF00 /* View.swift in Sources */,
-				CB8C77502B77F4CE00F97A1A /* Setting.swift in Sources */,
 				4FFE75AD2B444BD40098FF00 /* ForestListView.swift in Sources */,
 				4FFE757C2B444B340098FF00 /* ForestFlowApp.swift in Sources */,
 				4FFE75B52B444E190098FF00 /* ForestModifyView.swift in Sources */,
