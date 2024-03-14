@@ -14,7 +14,7 @@ struct TreeDetailView: View {
     var body: some View {
         Form {
             Section("Standort") {
-                Map(position: .constant(MapCameraPosition.region(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: tree.latitude, longitude: tree.longitude), latitudinalMeters: 500, longitudinalMeters: 500)))) {
+                Map(position: .constant(MapCameraPosition.region(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: tree.latitude, longitude: tree.longitude), latitudinalMeters: 250, longitudinalMeters: 250)))) {
                     Marker("Baum Standort", coordinate: CLLocationCoordinate2D(latitude: tree.latitude, longitude: tree.longitude))
                 }
                 .frame(width: 330, height: 330)
