@@ -39,7 +39,7 @@ struct ForestListView: View {
             .navigationTitle("Waldliste")
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
-                    NavigationLink(value: ForestShow(forest: nil, editing: true)) {
+                    NavigationLink(value: ForestShow(forest: nil, editing: false)) {
                         PlusButton()
                     }
                 }
