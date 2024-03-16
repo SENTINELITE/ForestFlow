@@ -2,7 +2,7 @@
 //  ForestFlowUITestsLaunchTests.swift
 //  ForestFlowUITests
 //
-//  Created by Roman Indermühle on 20.05.23.
+//  Created by Simon Zwicker on 02.01.24.
 //
 
 import XCTest

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1500"
+   LastUpgradeVersion = "1530"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CB25F3502A1934B800D40E6E"
+               BlueprintIdentifier = "4FFE75772B444B340098FF00"
                BuildableName = "ForestFlow.app"
                BlueprintName = "ForestFlow"
                ReferencedContainer = "container:ForestFlow.xcodeproj">
@@ -28,30 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
-      <Testables>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CB25F3612A1934B900D40E6E"
-               BuildableName = "ForestFlowTests.xctest"
-               BlueprintName = "ForestFlowTests"
-               ReferencedContainer = "container:ForestFlow.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CB25F36B2A1934B900D40E6E"
-               BuildableName = "ForestFlowUITests.xctest"
-               BlueprintName = "ForestFlowUITests"
-               ReferencedContainer = "container:ForestFlow.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -67,12 +43,19 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CB25F3502A1934B800D40E6E"
+            BlueprintIdentifier = "4FFE75772B444B340098FF00"
             BuildableName = "ForestFlow.app"
             BlueprintName = "ForestFlow"
             ReferencedContainer = "container:ForestFlow.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "IDEPreferLogStreaming"
+            value = "YES"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -84,7 +67,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CB25F3502A1934B800D40E6E"
+            BlueprintIdentifier = "4FFE75772B444B340098FF00"
             BuildableName = "ForestFlow.app"
             BlueprintName = "ForestFlow"
             ReferencedContainer = "container:ForestFlow.xcodeproj">
