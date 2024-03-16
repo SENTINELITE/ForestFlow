@@ -13,41 +13,51 @@ struct TreeListView: View {
     let forest: Forest
     
     var body: some View {
-        List {
-            ForEach(forest.trees, id: \.self) { tree in
-                NavigationLink(value: TreeShow(forest: nil, tree: tree, editing: false)) {
-                    HStack {
-                        Text("\(tree.woodType.name)")
-                            .font(.Bold.title3)
-                        
-                        Spacer()
-                        
-                        VStack(alignment: .leading, spacing: 10.0) {
-                            Text("Stufe: \(tree.rateValue?.stage ?? 0)")
-                                .font(.Regular.small)
-                                .foregroundStyle(.gray)
-                            
-                            Text("Volumen: \(tree.rateValue?.volume.string(decimalPlaces: 2) ?? "0.0" )")
-                                .font(.Regular.small)
-                                .foregroundStyle(.gray)
+        VStack {
+            if forest.trees.isEmpty {
+                ContentUnavailableView(
+                    "Noch kein Baum angelegt",
+                    systemImage: "tree.circle.fill",
+                    description: Text("Erstelle einen neuen Baum indem du auf das + drückst.")
+                )
+            } else {
+                List {
+                    ForEach(forest.trees, id: \.self) { tree in
+                        NavigationLink(value: TreeShow(forest: nil, tree: tree, editing: false)) {
+                            HStack {
+                                Text("\(tree.woodType.name)")
+                                    .font(.Bold.title3)
+                                
+                                Spacer()
+                                
+                                VStack(alignment: .leading, spacing: 10.0) {
+                                    Text("Stufe: \(tree.rateValue?.stage ?? 0)")
+                                        .font(.Regular.small)
+                                        .foregroundStyle(.gray)
+                                    
+                                    Text("Volumen: \(tree.rateValue?.volume.string(decimalPlaces: 2) ?? "0.0" )")
+                                        .font(.Regular.small)
+                                        .foregroundStyle(.gray)
+                                }
+                                .padding(.horizontal, 10.0)
+                            }
+                            .padding(10.0)
                         }
-                        .padding(.horizontal, 10.0)
+                        .contextMenu {
+                            Button(role: .destructive) {
+                                context.delete(tree)
+                            } label: {
+                                Label("Löschen", systemImage: "trash")
+                                    .tint(.red)
+                            }
+                            NavigationLink(value: TreeShow(forest: nil, tree: tree, editing: true)) {
+                                Label("Bearbeiten", systemImage: "pencil")
+                            }
+                        }
                     }
-                    .padding(10.0)
-                }
-                .contextMenu {
-                    Button(role: .destructive) {
-                        context.delete(tree)
-                    } label: {
-                        Label("Löschen", systemImage: "trash")
-                            .tint(.red)
-                    }
-                    NavigationLink(value: TreeShow(forest: nil, tree: tree, editing: true)) {
-                        Label("Bearbeiten", systemImage: "pencil")
-                    }
+                    .onDelete(perform: deleteModel)
                 }
             }
-            .onDelete(perform: deleteModel)
         }
         .toolbar {
             ToolbarItem(placement: .bottomBar) {

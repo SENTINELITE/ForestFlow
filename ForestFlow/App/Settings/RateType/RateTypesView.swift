@@ -17,13 +17,23 @@ struct RateTypesView: View {
     @Binding var path: NavigationPath
     
     var body: some View {
-        List {
-            ForEach(rateTypes, id: \.self) { rateType in
-                NavigationLink(value: rateType) {
-                    Text(rateType.name)
+        VStack {
+            if rateTypes.isEmpty {
+                ContentUnavailableView(
+                    "Noch keine Tarife angelegt",
+                    systemImage: "eurosign.arrow.circlepath" ,
+                    description: Text("Erstelle einen neuen Tarif indem du auf das + drückst.")
+                )
+            } else {
+                List {
+                    ForEach(rateTypes, id: \.self) { rateType in
+                        NavigationLink(value: rateType) {
+                            Text(rateType.name)
+                        }
+                    }
+                    .onDelete(perform: deleteModel)
                 }
             }
-            .onDelete(perform: deleteModel)
         }
         .navigationTitle("Tarife")
         .navigationDestination(for: RateType.self) { rateType in

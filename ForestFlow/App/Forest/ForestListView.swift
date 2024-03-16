@@ -38,7 +38,7 @@ struct ForestListView: View {
                 } else {
                     ContentUnavailableView(
                         "Noch kein Wald angelegt",
-                        systemImage: "tree.circle.fill",
+                        systemImage: "square.stack",
                         description: Text("Erstelle einen neuen Wald indem du auf das + drückst.")
                     )
                 }

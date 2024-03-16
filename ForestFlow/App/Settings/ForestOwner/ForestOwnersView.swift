@@ -16,16 +16,26 @@ struct ForestOwnersView: View {
     @State private var forestOwner: ForestOwner?
     
     var body: some View {
-        List {
-            ForEach(forestOwners, id: \.self) { forestOwner in
-                Button {
-                    self.forestOwner = forestOwner
-                } label: {
-                    Text(forestOwner.name)
-                        .font(.Bold.title)
+        VStack {
+            if forestOwners.isEmpty {
+                ContentUnavailableView(
+                    "Noch kein Waldbesitzer angelegt",
+                    systemImage: "person.circle.fill" ,
+                    description: Text("Erstelle einen neuen Waldbesitzer indem du auf das + drückst.")
+                )
+            } else {
+                List {
+                    ForEach(forestOwners, id: \.self) { forestOwner in
+                        Button {
+                            self.forestOwner = forestOwner
+                        } label: {
+                            Text(forestOwner.name)
+                                .font(.Bold.title)
+                        }
+                    }
+                    .onDelete(perform: deleteModel)
                 }
             }
-            .onDelete(perform: deleteModel)
         }
         .navigationTitle("Waldbesitzer")
         .toolbar {

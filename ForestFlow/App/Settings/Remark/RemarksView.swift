@@ -19,16 +19,26 @@ struct RemarksView: View {
     @Query var remarks: [Remark]
 
     var body: some View {
-        List {
-            ForEach(remarks, id: \.self) { remark in
-                Button {
-                    self.remark = remark
-                } label: {
-                    Text(remark.name)
-                        .font(.Bold.title)
+        VStack {
+            if remarks.isEmpty {
+                ContentUnavailableView(
+                    "Noch keine Bemerkung angelegt",
+                    systemImage: "text.bubble.fill" ,
+                    description: Text("Erstelle eine neue Bemerkung indem du auf das + drückst.")
+                )
+            } else {
+                List {
+                    ForEach(remarks, id: \.self) { remark in
+                        Button {
+                            self.remark = remark
+                        } label: {
+                            Text(remark.name)
+                                .font(.Bold.title)
+                        }
+                    }
+                    .onDelete(perform: deleteModel)
                 }
             }
-            .onDelete(perform: deleteModel)
         }
         .navigationTitle("Bemerkungen")
         .toolbar {

@@ -31,7 +31,16 @@ struct TreeModifyView: View {
         Form {
             Section("Bauminformationen") {
                 
-                CircleSelection(items: woodTypes, selected: $woodType)
+                if woodTypes.isEmpty {
+                    ContentUnavailableView(
+                        "Noch keine Baumart angelegt",
+                        systemImage: "tree.circle.fill" ,
+                        description: Text("Erstelle einen neuen Tarif unter Einstellungen -> Baumart")
+                    )
+
+                } else {
+                    CircleSelection(items: woodTypes, selected: $woodType)
+                }
                 
                 if let rateValues = forest?.rateType?.rateValues.sorted(by: { $0.stage < $1.stage }) {
                     CircleSelection(items: rateValues, selected: $rateValue)

@@ -31,7 +31,15 @@ struct ForestModifyView: View {
             }
             
             Section("Tarifeinstellung") {
-                CircleSelection(items: rateTypes, selected: $rateType)
+                if rateTypes.isEmpty {
+                    ContentUnavailableView(
+                        "Noch keine Tarife angelegt",
+                        systemImage: "eurosign.arrow.circlepath" ,
+                        description: Text("Erstelle einen neuen Tarif unter Einstellungen -> Tarif")
+                    )
+                } else {
+                    CircleSelection(items: rateTypes, selected: $rateType)
+                }
                 
                 Picker("Ernteverlust", selection: $cropLoss) {
                     ForEach(5...20, id: \.self) { percent in
@@ -51,6 +59,7 @@ struct ForestModifyView: View {
                     .button {
                         self.saveForest()
                     }
+                    .disabled(rateTypes.isEmpty || name.isEmpty)
             }
         }
         .toolbar(.hidden, for: .tabBar)

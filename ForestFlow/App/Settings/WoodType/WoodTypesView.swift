@@ -16,16 +16,26 @@ struct WoodTypesView: View {
     @State private var woodType: WoodType?
     
     var body: some View {
-        List {
-            ForEach(woodTypes, id: \.self) { woodType in
-                Button {
-                    self.woodType = woodType
-                } label: {
-                    Text(woodType.name)
-                        .font(.Bold.title)
+        VStack {
+            if woodTypes.isEmpty {
+                ContentUnavailableView(
+                    "Noch keine Baumart angelegt",
+                    systemImage: "tree.circle.fill" ,
+                    description: Text("Erstelle eine neue Baumart indem du auf das + drückst.")
+                )
+            } else {
+                List {
+                    ForEach(woodTypes, id: \.self) { woodType in
+                        Button {
+                            self.woodType = woodType
+                        } label: {
+                            Text(woodType.name)
+                                .font(.Bold.title)
+                        }
+                    }
+                    .onDelete(perform: deleteModel)
                 }
             }
-            .onDelete(perform: deleteModel)
         }
         .navigationTitle("Baumart")
         .toolbar {
