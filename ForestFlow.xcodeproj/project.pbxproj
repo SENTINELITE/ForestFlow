@@ -114,6 +114,7 @@
 		CB7A9B122B5D718B00170600 /* ForestOwnerModifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestOwnerModifyView.swift; sourceTree = "<group>"; };
 		CB7A9B142B5D72FB00170600 /* RateTypeModifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateTypeModifyView.swift; sourceTree = "<group>"; };
 		CB7A9B162B5D81C100170600 /* TreeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeDetailView.swift; sourceTree = "<group>"; };
+		CBB1588F2BA6074200EC1A7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CBE1CF392B4826970076B445 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		CBE1CF3C2B48470B0076B445 /* ForestOwnersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestOwnersView.swift; sourceTree = "<group>"; };
 		CBE1CF3F2B4856500076B445 /* WoodType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodType.swift; sourceTree = "<group>"; };
@@ -206,6 +207,7 @@
 				4FFE75A72B444B860098FF00 /* Common */,
 				4FFE75A82B444B8A0098FF00 /* Utils */,
 				4FFE757F2B444B350098FF00 /* Assets.xcassets */,
+				CBB1588F2BA6074200EC1A7A /* Info.plist */,
 				4FFE75812B444B350098FF00 /* ForestFlow.entitlements */,
 				4FFE75822B444B350098FF00 /* Preview Content */,
 			);
@@ -727,6 +729,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ForestFlow/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Need Permission to set Tree to correct Location";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need Permission to set Tree to correct Location";
@@ -770,6 +773,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ForestFlow/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Need Permission to set Tree to correct Location";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need Permission to set Tree to correct Location";
@@ -851,6 +855,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -874,6 +879,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
