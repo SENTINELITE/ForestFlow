@@ -32,6 +32,7 @@ struct WoodTypeModifyView: View {
                     .background(Color.accentColor)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
             }
+            .disabled(name.isEmpty)
             
         }
         .padding()
