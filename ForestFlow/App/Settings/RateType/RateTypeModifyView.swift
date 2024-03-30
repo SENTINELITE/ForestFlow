@@ -17,7 +17,7 @@ struct RateTypeModifyView: View {
     @State var rateValues: [RateValue]
     
     @State var name: String
-    let isEditing: Bool
+    let isEditing: Bool?
     
     var body: some View {
         Form {
@@ -62,7 +62,7 @@ struct RateTypeModifyView: View {
     }
     
     private func save() {
-        if isEditing {
+        if isEditing ?? false {
             rateType?.name = name
             rateType?.rateValues = rateValues 
         }
