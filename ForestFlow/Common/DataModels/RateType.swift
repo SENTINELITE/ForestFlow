@@ -12,9 +12,11 @@ import SwiftData
 class RateType: Selectable {
     var name: String
     var rateValues: [RateValue]
+    @Relationship(deleteRule: .deny) var forests: [Forest]
 
-    init(name: String, rateValues: [RateValue] = []) {
+    init(name: String, rateValues: [RateValue] = [], forests: [Forest] = []) {
         self.name = name
         self.rateValues = rateValues
+        self.forests = forests
     }
 }

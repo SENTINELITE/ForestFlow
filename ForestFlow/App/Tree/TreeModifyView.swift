@@ -119,7 +119,11 @@ struct TreeModifyView: View {
         } else {
             guard let location = locationManager.location, let woodType, let remark, let forestOwner, let forest else { return }
             let tree = Tree(woodType: woodType, rateValue: rateValue, lat: location.latitude, long: location.longitude, forest: forest, remark: remark, forestOwner: forestOwner)
-            context.insert(forest)
+            
+            woodType.trees.append(tree)
+            remark.trees.append(tree)
+            forestOwner.trees.append(tree)
+            rateValue?.trees.append(tree)
             forest.trees.append(tree)
         }
         dismiss()
