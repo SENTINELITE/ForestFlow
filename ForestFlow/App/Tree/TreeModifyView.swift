@@ -76,6 +76,7 @@ struct TreeModifyView: View {
                     .button {
                         self.saveTree()
                     }
+                    .disabled(woodTypes.isEmpty)
                 
             }
         }
@@ -88,6 +89,14 @@ struct TreeModifyView: View {
                 woodType = tree?.woodType
                 remark = tree?.remark
                 forestOwner = tree?.forestOwner
+            }
+            
+            if rateValue == nil {
+                rateValue = forest?.rateType?.rateValues.last
+            }
+            
+            if woodType == nil {
+                woodType = woodTypes.first
             }
             
             if forestOwner == nil {

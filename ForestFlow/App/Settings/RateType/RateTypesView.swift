@@ -37,7 +37,7 @@ struct RateTypesView: View {
         }
         .navigationTitle("Tarife")
         .navigationDestination(for: RateType.self) { rateType in
-            RateTypeModifyView(rateType: .constant(rateType), rateValues: rateType.rateValues, name: rateType.name, isEditing: true)
+            RateTypeModifyView(rateType: .constant(rateType), name: rateType.name, isEditing: true)
         }
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
