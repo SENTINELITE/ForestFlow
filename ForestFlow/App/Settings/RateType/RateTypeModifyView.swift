@@ -14,8 +14,6 @@ struct RateTypeModifyView: View {
     
     @Binding var rateType: RateType?
     
-    @State var rateValues: [RateValue]
-    
     @State var name: String
     let isEditing: Bool?
     
@@ -26,7 +24,7 @@ struct RateTypeModifyView: View {
             }
             
             Section("Stufen") {
-                ForEach(rateValues.sorted(by: { $0.stage > $1.stage }), id: \.self) { rateValue in
+                ForEach(rateType?.rateValues.sorted(by: { $0.stage > $1.stage }) ?? [], id: \.self) { rateValue in
                     RateValueStepper(rateValue: .constant(rateValue))
                         .swipeActions {
                             Button(role: .destructive) {
@@ -45,6 +43,9 @@ struct RateTypeModifyView: View {
             }
         }
         .toolbar(.hidden, for: .tabBar)
+        .onAppear {
+            
+        }
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
                 Text("Speichern")
@@ -56,6 +57,7 @@ struct RateTypeModifyView: View {
                     .button {
                         save()
                     }
+                    .disabled(name.isEmpty)
                 
             }
         }
@@ -64,16 +66,15 @@ struct RateTypeModifyView: View {
     private func save() {
         if isEditing ?? false {
             rateType?.name = name
-            rateType?.rateValues = rateValues 
         }
         dismiss()
         
     }
     
     private func createRateValue() {
-        let nextStage = (rateValues.last?.stage ?? 0) + 1
+        let nextStage = (rateType?.rateValues.last?.stage ?? 0) + 1
         let rateValue = RateValue(stage: nextStage, volume: 0.0)
-        rateValues.append(rateValue)
+        rateType?.rateValues.append(rateValue)
         
     }
 }
