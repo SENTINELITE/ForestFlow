@@ -19,4 +19,11 @@ class RateType: Selectable {
         self.rateValues = rateValues
         self.forests = forests
     }
+    
+    func canDelete() -> DataModelDeleteError? {
+         if forests.count > 0 {
+             return DataModelDeleteError.hasForests
+         }
+         return nil
+       }
 }

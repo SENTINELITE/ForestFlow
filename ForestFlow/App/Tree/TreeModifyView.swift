@@ -66,13 +66,8 @@ struct TreeModifyView: View {
             }
         }
         .toolbar {
-            ToolbarItem(placement: .bottomBar) {
+            ToolbarItem(placement: .topBarTrailing) {
                 Text("Speichern")
-                    .font(.Bold.title2)
-                    .frame(width: 250, height: 50)
-                    .foregroundStyle(.white)
-                    .background(Color.accentColor)
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
                     .button {
                         self.saveTree()
                     }

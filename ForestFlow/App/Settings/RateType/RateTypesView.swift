@@ -12,7 +12,8 @@ struct RateTypesView: View {
     @Query var rateTypes: [RateType]
     @Environment(\.modelContext) var context
     
-    @State private var showModifyView = false
+    @State private var showModifyView: Bool = false
+    @State private var showAlert: Bool = false
     
     @Binding var path: NavigationPath
     
@@ -30,8 +31,19 @@ struct RateTypesView: View {
                         NavigationLink(value: rateType) {
                             Text(rateType.name)
                         }
+                        .swipeActions {
+                            Button {
+                                if rateType.canDelete() != nil {
+                                    showAlert.toggle()
+                                } else {
+                                    context.delete(rateType)
+                                }
+                            } label: {
+                                Text("Delete")
+                            }
+                            .tint(rateType.canDelete() != nil ? .gray : .red)
+                        }
                     }
-                    .onDelete(perform: deleteModel)
                 }
             }
         }
@@ -40,8 +52,8 @@ struct RateTypesView: View {
             RateTypeModifyView(rateType: .constant(rateType), name: rateType.name, isEditing: true)
         }
         .toolbar {
-            ToolbarItem(placement: .bottomBar) {
-                PlusButton()
+            ToolbarItem(placement: .topBarTrailing) {
+                Image(systemName: "plus")
                     .button {
                         let rateType = RateType(name: "", rateValues: [])
                         context.insert(rateType)
@@ -49,12 +61,10 @@ struct RateTypesView: View {
                     }
             }
         }
-    }
-    
-    func deleteModel(_ indexSet: IndexSet) {
-        for index in indexSet {
-            let model = rateTypes[index]
-            context.delete(model)
+        .alert("Löschen nicht möglich", isPresented: $showAlert) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text("Element konnte nicht gelöscht werden da eine Referenz zu einem anderen Element besteht.")
         }
     }
 }

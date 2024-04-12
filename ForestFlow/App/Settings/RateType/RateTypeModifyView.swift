@@ -15,6 +15,7 @@ struct RateTypeModifyView: View {
     @Binding var rateType: RateType?
     
     @State var name: String
+    @State private var showAlert: Bool = false
     let isEditing: Bool?
     
     var body: some View {
@@ -27,12 +28,16 @@ struct RateTypeModifyView: View {
                 ForEach(rateType?.rateValues.sorted(by: { $0.stage > $1.stage }) ?? [], id: \.self) { rateValue in
                     RateValueStepper(rateValue: .constant(rateValue))
                         .swipeActions {
-                            Button(role: .destructive) {
-                                context.delete(rateValue)
+                            Button {
+                                if rateValue.canDelete() != nil {
+                                    showAlert.toggle()
+                                } else {
+                                    context.delete(rateValue)
+                                }
                             } label: {
-                                Image(systemName: "trash")
+                                Text("Delete")
                             }
-                            
+                            .tint(rateValue.canDelete() != nil ? .gray : .red)
                         }
                 }
                 
@@ -47,19 +52,18 @@ struct RateTypeModifyView: View {
             
         }
         .toolbar {
-            ToolbarItem(placement: .bottomBar) {
+            ToolbarItem(placement: .topBarTrailing) {
                 Text("Speichern")
-                    .font(.Bold.title2)
-                    .frame(width: 250, height: 50)
-                    .foregroundStyle(.white)
-                    .background(Color.accentColor)
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
                     .button {
                         save()
                     }
                     .disabled(name.isEmpty)
-                
             }
+        }
+        .alert("Löschen nicht möglich", isPresented: $showAlert) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text("Element konnte nicht gelöscht werden da eine Referenz zu einem anderen Element besteht.")
         }
     }
     

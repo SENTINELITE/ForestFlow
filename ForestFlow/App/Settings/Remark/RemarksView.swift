@@ -13,6 +13,7 @@ struct RemarksView: View {
     @Environment(\.modelContext) var context
     
     @State var showModifyView: Bool = false
+    @State private var showAlert: Bool = false
     @State private var remark: Remark?
     
     // MARK: - Query
@@ -35,34 +36,45 @@ struct RemarksView: View {
                             Text(remark.name)
                                 .font(.Bold.title)
                         }
+                        .swipeActions {
+                            Button {
+                                if remark.canDelete() != nil {
+                                    showAlert.toggle()
+                                } else {
+                                    context.delete(remark)
+                                }
+                            } label: {
+                                Text("Delete")
+                            }
+                            .tint(remark.canDelete() != nil ? .gray : .red)
+                        }
                     }
-                    .onDelete(perform: deleteModel)
                 }
             }
         }
         .navigationTitle("Bemerkungen")
         .toolbar {
-            ToolbarItem(placement: .bottomBar) {
-                PlusButton()
+            ToolbarItem(placement: .topBarTrailing) {
+                Image(systemName: "plus")
                     .button {
                         showModifyView.toggle()
                     }
             }
         }
+        .alert("Löschen nicht möglich", isPresented: $showAlert) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text("Element konnte nicht gelöscht werden da eine Referenz zu einem anderen Element besteht.")
+        }
         .sheet(item: $remark, onDismiss: { self.remark = nil }) { remark in
-            RemarkModifyView(remark: $remark, name: remark.name, isEditing: true)
-                .presentationDetents([.height(250.0)])
+            NavigationStack {
+                RemarkModifyView(remark: $remark, name: remark.name, isEditing: true)
+            }
         }
         .sheet(isPresented: $showModifyView) {
-            RemarkModifyView(remark: .constant(nil), name: "", isEditing: false)
-                .presentationDetents([.height(250.0)])
-        }
-    }
-    
-    func deleteModel(_ indexSet: IndexSet) {
-        for index in indexSet {
-            let model = remarks[index]
-            context.delete(model)
+            NavigationStack {
+                RemarkModifyView(remark: .constant(nil), name: "", isEditing: false)
+            }
         }
     }
 }

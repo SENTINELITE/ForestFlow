@@ -60,9 +60,9 @@ struct TreeListView: View {
             }
         }
         .toolbar {
-            ToolbarItem(placement: .bottomBar) {
+            ToolbarItem(placement: .topBarTrailing) {
                 NavigationLink(value: TreeShow(forest: forest, tree: nil, editing: false)) {
-                    PlusButton()
+                    Image(systemName: "plus")
                 }
             }
         }
