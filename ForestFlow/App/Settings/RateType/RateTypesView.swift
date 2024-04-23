@@ -46,6 +46,7 @@ struct RateTypesView: View {
                         let rateType = RateType(name: "", rateValues: [])
                         context.insert(rateType)
                         path.append(rateType)
+                        try! context.save()
                     }
             }
         }
@@ -55,6 +56,7 @@ struct RateTypesView: View {
         for index in indexSet {
             let model = rateTypes[index]
             context.delete(model)
+            try! context.save()
         }
     }
 }

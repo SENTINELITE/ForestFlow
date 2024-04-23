@@ -44,6 +44,7 @@ struct RemarkModifyView: View {
         } else {
             let remark = Remark(name: name)
             context.insert(remark)
+            try! context.save()
         }
         
         dismiss()

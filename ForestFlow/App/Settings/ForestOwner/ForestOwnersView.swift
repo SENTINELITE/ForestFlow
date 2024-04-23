@@ -60,6 +60,7 @@ struct ForestOwnersView: View {
         for index in indexSet {
             let model = forestOwners[index]
             context.delete(model)
+            try! context.save()
         }
     }
 }

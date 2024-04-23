@@ -46,6 +46,7 @@ struct TreeListView: View {
                         .contextMenu {
                             Button(role: .destructive) {
                                 context.delete(tree)
+                                try! context.save()
                             } label: {
                                 Label("Löschen", systemImage: "trash")
                                     .tint(.red)
@@ -84,6 +85,7 @@ struct TreeListView: View {
         for index in indexSet {
             let model = forest.trees[index]
             context.delete(model)
+            try! context.save()
         }
     }
 }

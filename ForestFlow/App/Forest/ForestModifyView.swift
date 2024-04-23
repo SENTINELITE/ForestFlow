@@ -81,6 +81,7 @@ struct ForestModifyView: View {
         } else {
             let forest = Forest(name: name, location: location, rateType: rateType, cropLoss: cropLoss)
             context.insert(forest)
+            try! context.save()
         }
         dismiss()
     }

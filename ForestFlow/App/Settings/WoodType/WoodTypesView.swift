@@ -60,6 +60,7 @@ struct WoodTypesView: View {
         for index in indexSet {
             let model = woodTypes[index]
             context.delete(model)
+            try! context.save()
         }
     }
 }

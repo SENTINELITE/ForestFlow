@@ -46,6 +46,7 @@ struct ForestOwnerModifyView: View {
         } else {
             let forestOwner = ForestOwner(name: name)
             context.insert(forestOwner)
+            try! context.save()
         }
         
         dismiss()

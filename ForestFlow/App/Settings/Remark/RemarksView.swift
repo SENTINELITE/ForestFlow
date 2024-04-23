@@ -63,6 +63,7 @@ struct RemarksView: View {
         for index in indexSet {
             let model = remarks[index]
             context.delete(model)
+            try! context.save()
         }
     }
 }
