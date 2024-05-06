@@ -14,8 +14,7 @@ struct ForestFlowApp: App {
         WindowGroup {
             MainView()
                 .modelContainer(for: [
-                    Forest.self,
-                    ForestOwner.self,
+                    Forest.self
                 ])
         }
     }
