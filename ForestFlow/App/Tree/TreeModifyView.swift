@@ -42,7 +42,7 @@ struct TreeModifyView: View {
                     CircleSelection(items: woodTypes, selected: $woodType)
                 }
                 
-                if let rateValues = forest?.rateType?.rateValues.sorted(by: { $0.stage < $1.stage }) {
+                if let rateValues = forest?.rateType?.rateValues?.sorted(by: { $0.stage < $1.stage }) {
                     CircleSelection(items: rateValues, selected: $rateValue)
                 }
                 if let volume = rateValue?.volume {
@@ -66,13 +66,8 @@ struct TreeModifyView: View {
             }
         }
         .toolbar {
-            ToolbarItem(placement: .bottomBar) {
+            ToolbarItem(placement: .topBarTrailing) {
                 Text("Speichern")
-                    .font(.Bold.title2)
-                    .frame(width: 250, height: 50)
-                    .foregroundStyle(.white)
-                    .background(Color.accentColor)
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
                     .button {
                         self.saveTree()
                     }
@@ -92,7 +87,7 @@ struct TreeModifyView: View {
             }
             
             if rateValue == nil {
-                rateValue = forest?.rateType?.rateValues.last
+                rateValue = forest?.rateType?.rateValues?.last
             }
             
             if woodType == nil {
@@ -119,7 +114,11 @@ struct TreeModifyView: View {
         } else {
             guard let location = locationManager.location, let woodType, let remark, let forestOwner, let forest else { return }
             let tree = Tree(woodType: woodType, rateValue: rateValue, lat: location.latitude, long: location.longitude, forest: forest, remark: remark, forestOwner: forestOwner)
-            context.insert(forest)
+            
+            woodType.trees.append(tree)
+            remark.trees.append(tree)
+            forestOwner.trees.append(tree)
+            rateValue?.trees.append(tree)
             forest.trees.append(tree)
         }
         dismiss()

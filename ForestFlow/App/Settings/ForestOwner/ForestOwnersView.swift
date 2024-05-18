@@ -12,7 +12,8 @@ struct ForestOwnersView: View {
     @Query var forestOwners: [ForestOwner]
     @Environment(\.modelContext) var context
     
-    @State private var showModifyView = false
+    @State private var showModifyView: Bool = false
+    @State private var showAlert: Bool = false
     @State private var forestOwner: ForestOwner?
     
     var body: some View {
@@ -32,34 +33,45 @@ struct ForestOwnersView: View {
                             Text(forestOwner.name)
                                 .font(.Bold.title)
                         }
+                        .swipeActions {
+                            Button {
+                                if forestOwner.canDelete() != nil {
+                                    showAlert.toggle()
+                                } else {
+                                    context.delete(forestOwner)
+                                }
+                            } label: {
+                                Text("Delete")
+                            }
+                            .tint(forestOwner.canDelete() != nil ? .gray : .red)
+                        }
                     }
-                    .onDelete(perform: deleteModel)
                 }
             }
         }
         .navigationTitle("Waldbesitzer")
         .toolbar {
-            ToolbarItem(placement: .bottomBar) {
-                PlusButton()
+            ToolbarItem(placement: .topBarTrailing) {
+                Image(systemName: "plus")
                     .button {
                         showModifyView.toggle()
                     }
             }
         }
+        .alert("Löschen nicht möglich", isPresented: $showAlert) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text("Dieses Element kann nicht gelöscht werden, da es in verwendung ist")
+        }
         .sheet(item: $forestOwner, onDismiss: { self.forestOwner = nil }) { forestOwner in
-            ForestOwnerModifyView(forestOwner: $forestOwner, name: forestOwner.name, isEditing: true)
-                .presentationDetents([.height(250.0)])
+            NavigationStack {
+                ForestOwnerModifyView(forestOwner: $forestOwner, name: forestOwner.name, isEditing: true)
+            }
         }
         .sheet(isPresented: $showModifyView) {
-            ForestOwnerModifyView(forestOwner: .constant(nil), name: "", isEditing: false)
-                .presentationDetents([.height(250.0)])
-        }
-    }
-
-    func deleteModel(_ indexSet: IndexSet) {
-        for index in indexSet {
-            let model = forestOwners[index]
-            context.delete(model)
+            NavigationStack {
+                ForestOwnerModifyView(forestOwner: .constant(nil), name: "", isEditing: false)
+            }
         }
     }
 }

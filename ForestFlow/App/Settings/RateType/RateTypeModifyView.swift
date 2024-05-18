@@ -15,7 +15,10 @@ struct RateTypeModifyView: View {
     @Binding var rateType: RateType?
     
     @State var name: String
-    let isEditing: Bool?
+    @State var currentStage: Int = -1
+    @State var rateValues: [RateValue]
+    @State private var showAlert: Bool = false
+    let isEditing: Bool
     
     var body: some View {
         Form {
@@ -24,15 +27,19 @@ struct RateTypeModifyView: View {
             }
             
             Section("Stufen") {
-                ForEach(rateType?.rateValues.sorted(by: { $0.stage > $1.stage }) ?? [], id: \.self) { rateValue in
+                ForEach(rateValues.sorted(by: { $0.stage > $1.stage }), id: \.self) { rateValue in
                     RateValueStepper(rateValue: .constant(rateValue))
                         .swipeActions {
-                            Button(role: .destructive) {
-                                context.delete(rateValue)
+                            Button {
+                                if rateValue.canDelete() != nil {
+                                    showAlert.toggle()
+                                } else {
+                                    context.delete(rateValue)
+                                }
                             } label: {
-                                Image(systemName: "trash")
+                                Text("Delete")
                             }
-                            
+                            .tint(rateValue.canDelete() != nil ? .gray : .red)
                         }
                 }
                 
@@ -43,38 +50,38 @@ struct RateTypeModifyView: View {
             }
         }
         .toolbar(.hidden, for: .tabBar)
-        .onAppear {
-            
-        }
         .toolbar {
-            ToolbarItem(placement: .bottomBar) {
+            ToolbarItem(placement: .topBarTrailing) {
                 Text("Speichern")
-                    .font(.Bold.title2)
-                    .frame(width: 250, height: 50)
-                    .foregroundStyle(.white)
-                    .background(Color.accentColor)
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
                     .button {
                         save()
                     }
                     .disabled(name.isEmpty)
-                
             }
+        }
+        .alert("Löschen nicht möglich", isPresented: $showAlert) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text("Dieses Element kann nicht gelöscht werden, da es in verwendung ist")
         }
     }
     
     private func save() {
-        if isEditing ?? false {
+        if isEditing {
             rateType?.name = name
+            rateType?.rateValues = rateValues
+        } else {
+            let rateType = RateType(name: name, rateValues: rateValues)
+            context.insert(rateType)
         }
         dismiss()
         
     }
     
     private func createRateValue() {
-        let nextStage = (rateType?.rateValues.last?.stage ?? 0) + 1
-        let rateValue = RateValue(stage: nextStage, volume: 0.0)
-        rateType?.rateValues.append(rateValue)
+        currentStage += 1
+        let rateValue = RateValue(stage: currentStage, volume: 0.0)
+        rateValues.append(rateValue)
         
     }
 }

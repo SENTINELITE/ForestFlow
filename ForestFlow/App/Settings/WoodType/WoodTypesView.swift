@@ -12,7 +12,8 @@ struct WoodTypesView: View {
     @Query var woodTypes: [WoodType]
     @Environment(\.modelContext) var context
     
-    @State private var showModifyView = false
+    @State private var showModifyView: Bool = false
+    @State private var showAlert: Bool = false
     @State private var woodType: WoodType?
     
     var body: some View {
@@ -32,34 +33,45 @@ struct WoodTypesView: View {
                             Text(woodType.name)
                                 .font(.Bold.title)
                         }
+                        .swipeActions {
+                            Button {
+                                if woodType.canDelete() != nil {
+                                    showAlert.toggle()
+                                } else {
+                                    context.delete(woodType)
+                                }
+                            } label: {
+                                Text("Delete")
+                            }
+                            .tint(woodType.canDelete() != nil ? .gray : .red)
+                        }
                     }
-                    .onDelete(perform: deleteModel)
                 }
             }
         }
         .navigationTitle("Baumart")
         .toolbar {
-            ToolbarItem(placement: .bottomBar) {
-                PlusButton()
+            ToolbarItem(placement: .topBarTrailing) {
+                Image(systemName: "plus")
                     .button {
                         showModifyView.toggle()
                     }
             }
         }
+        .alert("Löschen nicht möglich", isPresented: $showAlert) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text("Dieses Element kann nicht gelöscht werden, da es in verwendung ist")
+        }
         .sheet(item: $woodType, onDismiss: { self.woodType = nil }) { woodType in
-            WoodTypeModifyView(woodType: $woodType, name: woodType.name, isEditing: true)
-                .presentationDetents([.height(250.0)])
+            NavigationStack {
+                WoodTypeModifyView(woodType: $woodType, name: woodType.name, isEditing: true)
+            }
         }
         .sheet(isPresented: $showModifyView) {
-            WoodTypeModifyView(woodType: .constant(nil), name: "", isEditing: false)
-                .presentationDetents([.height(250.0)])
-        }
-    }
-    
-    func deleteModel(_ indexSet: IndexSet) {
-        for index in indexSet {
-            let model = woodTypes[index]
-            context.delete(model)
+            NavigationStack {
+                WoodTypeModifyView(woodType: .constant(nil), name: "", isEditing: false)
+            }
         }
     }
 }

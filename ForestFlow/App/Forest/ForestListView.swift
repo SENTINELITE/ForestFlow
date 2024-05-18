@@ -43,11 +43,11 @@ struct ForestListView: View {
                     )
                 }
             }
-            .navigationTitle("Waldliste")
+            .navigationTitle("Anzeichnungsliste")
             .toolbar {
-                ToolbarItem(placement: .bottomBar) {
+                ToolbarItem(placement: .topBarTrailing) {
                     NavigationLink(value: ForestShow(forest: nil, editing: false)) {
-                        PlusButton()
+                        Image(systemName: "plus")
                     }
                 }
             }

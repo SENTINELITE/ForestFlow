@@ -14,11 +14,20 @@ class RateValue: Selectable {
     var volume: Double
     var name: String
     var rateType: RateType?
+    @Relationship(deleteRule: .deny) var trees: [Tree]
 
-    init(stage: Int, volume: Double, rateType: RateType? = nil) {
+    init(stage: Int, volume: Double, rateType: RateType? = nil, trees: [Tree] = []) {
         self.stage = stage
         self.volume = volume
         self.name = stage.description
         self.rateType = rateType
+        self.trees = trees
     }
+    
+    func canDelete() -> DataModelDeleteError? {
+         if trees.count > 0 {
+             return DataModelDeleteError.isInUse
+         }
+         return nil
+       }
 }

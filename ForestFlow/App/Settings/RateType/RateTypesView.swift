@@ -12,9 +12,8 @@ struct RateTypesView: View {
     @Query var rateTypes: [RateType]
     @Environment(\.modelContext) var context
     
-    @State private var showModifyView = false
-    
-    @Binding var path: NavigationPath
+    @State private var showModifyView: Bool = false
+    @State private var showAlert: Bool = false
     
     var body: some View {
         VStack {
@@ -30,31 +29,40 @@ struct RateTypesView: View {
                         NavigationLink(value: rateType) {
                             Text(rateType.name)
                         }
+                        .swipeActions {
+                            Button {
+                                if rateType.canDelete() != nil {
+                                    showAlert.toggle()
+                                } else {
+                                    context.delete(rateType)
+                                }
+                            } label: {
+                                Text("Delete")
+                            }
+                            .tint(rateType.canDelete() != nil ? .gray : .red)
+                        }
                     }
-                    .onDelete(perform: deleteModel)
                 }
             }
         }
         .navigationTitle("Tarife")
         .navigationDestination(for: RateType.self) { rateType in
-            RateTypeModifyView(rateType: .constant(rateType), name: rateType.name, isEditing: true)
+            RateTypeModifyView(rateType: .constant(rateType), name: rateType.name, rateValues: rateType.rateValues ?? [], isEditing: true)
+        }
+        .navigationDestination(for: Bool.self) { _ in
+            RateTypeModifyView(rateType: .constant(nil), name: "", rateValues: [], isEditing: false)
         }
         .toolbar {
-            ToolbarItem(placement: .bottomBar) {
-                PlusButton()
-                    .button {
-                        let rateType = RateType(name: "", rateValues: [])
-                        context.insert(rateType)
-                        path.append(rateType)
-                    }
+            ToolbarItem(placement: .topBarTrailing) {
+                NavigationLink(value: true) {
+                    Image(systemName: "plus")
+                }
             }
         }
-    }
-    
-    func deleteModel(_ indexSet: IndexSet) {
-        for index in indexSet {
-            let model = rateTypes[index]
-            context.delete(model)
+        .alert("Löschen nicht möglich", isPresented: $showAlert) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text("Dieses Element kann nicht gelöscht werden, da es in verwendung ist")
         }
     }
 }

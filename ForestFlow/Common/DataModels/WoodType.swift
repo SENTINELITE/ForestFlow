@@ -11,10 +11,17 @@ import SwiftData
 @Model
 class WoodType: Selectable {
     var name: String
-    var trees: [Tree]
+    @Relationship(deleteRule: .deny) var trees: [Tree]
 
     init(name: String, trees: [Tree] = []) {
         self.name = name
         self.trees = trees
     }
+    
+    func canDelete() -> DataModelDeleteError? {
+         if trees.count > 0 {
+             return DataModelDeleteError.isInUse
+         }
+         return nil
+       }
 }

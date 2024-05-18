@@ -12,7 +12,6 @@ import SwiftData
 class Forest {
     var name: String
     var location: String
-    var forestOwner: ForestOwner?
     var rateType: RateType?
     var cropLoss: Int
     @Relationship(deleteRule: .cascade, inverse: \Tree.forest) var trees: [Tree]
@@ -20,14 +19,12 @@ class Forest {
     init(
         name: String,
         location: String,
-        forestOwner: ForestOwner? = nil,
         rateType: RateType? = nil,
         cropLoss: Int,
         trees: [Tree] = []
     ) {
         self.name = name
         self.location = location
-        self.forestOwner = forestOwner
         self.rateType = rateType
         self.cropLoss = cropLoss
         self.trees = trees

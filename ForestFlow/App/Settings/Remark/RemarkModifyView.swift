@@ -19,23 +19,26 @@ struct RemarkModifyView: View {
         VStack {
             TextField("Name", text: $name)
                 .textFieldStyle(.roundedBorder)
-            
             Spacer()
-            
-            Button {
-                saveRemark()
-            } label: {
-                Text("Speichern")
-                    .font(.Bold.title2)
-                    .frame(width: 250, height: 50)
-                    .foregroundStyle(.white)
-                    .background(Color.accentColor)
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
-            }
-            .disabled(name.isEmpty)
-            
         }
         .padding()
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    saveRemark()
+                } label: {
+                    Text("Speichern")
+                }
+                .disabled(name.isEmpty)
+            }
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    dismiss()
+                } label: {
+                    Text("Abbrechen")
+                }
+            }
+        }
     }
     
     func saveRemark() {

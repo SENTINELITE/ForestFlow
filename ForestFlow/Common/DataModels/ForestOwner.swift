@@ -11,10 +11,17 @@ import SwiftData
 @Model
 class ForestOwner {
     var name: String
-    var forests: [Forest]
+    @Relationship(deleteRule: .deny) var trees: [Tree]
 
-    init(name: String, forests: [Forest] = []) {
+    init(name: String, trees: [Tree] = []) {
         self.name = name
-        self.forests = forests
+        self.trees = trees
     }
+    
+    func canDelete() -> DataModelDeleteError? {
+         if trees.count > 0 {
+             return DataModelDeleteError.isInUse
+         }
+         return nil
+       }
 }
