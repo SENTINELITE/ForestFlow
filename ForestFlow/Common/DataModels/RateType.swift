@@ -11,10 +11,10 @@ import SwiftData
 @Model
 class RateType: Selectable {
     var name: String
-    var rateValues: [RateValue]
+    var rateValues: [RateValue]?
     @Relationship(deleteRule: .deny) var forests: [Forest]
 
-    init(name: String, rateValues: [RateValue] = [], forests: [Forest] = []) {
+    init(name: String, rateValues: [RateValue]?, forests: [Forest] = []) {
         self.name = name
         self.rateValues = rateValues
         self.forests = forests
@@ -22,7 +22,7 @@ class RateType: Selectable {
     
     func canDelete() -> DataModelDeleteError? {
          if forests.count > 0 {
-             return DataModelDeleteError.hasForests
+             return DataModelDeleteError.isInUse
          }
          return nil
        }

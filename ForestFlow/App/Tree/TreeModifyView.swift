@@ -42,7 +42,7 @@ struct TreeModifyView: View {
                     CircleSelection(items: woodTypes, selected: $woodType)
                 }
                 
-                if let rateValues = forest?.rateType?.rateValues.sorted(by: { $0.stage < $1.stage }) {
+                if let rateValues = forest?.rateType?.rateValues?.sorted(by: { $0.stage < $1.stage }) {
                     CircleSelection(items: rateValues, selected: $rateValue)
                 }
                 if let volume = rateValue?.volume {
@@ -87,7 +87,7 @@ struct TreeModifyView: View {
             }
             
             if rateValue == nil {
-                rateValue = forest?.rateType?.rateValues.last
+                rateValue = forest?.rateType?.rateValues?.last
             }
             
             if woodType == nil {
