@@ -30,11 +30,11 @@ struct TreeDetailView: View {
             }
             
             Section("Waldbesitzer") {
-                Text(tree.forestOwner.name)
+                Text(tree.forestOwner?.name ?? "")
             }
             
             Section("Bemerkungen") {
-                Text(tree.remark.name)
+                Text(tree.remark?.name ?? "")
             }
         }
         .toolbar(.hidden, for: .tabBar)
