@@ -26,7 +26,7 @@ class RateValue: Selectable {
     
     func canDelete() -> DataModelDeleteError? {
          if trees.count > 0 {
-             return DataModelDeleteError.hasTrees
+             return DataModelDeleteError.isInUse
          }
          return nil
        }

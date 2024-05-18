@@ -7,9 +7,8 @@
 
 import Foundation
 
-enum DataModelDeleteError {
-    case hasForests
-    case hasTrees
+enum DataModelDeleteError: String, Error {
+    case isInUse
     
 }
 
