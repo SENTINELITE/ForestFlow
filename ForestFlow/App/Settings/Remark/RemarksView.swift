@@ -64,7 +64,7 @@ struct RemarksView: View {
         .alert("Löschen nicht möglich", isPresented: $showAlert) {
             Button("OK", role: .cancel) {}
         } message: {
-            Text("Element konnte nicht gelöscht werden da eine Referenz zu einem anderen Element besteht.")
+            Text("Dieses Element kann nicht gelöscht werden, da es in verwendung ist")
         }
         .sheet(item: $remark, onDismiss: { self.remark = nil }) { remark in
             NavigationStack {

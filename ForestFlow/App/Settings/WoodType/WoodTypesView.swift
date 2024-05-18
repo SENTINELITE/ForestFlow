@@ -61,7 +61,7 @@ struct WoodTypesView: View {
         .alert("Löschen nicht möglich", isPresented: $showAlert) {
             Button("OK", role: .cancel) {}
         } message: {
-            Text("Element konnte nicht gelöscht werden da eine Referenz zu einem anderen Element besteht.")
+            Text("Dieses Element kann nicht gelöscht werden, da es in verwendung ist")
         }
         .sheet(item: $woodType, onDismiss: { self.woodType = nil }) { woodType in
             NavigationStack {
