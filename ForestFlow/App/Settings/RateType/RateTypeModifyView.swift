@@ -75,7 +75,6 @@ struct RateTypeModifyView: View {
         let nextStage = (rateType?.rateValues.last?.stage ?? 0) + 1
         let rateValue = RateValue(stage: nextStage, volume: 0.0)
         rateType?.rateValues.append(rateValue)
-        try! context.save()
         
     }
 }

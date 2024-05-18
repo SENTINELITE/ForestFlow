@@ -44,7 +44,6 @@ struct WoodTypeModifyView: View {
         } else {
             let woodType = WoodType(name: name)
             context.insert(woodType)
-            try! context.save()
         }
         dismiss()
     }
