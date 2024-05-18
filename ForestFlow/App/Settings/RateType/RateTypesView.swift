@@ -15,8 +15,6 @@ struct RateTypesView: View {
     @State private var showModifyView: Bool = false
     @State private var showAlert: Bool = false
     
-    @Binding var path: NavigationPath
-    
     var body: some View {
         VStack {
             if rateTypes.isEmpty {
@@ -49,22 +47,22 @@ struct RateTypesView: View {
         }
         .navigationTitle("Tarife")
         .navigationDestination(for: RateType.self) { rateType in
-            RateTypeModifyView(rateType: .constant(rateType), name: rateType.name, isEditing: true)
+            RateTypeModifyView(rateType: .constant(rateType), name: rateType.name, rateValues: rateType.rateValues ?? [], isEditing: true)
+        }
+        .navigationDestination(for: Bool.self) { _ in
+            RateTypeModifyView(rateType: .constant(nil), name: "", rateValues: [], isEditing: false)
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Image(systemName: "plus")
-                    .button {
-                        let rateType = RateType(name: "", rateValues: [])
-                        context.insert(rateType)
-                        path.append(rateType)
-                    }
+                NavigationLink(value: true) {
+                    Image(systemName: "plus")
+                }
             }
         }
         .alert("Löschen nicht möglich", isPresented: $showAlert) {
             Button("OK", role: .cancel) {}
         } message: {
-            Text("Element konnte nicht gelöscht werden da eine Referenz zu einem anderen Element besteht.")
+            Text("Dieses Element kann nicht gelöscht werden, da es in verwendung ist")
         }
     }
 }
