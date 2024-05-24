@@ -120,6 +120,8 @@ struct TreeModifyView: View {
             forestOwner.trees.append(tree)
             rateValue?.trees.append(tree)
             forest.trees.append(tree)
+            
+            context.insert(tree)
         }
         dismiss()
     }
