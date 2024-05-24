@@ -14,11 +14,12 @@ struct RateTypeModifyView: View {
     
     @Binding var rateType: RateType?
     
+    @FocusState var focusedField: UUID?
+    
     @State var name: String
-    @State var currentStage: Int = -1
+    @State var currentStage: Int = 0
     @State var rateValues: [RateValue]
     @State private var showAlert: Bool = false
-    let isEditing: Bool
     
     var body: some View {
         Form {
@@ -27,14 +28,14 @@ struct RateTypeModifyView: View {
             }
             
             Section("Stufen") {
-                ForEach(rateValues.sorted(by: { $0.stage > $1.stage }), id: \.self) { rateValue in
-                    RateValueStepper(rateValue: .constant(rateValue))
+                ForEach(rateValues.sorted(by: { $0.stage > $1.stage }), id: \.id) { rateValue in
+                    RateValueStepper(focusedField: $focusedField, rateValue: .constant(rateValue))
                         .swipeActions {
                             Button {
                                 if rateValue.canDelete() != nil {
                                     showAlert.toggle()
                                 } else {
-                                    context.delete(rateValue)
+                                    rateValues.remove(object: rateValue)
                                 }
                             } label: {
                                 Text("Delete")
@@ -50,6 +51,16 @@ struct RateTypeModifyView: View {
             }
         }
         .toolbar(.hidden, for: .tabBar)
+        .onAppear {
+            rateValues = rateType?.rateValues ?? []
+        }
+        .onDisappear {
+            if name.isEmpty {
+                if let existingRateType = rateType {
+                    context.delete(existingRateType)
+                }
+            }
+        }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Text("Speichern")
@@ -67,20 +78,17 @@ struct RateTypeModifyView: View {
     }
     
     private func save() {
-        if isEditing {
-            rateType?.name = name
-            rateType?.rateValues = rateValues
-        } else {
-            let rateType = RateType(name: name, rateValues: rateValues)
-            context.insert(rateType)
-        }
+        rateType?.name = name
+        rateType?.rateValues = rateValues
+        
         dismiss()
         
     }
     
     private func createRateValue() {
-        currentStage += 1
-        let rateValue = RateValue(stage: currentStage, volume: 0.0)
+        let nextStage = (rateValues.last?.stage ?? 0) + 1
+        let rateValue = RateValue(stage: nextStage, volume: 0.0)
+        focusedField = rateValue.id
         rateValues.append(rateValue)
         
     }
