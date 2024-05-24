@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @State private var path = NavigationPath()
+    
     var body: some View {
-        NavigationStack() {
+        NavigationStack(path: $path) {
             List {
                 NavigationLink(value: "RateType") {
                     Label("Tarife", systemImage: "eurosign.arrow.circlepath")
@@ -29,7 +31,7 @@ struct SettingsView: View {
                 
                 switch setting {
                 case "RateType":
-                    RateTypesView()
+                    RateTypesView(path: $path)
                 case "Remark":
                     RemarksView()
                 case "WoodType":

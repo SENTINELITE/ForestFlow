@@ -14,6 +14,7 @@ struct RateTypesView: View {
     
     @State private var showModifyView: Bool = false
     @State private var showAlert: Bool = false
+    @Binding var path: NavigationPath
     
     var body: some View {
         VStack {
@@ -25,7 +26,7 @@ struct RateTypesView: View {
                 )
             } else {
                 List {
-                    ForEach(rateTypes, id: \.self) { rateType in
+                    ForEach(rateTypes, id: \.id) { rateType in
                         NavigationLink(value: rateType) {
                             Text(rateType.name)
                         }
@@ -47,14 +48,13 @@ struct RateTypesView: View {
         }
         .navigationTitle("Tarife")
         .navigationDestination(for: RateType.self) { rateType in
-            RateTypeModifyView(rateType: .constant(rateType), name: rateType.name, rateValues: rateType.rateValues ?? [], isEditing: true)
-        }
-        .navigationDestination(for: Bool.self) { _ in
-            RateTypeModifyView(rateType: .constant(nil), name: "", rateValues: [], isEditing: false)
+            RateTypeModifyView(rateType: .constant(rateType), name: rateType.name, rateValues: rateType.rateValues ?? [])
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                NavigationLink(value: true) {
+                Button {
+                    createRateType()
+                } label: {
                     Image(systemName: "plus")
                 }
             }
@@ -64,6 +64,12 @@ struct RateTypesView: View {
         } message: {
             Text("Dieses Element kann nicht gelöscht werden, da es in verwendung ist")
         }
+    }
+    
+    func createRateType() {
+        let rateType = RateType(name: "", rateValues: [])
+        context.insert(rateType)
+        path.append(rateType)
     }
 }
 
