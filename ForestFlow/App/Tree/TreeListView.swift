@@ -22,7 +22,7 @@ struct TreeListView: View {
                 )
             } else {
                 List {
-                    ForEach(forest.trees, id: \.self) { tree in
+                    ForEach(forest.trees, id: \.id) { tree in
                         NavigationLink(value: TreeShow(forest: nil, tree: tree, editing: false)) {
                             HStack {
                                 Text("\(tree.woodType.name)")

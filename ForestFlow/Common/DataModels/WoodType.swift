@@ -10,10 +10,12 @@ import SwiftData
 
 @Model
 class WoodType: Selectable {
+    let id: UUID
     var name: String
     @Relationship(deleteRule: .deny) var trees: [Tree]
 
     init(name: String, trees: [Tree] = []) {
+        self.id = UUID()
         self.name = name
         self.trees = trees
     }

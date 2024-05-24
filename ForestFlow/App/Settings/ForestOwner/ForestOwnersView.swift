@@ -26,7 +26,7 @@ struct ForestOwnersView: View {
                 )
             } else {
                 List {
-                    ForEach(forestOwners, id: \.self) { forestOwner in
+                    ForEach(forestOwners, id: \.id) { forestOwner in
                         Button {
                             self.forestOwner = forestOwner
                         } label: {

@@ -10,6 +10,7 @@ import SwiftData
 
 @Model
 class Forest {
+    let id: UUID
     var name: String
     var location: String
     var rateType: RateType?
@@ -23,6 +24,7 @@ class Forest {
         cropLoss: Int,
         trees: [Tree] = []
     ) {
+        self.id = UUID()
         self.name = name
         self.location = location
         self.rateType = rateType

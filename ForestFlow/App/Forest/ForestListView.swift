@@ -17,7 +17,7 @@ struct ForestListView: View {
             VStack {
                 if forests.isNotEmpty {
                     List {
-                        ForEach(forests, id: \.self) { forest in
+                        ForEach(forests, id: \.id) { forest in
                             NavigationLink(value: ForestShow(forest: forest, editing: false)) {
                                 ForestCell(forest: forest)
                             }

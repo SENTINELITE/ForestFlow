@@ -26,7 +26,7 @@ struct WoodTypesView: View {
                 )
             } else {
                 List {
-                    ForEach(woodTypes, id: \.self) { woodType in
+                    ForEach(woodTypes, id: \.id) { woodType in
                         Button {
                             self.woodType = woodType
                         } label: {

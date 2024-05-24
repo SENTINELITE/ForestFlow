@@ -10,11 +10,13 @@ import SwiftData
 
 @Model
 class RateType: Selectable {
+    let id: UUID
     var name: String
     var rateValues: [RateValue]?
     @Relationship(deleteRule: .deny) var forests: [Forest]
 
     init(name: String, rateValues: [RateValue]?, forests: [Forest] = []) {
+        self.id = UUID()
         self.name = name
         self.rateValues = rateValues
         self.forests = forests

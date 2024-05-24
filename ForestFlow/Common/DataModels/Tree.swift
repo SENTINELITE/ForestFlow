@@ -10,7 +10,8 @@ import SwiftData
 
 @Model
 class Tree {
-    var woodType: WoodType 
+    let id: UUID
+    var woodType: WoodType
     var rateValue: RateValue?
     var latitude: CGFloat
     var longitude: CGFloat
@@ -19,6 +20,7 @@ class Tree {
     var forestOwner: ForestOwner?
 
     init(woodType: WoodType, rateValue: RateValue?, lat: CGFloat, long: CGFloat, forest: Forest? = nil, remark: Remark?, forestOwner: ForestOwner?) {
+        self.id = UUID()
         self.woodType = woodType
         self.rateValue = rateValue
         self.latitude = lat

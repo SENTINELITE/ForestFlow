@@ -29,7 +29,7 @@ struct RemarksView: View {
                 )
             } else {
                 List {
-                    ForEach(remarks, id: \.self) { remark in
+                    ForEach(remarks, id: \.id) { remark in
                         Button {
                             self.remark = remark
                         } label: {
