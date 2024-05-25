@@ -10,6 +10,7 @@ import Foundation
 
 enum AppScreen: CaseIterable {
     case forest
+    case map
     case settings
 }
 
@@ -17,6 +18,7 @@ extension AppScreen {
     var navigationTitle: String {
         switch self {
         case .forest: "Waldliste"
+        case .map: "Karte"
         case .settings: "Einstellungen"
         }
     }
@@ -26,6 +28,8 @@ extension AppScreen {
         switch self {
         case .forest:
             Label("Waldlisten", systemImage: "square.stack")
+        case .map:
+            Label("Karte", systemImage: "map")
         case .settings:
             Label("Einstellungen", systemImage: "gear")
         }
@@ -36,6 +40,8 @@ extension AppScreen {
         switch self {
         case .forest:
             ForestListView()
+        case .map:
+            MapView()
         case .settings:
             SettingsView()
         }
