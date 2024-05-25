@@ -37,6 +37,7 @@
 		CB1CEE6B2B57207C00589FA4 /* RemarkModifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1CEE6A2B57207B00589FA4 /* RemarkModifyView.swift */; };
 		CB5B258C2B9CAC1C0023F582 /* RateValueInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5B258B2B9CAC1C0023F582 /* RateValueInput.swift */; };
 		CB5B258E2B9CB5A70023F582 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5B258D2B9CB5A70023F582 /* Double.swift */; };
+		CB5CB8E92C01C1CE005353B6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CB8E82C01C1CE005353B6 /* MapView.swift */; };
 		CB686D312BC9855B008AAE13 /* DataModelDeleteError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB686D302BC9855B008AAE13 /* DataModelDeleteError.swift */; };
 		CB756BF22B52D17F00228989 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB756BF12B52D17F00228989 /* AddButton.swift */; };
 		CB756BF52B531AAF00228989 /* RateTypesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB756BF42B531AAF00228989 /* RateTypesView.swift */; };
@@ -106,6 +107,7 @@
 		CB1CEE6A2B57207B00589FA4 /* RemarkModifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemarkModifyView.swift; sourceTree = "<group>"; };
 		CB5B258B2B9CAC1C0023F582 /* RateValueInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateValueInput.swift; sourceTree = "<group>"; };
 		CB5B258D2B9CB5A70023F582 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		CB5CB8E82C01C1CE005353B6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		CB686D302BC9855B008AAE13 /* DataModelDeleteError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelDeleteError.swift; sourceTree = "<group>"; };
 		CB756BF12B52D17F00228989 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		CB756BF42B531AAF00228989 /* RateTypesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateTypesView.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				4F5F9B352B4822940037CB5C /* Settings */,
 				4F5F9B2D2B481E6E0037CB5C /* Navigation */,
 				4FFE75AA2B444BAE0098FF00 /* Main */,
+				CB5CB8E72C01C1BE005353B6 /* Map */,
 				4FFE75AB2B444BBE0098FF00 /* Forest */,
 				4FFE75CC2B445C600098FF00 /* Tree */,
 			);
@@ -350,6 +353,14 @@
 				CB756BF12B52D17F00228989 /* AddButton.swift */,
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		CB5CB8E72C01C1BE005353B6 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				CB5CB8E82C01C1CE005353B6 /* MapView.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		CB686D2F2BC98531008AAE13 /* Enumerations */ = {
@@ -545,6 +556,7 @@
 				4FFE75CE2B445C720098FF00 /* TreeListView.swift in Sources */,
 				4FFE75B72B444E300098FF00 /* MainView.swift in Sources */,
 				4FFE75BE2B4452010098FF00 /* View.swift in Sources */,
+				CB5CB8E92C01C1CE005353B6 /* MapView.swift in Sources */,
 				CBF1208E2BA3791E00C345E6 /* TreeShow.swift in Sources */,
 				4FFE75AD2B444BD40098FF00 /* ForestListView.swift in Sources */,
 				4FFE757C2B444B340098FF00 /* ForestFlowApp.swift in Sources */,
