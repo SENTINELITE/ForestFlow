@@ -35,7 +35,9 @@ struct MapView: View {
                 isDetailShowing.toggle()
             }
         }
-        .sheet(isPresented: $isDetailShowing) {
+        .sheet(isPresented: $isDetailShowing, onDismiss: {
+            selectedTree = nil
+        }) {
             NavigationStack {
                 SelectionDetailView(selectedTree: $selectedTree)
             }
