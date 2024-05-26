@@ -39,6 +39,7 @@ struct ForestModifyView: View {
                     )
                 } else {
                     CircleSelection(items: rateTypes, selected: $rateType)
+                        .disabled(isEditing)
                 }
                 
                 Picker("Ernteverlust", selection: $cropLoss) {
