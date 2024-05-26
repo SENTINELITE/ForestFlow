@@ -45,6 +45,7 @@
 		CB7A9B132B5D718B00170600 /* ForestOwnerModifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7A9B122B5D718B00170600 /* ForestOwnerModifyView.swift */; };
 		CB7A9B152B5D72FB00170600 /* RateTypeModifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7A9B142B5D72FB00170600 /* RateTypeModifyView.swift */; };
 		CB7A9B172B5D81C100170600 /* TreeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7A9B162B5D81C100170600 /* TreeDetailView.swift */; };
+		CB99EFC42C0313D8005854C3 /* AboutForestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB99EFC32C0313D8005854C3 /* AboutForestView.swift */; };
 		CBE1CF3D2B48470B0076B445 /* ForestOwnersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF3C2B48470B0076B445 /* ForestOwnersView.swift */; };
 		CBE1CF402B4856500076B445 /* WoodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF3F2B4856500076B445 /* WoodType.swift */; };
 		CBE1CF422B4856DE0076B445 /* WoodTypesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1CF412B4856DE0076B445 /* WoodTypesView.swift */; };
@@ -116,6 +117,7 @@
 		CB7A9B122B5D718B00170600 /* ForestOwnerModifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestOwnerModifyView.swift; sourceTree = "<group>"; };
 		CB7A9B142B5D72FB00170600 /* RateTypeModifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateTypeModifyView.swift; sourceTree = "<group>"; };
 		CB7A9B162B5D81C100170600 /* TreeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeDetailView.swift; sourceTree = "<group>"; };
+		CB99EFC32C0313D8005854C3 /* AboutForestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutForestView.swift; sourceTree = "<group>"; };
 		CBB1588F2BA6074200EC1A7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CBE1CF3C2B48470B0076B445 /* ForestOwnersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestOwnersView.swift; sourceTree = "<group>"; };
 		CBE1CF3F2B4856500076B445 /* WoodType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodType.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				4FFE75B82B4450C70098FF00 /* ForestCell.swift */,
 				4FFE75C32B4454FE0098FF00 /* ForestDetailView.swift */,
 				4FCB75B02BA1AECD007EC941 /* ForestShow.swift */,
+				CB99EFC32C0313D8005854C3 /* AboutForestView.swift */,
 			);
 			path = Forest;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				CBE625DF2C01DEB800141913 /* SelectionDetailView.swift in Sources */,
 				CBE1CF402B4856500076B445 /* WoodType.swift in Sources */,
 				4FFE75AF2B444C0C0098FF00 /* Forest.swift in Sources */,
+				CB99EFC42C0313D8005854C3 /* AboutForestView.swift in Sources */,
 				CB5B258C2B9CAC1C0023F582 /* RateValueInput.swift in Sources */,
 				CBE1CF422B4856DE0076B445 /* WoodTypesView.swift in Sources */,
 			);
