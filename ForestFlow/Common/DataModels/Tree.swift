@@ -10,7 +10,7 @@ import SwiftData
 
 @Model
 class Tree {
-    let id: UUID
+    var id: UUID
     var woodType: WoodType
     var rateValue: RateValue?
     var latitude: CGFloat
@@ -18,8 +18,9 @@ class Tree {
     var forest: Forest?
     var remark: Remark?
     var forestOwner: ForestOwner?
+    var addedAt: Date
 
-    init(woodType: WoodType, rateValue: RateValue?, lat: CGFloat, long: CGFloat, forest: Forest? = nil, remark: Remark?, forestOwner: ForestOwner?) {
+    init(woodType: WoodType, rateValue: RateValue?, lat: CGFloat, long: CGFloat, forest: Forest? = nil, remark: Remark?, forestOwner: ForestOwner?, addedAt: Date = .now) {
         self.id = UUID()
         self.woodType = woodType
         self.rateValue = rateValue
@@ -28,5 +29,6 @@ class Tree {
         self.forest = forest
         self.remark = remark
         self.forestOwner = forestOwner
+        self.addedAt = addedAt
     }
 }
