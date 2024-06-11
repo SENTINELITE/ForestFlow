@@ -11,6 +11,9 @@ import SwiftData
 struct ForestListView: View {
     @Environment(\.modelContext) var context
     @Query private var forests: [Forest]
+    
+    @State private var isShowingInfoSheet: Bool = false
+    @State private var forest: Forest?
 
     var body: some View {
         NavigationStack {
@@ -30,6 +33,13 @@ struct ForestListView: View {
                                 }
                                 NavigationLink(value: ForestShow(forest: forest, editing: true)) {
                                     Label("Bearbeiten", systemImage: "pencil")
+                                }
+                                
+                                Button {
+                                    isShowingInfoSheet.toggle()
+                                    self.forest = forest
+                                } label: {
+                                    Label("Infos zur Liste anzeigen", systemImage: "info.circle")
                                 }
                             }
                         }
@@ -68,6 +78,14 @@ struct ForestListView: View {
                 } else {
                     ForestModifyView(forest: .constant(nil), name: "", location: "", cropLoss: 12, isEditing: show.editing)
                 }
+            }
+            .sheet(isPresented: $isShowingInfoSheet, onDismiss: {
+                forest = nil
+            }) {
+                NavigationStack {
+                    AboutForestView()
+                }
+                .presentationDetents([.height(250), .medium])
             }
         }
     }
