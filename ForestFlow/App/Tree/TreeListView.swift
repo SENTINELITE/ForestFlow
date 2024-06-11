@@ -10,7 +10,7 @@ import SwiftData
 
 struct TreeListView: View {
     @Environment(\.modelContext) var context
-    let forest: Forest
+    var forest: Forest
     
     var body: some View {
         VStack {

@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct ForestDetailView: View {
-
-    let forest: Forest
+    var forest: Forest
 
     var body: some View {
         VStack {

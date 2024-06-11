@@ -10,7 +10,7 @@ import SwiftData
 
 @Model
 class Remark {
-    let id: UUID
+    var id: UUID
     var name: String
     @Relationship(deleteRule: .deny) var trees: [Tree]
     

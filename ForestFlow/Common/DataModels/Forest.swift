@@ -10,7 +10,7 @@ import SwiftData
 
 @Model
 class Forest {
-    let id: UUID
+    var id: UUID
     var name: String
     var location: String
     var rateType: RateType?

@@ -10,7 +10,7 @@ import SwiftData
 
 @Model
 class RateValue: Selectable {
-    let id: UUID
+    var id: UUID
     var stage: Int
     var volume: Double
     var name: String

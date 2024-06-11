@@ -8,7 +8,7 @@
 import Foundation
 
 struct TreeShow: Hashable {
-    let forest: Forest?
+    var forest: Forest?
     let tree: Tree?
     let editing: Bool
 }
