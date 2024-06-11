@@ -69,7 +69,7 @@ struct TreeModifyView: View {
             ToolbarItem(placement: .topBarTrailing) {
                 Text("Speichern")
                     .button {
-                        self.saveTree()
+                        saveTree()
                     }
                     .disabled(woodTypes.isEmpty)
                 
@@ -90,15 +90,15 @@ struct TreeModifyView: View {
                 rateValue = forest?.rateType?.rateValues?.last
             }
             
-            if woodType == nil {
+            if woodType == nil && woodTypes.isNotEmpty {
                 woodType = woodTypes.first
             }
             
-            if forestOwner == nil {
+            if forestOwner == nil && forestOwners.isNotEmpty {
                 forestOwner = forestOwners.first
             }
             
-            if remark == nil {
+            if remark == nil && remarks.isNotEmpty {
                 remark = remarks.first
             }
         }
@@ -106,22 +106,23 @@ struct TreeModifyView: View {
     
     func saveTree() {
         if isEditing {
-            guard let woodType, let remark, let forestOwner else { return }
+            guard let woodType else { return }
             tree?.rateValue = rateValue
             tree?.woodType = woodType
             tree?.remark = remark
             tree?.forestOwner = forestOwner
         } else {
-            guard let location = locationManager.location, let woodType, let remark, let forestOwner, let forest else { return }
+            guard let location = locationManager.location, let woodType, let forest else { return }
             let tree = Tree(woodType: woodType, rateValue: rateValue, lat: location.latitude, long: location.longitude, forest: forest, remark: remark, forestOwner: forestOwner)
             
+            context.insert(tree)
+            
             woodType.trees.append(tree)
-            remark.trees.append(tree)
-            forestOwner.trees.append(tree)
+            remark?.trees.append(tree)
+            forestOwner?.trees.append(tree)
             rateValue?.trees.append(tree)
             forest.trees.append(tree)
             
-            context.insert(tree)
         }
         dismiss()
     }
