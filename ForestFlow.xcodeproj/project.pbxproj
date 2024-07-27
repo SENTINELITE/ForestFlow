@@ -34,6 +34,7 @@
 		4FFE75CE2B445C720098FF00 /* TreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75CD2B445C720098FF00 /* TreeListView.swift */; };
 		4FFE75D02B445C880098FF00 /* TreeModifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75CF2B445C880098FF00 /* TreeModifyView.swift */; };
 		4FFE75D52B458ACC0098FF00 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE75D42B458ACC0098FF00 /* LocationManager.swift */; };
+		A17CE2922C55B501009E35A6 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A17CE2912C55B501009E35A6 /* Localizable.xcstrings */; };
 		CB1CEE6B2B57207C00589FA4 /* RemarkModifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1CEE6A2B57207B00589FA4 /* RemarkModifyView.swift */; };
 		CB5B258C2B9CAC1C0023F582 /* RateValueInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5B258B2B9CAC1C0023F582 /* RateValueInput.swift */; };
 		CB5B258E2B9CB5A70023F582 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5B258D2B9CB5A70023F582 /* Double.swift */; };
@@ -106,6 +107,7 @@
 		4FFE75CD2B445C720098FF00 /* TreeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeListView.swift; sourceTree = "<group>"; };
 		4FFE75CF2B445C880098FF00 /* TreeModifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeModifyView.swift; sourceTree = "<group>"; };
 		4FFE75D42B458ACC0098FF00 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		A17CE2912C55B501009E35A6 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		CB1CEE6A2B57207B00589FA4 /* RemarkModifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemarkModifyView.swift; sourceTree = "<group>"; };
 		CB5B258B2B9CAC1C0023F582 /* RateValueInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateValueInput.swift; sourceTree = "<group>"; };
 		CB5B258D2B9CB5A70023F582 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				CBB1588F2BA6074200EC1A7A /* Info.plist */,
 				4FFE75812B444B350098FF00 /* ForestFlow.entitlements */,
 				4FFE75822B444B350098FF00 /* Preview Content */,
+				A17CE2912C55B501009E35A6 /* Localizable.xcstrings */,
 			);
 			path = ForestFlow;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 4FFE756F2B444B340098FF00;
 			productRefGroup = 4FFE75792B444B340098FF00 /* Products */;
@@ -520,6 +524,7 @@
 			files = (
 				4FFE75842B444B350098FF00 /* Preview Assets.xcassets in Resources */,
 				4FFE75802B444B350098FF00 /* Assets.xcassets in Resources */,
+				A17CE2922C55B501009E35A6 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,6 +686,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -736,6 +742,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;
 		};
